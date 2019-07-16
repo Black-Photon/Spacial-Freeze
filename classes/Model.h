@@ -24,13 +24,6 @@ public:
     ~Model();
 
     /**
-     * Draws the model to the screen at the given position
-     * @param position Position to draw to the screen
-     * @param shader Shader to draw using
-     */
-    virtual void draw(glm::vec3 position, Shader &shader) = 0;
-
-    /**
      * Binds the VAO
      */
     void bind() const;

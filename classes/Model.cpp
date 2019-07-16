@@ -15,7 +15,7 @@ Model::Model(float vertices[], int length)
 
     // Binds the buffer to the buffer type so glBufferData works on this
     glBindBuffer(GL_ARRAY_BUFFER, VBO);
-    // Allocates memory for and stores the vertices data
+    // Allocates memory for and stores the cubeVertices data
     glBufferData(GL_ARRAY_BUFFER, length * sizeof(*vertices), vertices, GL_STATIC_DRAW);
 }
 

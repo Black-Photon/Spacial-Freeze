@@ -1,6 +1,6 @@
 #include "data.cpp"
-#include "../classes/Shader.h"
-#include "../classes/Camera.h"
+#include "../../classes/Shader.h"
+#include "../../classes/Camera.h"
 
 /**
  * Methods used from frame to frame

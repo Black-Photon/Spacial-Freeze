@@ -1,5 +1,5 @@
 #include "data.cpp"
-#include "logger.cpp"
+#include "../logger.cpp"
 #include <memory>
 
 /**
@@ -25,6 +25,7 @@ namespace core {
         glEnable(GL_BLEND);
         glEnable(GL_DEPTH_TEST);
         glEnable(GL_STENCIL_TEST);
+        glEnable(GL_CULL_FACE);
 
         // Flips Textures to correct orientation
         stbi_set_flip_vertically_on_load(true);

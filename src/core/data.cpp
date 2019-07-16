@@ -5,9 +5,9 @@
  */
 
 #include "include.cpp"
-#include "../classes/Shader.h"
-#include "../classes/Camera.h"
-#include "../classes/Model.h"
+#include "../../classes/Shader.h"
+#include "../../classes/Camera.h"
+#include "../../classes/Model.h"
 
 #include <memory>
 

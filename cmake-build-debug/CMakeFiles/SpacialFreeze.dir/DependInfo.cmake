@@ -17,8 +17,10 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Camera.cpp" "/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles/SpacialFreeze.dir/classes/Camera.cpp.o"
   "/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/CubeModel.cpp" "/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles/SpacialFreeze.dir/classes/CubeModel.cpp.o"
+  "/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Lightning.cpp" "/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles/SpacialFreeze.dir/classes/Lightning.cpp.o"
   "/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Model.cpp" "/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles/SpacialFreeze.dir/classes/Model.cpp.o"
   "/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Shader.cpp" "/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles/SpacialFreeze.dir/classes/Shader.cpp.o"
+  "/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/SquareModel.cpp" "/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles/SpacialFreeze.dir/classes/SquareModel.cpp.o"
   "/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/main.cpp" "/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles/SpacialFreeze.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

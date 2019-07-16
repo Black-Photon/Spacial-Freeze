@@ -249,6 +249,33 @@ classes/CubeModel.cpp.s:
 	$(MAKE) -f CMakeFiles/SpacialFreeze.dir/build.make CMakeFiles/SpacialFreeze.dir/classes/CubeModel.cpp.s
 .PHONY : classes/CubeModel.cpp.s
 
+classes/Lightning.o: classes/Lightning.cpp.o
+
+.PHONY : classes/Lightning.o
+
+# target to build an object file
+classes/Lightning.cpp.o:
+	$(MAKE) -f CMakeFiles/SpacialFreeze.dir/build.make CMakeFiles/SpacialFreeze.dir/classes/Lightning.cpp.o
+.PHONY : classes/Lightning.cpp.o
+
+classes/Lightning.i: classes/Lightning.cpp.i
+
+.PHONY : classes/Lightning.i
+
+# target to preprocess a source file
+classes/Lightning.cpp.i:
+	$(MAKE) -f CMakeFiles/SpacialFreeze.dir/build.make CMakeFiles/SpacialFreeze.dir/classes/Lightning.cpp.i
+.PHONY : classes/Lightning.cpp.i
+
+classes/Lightning.s: classes/Lightning.cpp.s
+
+.PHONY : classes/Lightning.s
+
+# target to generate assembly for a file
+classes/Lightning.cpp.s:
+	$(MAKE) -f CMakeFiles/SpacialFreeze.dir/build.make CMakeFiles/SpacialFreeze.dir/classes/Lightning.cpp.s
+.PHONY : classes/Lightning.cpp.s
+
 classes/Model.o: classes/Model.cpp.o
 
 .PHONY : classes/Model.o
@@ -302,6 +329,33 @@ classes/Shader.s: classes/Shader.cpp.s
 classes/Shader.cpp.s:
 	$(MAKE) -f CMakeFiles/SpacialFreeze.dir/build.make CMakeFiles/SpacialFreeze.dir/classes/Shader.cpp.s
 .PHONY : classes/Shader.cpp.s
+
+classes/SquareModel.o: classes/SquareModel.cpp.o
+
+.PHONY : classes/SquareModel.o
+
+# target to build an object file
+classes/SquareModel.cpp.o:
+	$(MAKE) -f CMakeFiles/SpacialFreeze.dir/build.make CMakeFiles/SpacialFreeze.dir/classes/SquareModel.cpp.o
+.PHONY : classes/SquareModel.cpp.o
+
+classes/SquareModel.i: classes/SquareModel.cpp.i
+
+.PHONY : classes/SquareModel.i
+
+# target to preprocess a source file
+classes/SquareModel.cpp.i:
+	$(MAKE) -f CMakeFiles/SpacialFreeze.dir/build.make CMakeFiles/SpacialFreeze.dir/classes/SquareModel.cpp.i
+.PHONY : classes/SquareModel.cpp.i
+
+classes/SquareModel.s: classes/SquareModel.cpp.s
+
+.PHONY : classes/SquareModel.s
+
+# target to generate assembly for a file
+classes/SquareModel.cpp.s:
+	$(MAKE) -f CMakeFiles/SpacialFreeze.dir/build.make CMakeFiles/SpacialFreeze.dir/classes/SquareModel.cpp.s
+.PHONY : classes/SquareModel.cpp.s
 
 main.o: main.cpp.o
 
@@ -378,12 +432,18 @@ help:
 	@echo "... classes/CubeModel.o"
 	@echo "... classes/CubeModel.i"
 	@echo "... classes/CubeModel.s"
+	@echo "... classes/Lightning.o"
+	@echo "... classes/Lightning.i"
+	@echo "... classes/Lightning.s"
 	@echo "... classes/Model.o"
 	@echo "... classes/Model.i"
 	@echo "... classes/Model.s"
 	@echo "... classes/Shader.o"
 	@echo "... classes/Shader.i"
 	@echo "... classes/Shader.s"
+	@echo "... classes/SquareModel.o"
+	@echo "... classes/SquareModel.i"
+	@echo "... classes/SquareModel.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

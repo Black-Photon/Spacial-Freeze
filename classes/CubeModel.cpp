@@ -1,7 +1,7 @@
 #include <glm/ext/matrix_transform.hpp>
 #include "CubeModel.h"
 
-CubeModel::CubeModel() : Model((float*) vertices, 288)
+CubeModel::CubeModel() : Model((float*) cubeVertices, 288)
 {
     addAttribute(3); // Position
     addAttribute(2); // Texture

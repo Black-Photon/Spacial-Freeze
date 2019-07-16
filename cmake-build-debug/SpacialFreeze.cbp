@@ -202,6 +202,12 @@
 		<Unit filename="/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/CubeModel.h">
 			<Option target="SpacialFreeze"/>
 		</Unit>
+		<Unit filename="/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Lightning.cpp">
+			<Option target="SpacialFreeze"/>
+		</Unit>
+		<Unit filename="/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Lightning.h">
+			<Option target="SpacialFreeze"/>
+		</Unit>
 		<Unit filename="/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Model.cpp">
 			<Option target="SpacialFreeze"/>
 		</Unit>
@@ -212,6 +218,12 @@
 			<Option target="SpacialFreeze"/>
 		</Unit>
 		<Unit filename="/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Shader.h">
+			<Option target="SpacialFreeze"/>
+		</Unit>
+		<Unit filename="/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/SquareModel.cpp">
+			<Option target="SpacialFreeze"/>
+		</Unit>
+		<Unit filename="/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/SquareModel.h">
 			<Option target="SpacialFreeze"/>
 		</Unit>
 		<Unit filename="/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/include/glfw-3.2.1/src/glfw_config.h">

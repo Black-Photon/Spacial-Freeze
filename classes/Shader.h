@@ -65,6 +65,23 @@ public:
     void setVec3(const std::string &name, glm::vec3 vec) const;
 
     /**
+     * Sets a vector 4 uniform to the given value
+     * @param name Variable name
+     * @param v1 First Value
+     * @param v2 Second Value
+     * @param v3 Third Value
+     * @param v4 Fourth Value
+     */
+    void setVec4(const std::string &name, float v1, float v2, float v3, float v4) const;
+
+    /**
+     * Sets a vector 4 uniform to the given value
+     * @param name Variable name
+     * @param vec Vector Value
+     */
+    void setVec4(const std::string &name, glm::vec4 vec) const;
+
+    /**
      * Sets a matrix 4 uniform to the given value
      * @param name Variable name
      * @param vec Vector Value
