@@ -55,4 +55,4 @@ void Model::setAttributes()
         int v = attributeSizes.at(i);
         setAttribute(i, v, sum, startPos.at(i));
     }
-} // TODO Test with cube
+}
