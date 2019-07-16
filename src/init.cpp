@@ -1,5 +1,6 @@
 #include "data.cpp"
 #include "logger.cpp"
+#include <memory>
 
 /**
  * Methods used in Initialisation
@@ -36,7 +37,7 @@ namespace core {
 
         // Creates Camera viewed from
         auto *camera = new Camera(1920.0f/1080.0f);
-        Data.camera = camera;
+        Data.camera = std::unique_ptr<Camera>(camera);
         Data.camera->rotate(YAW, -90.0f);
 
         if(capture) {

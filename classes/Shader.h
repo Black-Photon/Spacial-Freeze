@@ -64,6 +64,13 @@ public:
      */
     void setVec3(const std::string &name, glm::vec3 vec) const;
 
+    /**
+     * Sets a matrix 4 uniform to the given value
+     * @param name Variable name
+     * @param vec Vector Value
+     */
+    void setMat4(const std::string &name, glm::mat4 mat) const;
+
 private:
     /**
      * Links the shader programs together into a single program

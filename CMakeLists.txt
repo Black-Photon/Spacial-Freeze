@@ -12,7 +12,7 @@ add_executable(SpacialFreeze
         src/glad.c
         include/glad/glad.h
         include/stb_image.h
-        classes/Camera.cpp classes/Shader.cpp classes/Model.cpp)
+        classes/Camera.cpp classes/Shader.cpp classes/Model.cpp classes/CubeModel.cpp)
 
 # GLFW
 

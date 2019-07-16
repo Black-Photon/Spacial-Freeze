@@ -64,9 +64,7 @@ namespace core {
         glm::mat4 projection = camera.getPerspectiveTransformation();
 
         shader.use();
-        int viewLoc = glGetUniformLocation(shader.ID, "view");
-        glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
-        int projectionLoc = glGetUniformLocation(shader.ID, "projection");
-        glUniformMatrix4fv(projectionLoc, 1, GL_FALSE, glm::value_ptr(projection));
+        shader.setMat4("view", view);
+        shader.setMat4("projection", projection);
     }
 }

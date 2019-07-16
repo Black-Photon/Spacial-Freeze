@@ -196,6 +196,12 @@
 		<Unit filename="/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Camera.h">
 			<Option target="SpacialFreeze"/>
 		</Unit>
+		<Unit filename="/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/CubeModel.cpp">
+			<Option target="SpacialFreeze"/>
+		</Unit>
+		<Unit filename="/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/CubeModel.h">
+			<Option target="SpacialFreeze"/>
+		</Unit>
 		<Unit filename="/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Model.cpp">
 			<Option target="SpacialFreeze"/>
 		</Unit>

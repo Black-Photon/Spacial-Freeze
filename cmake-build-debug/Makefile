@@ -222,6 +222,33 @@ classes/Camera.cpp.s:
 	$(MAKE) -f CMakeFiles/SpacialFreeze.dir/build.make CMakeFiles/SpacialFreeze.dir/classes/Camera.cpp.s
 .PHONY : classes/Camera.cpp.s
 
+classes/CubeModel.o: classes/CubeModel.cpp.o
+
+.PHONY : classes/CubeModel.o
+
+# target to build an object file
+classes/CubeModel.cpp.o:
+	$(MAKE) -f CMakeFiles/SpacialFreeze.dir/build.make CMakeFiles/SpacialFreeze.dir/classes/CubeModel.cpp.o
+.PHONY : classes/CubeModel.cpp.o
+
+classes/CubeModel.i: classes/CubeModel.cpp.i
+
+.PHONY : classes/CubeModel.i
+
+# target to preprocess a source file
+classes/CubeModel.cpp.i:
+	$(MAKE) -f CMakeFiles/SpacialFreeze.dir/build.make CMakeFiles/SpacialFreeze.dir/classes/CubeModel.cpp.i
+.PHONY : classes/CubeModel.cpp.i
+
+classes/CubeModel.s: classes/CubeModel.cpp.s
+
+.PHONY : classes/CubeModel.s
+
+# target to generate assembly for a file
+classes/CubeModel.cpp.s:
+	$(MAKE) -f CMakeFiles/SpacialFreeze.dir/build.make CMakeFiles/SpacialFreeze.dir/classes/CubeModel.cpp.s
+.PHONY : classes/CubeModel.cpp.s
+
 classes/Model.o: classes/Model.cpp.o
 
 .PHONY : classes/Model.o
@@ -348,6 +375,9 @@ help:
 	@echo "... classes/Camera.o"
 	@echo "... classes/Camera.i"
 	@echo "... classes/Camera.s"
+	@echo "... classes/CubeModel.o"
+	@echo "... classes/CubeModel.i"
+	@echo "... classes/CubeModel.s"
 	@echo "... classes/Model.o"
 	@echo "... classes/Model.i"
 	@echo "... classes/Model.s"

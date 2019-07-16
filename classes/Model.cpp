@@ -30,3 +30,29 @@ void Model::bind() const
 {
     glBindVertexArray(VAO);
 }
+
+void Model::setAttribute(int index, int size, int stride, int start)
+{
+    // Index, Size, Type, Normalized, Stride, Pointer
+    glVertexAttribPointer(index, size, GL_FLOAT, GL_FALSE, stride * sizeof(float), (void *) (start * sizeof(float)));
+    glEnableVertexAttribArray(index);
+}
+
+void Model::addAttribute(int size)
+{
+    attributeSizes.push_back(size);
+}
+
+void Model::setAttributes()
+{
+    std::vector<int> startPos;
+    int sum = 0;
+    for(int i : attributeSizes) {
+        startPos.push_back(sum);
+        sum += i;
+    }
+    for(int i = 0; i < attributeSizes.size(); i++) {
+        int v = attributeSizes.at(i);
+        setAttribute(i, v, sum, startPos.at(i));
+    }
+} // TODO Test with cube

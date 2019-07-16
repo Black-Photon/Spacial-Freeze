@@ -9,6 +9,8 @@
 #include "../classes/Camera.h"
 #include "../classes/Model.h"
 
+#include <memory>
+
 namespace core {
 
     /**
@@ -19,11 +21,7 @@ namespace core {
         unsigned int SCR_HEIGHT = 600;
         float lastFrame = 0.0f;
         GLFWwindow *window = nullptr;
-        Camera *camera = nullptr;
-
-        ~Data() {
-            delete camera;
-        }
+        std::unique_ptr<Camera> camera = nullptr;
     } Data;
 
     /**

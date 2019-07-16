@@ -23,36 +23,6 @@ Shader::Shader(std::string vertexPath, std::string fragmentPath, std::string loc
     glDeleteShader(fragment);
 }
 
-void Shader::use() const
-{
-    glUseProgram(ID);
-}
-
-void Shader::setBool(const std::string &name, bool value) const
-{
-    glUniform1i(glGetUniformLocation(ID, name.c_str()), (int)value);
-}
-
-void Shader::setInt(const std::string &name, int value) const
-{
-    glUniform1i(glGetUniformLocation(ID, name.c_str()), value);
-}
-
-void Shader::setFloat(const std::string &name, float value) const
-{
-    glUniform1f(glGetUniformLocation(ID, name.c_str()), value);
-}
-
-void Shader::setVec3(const std::string &name, float v1, float v2, float v3) const
-{
-    setVec3(name, glm::vec3(v1, v2, v3));
-}
-
-void Shader::setVec3(const std::string &name, glm::vec3 vec) const
-{
-    glUniform3fv(glGetUniformLocation(ID, name.c_str()), 1, glm::value_ptr(vec));
-}
-
 void Shader::readVertexFile(const char* vertexPath, std::string * vertexCode) const
 {
     std::ifstream vShaderFile;
@@ -159,4 +129,41 @@ unsigned int Shader::createFragmentShader(const char * fragmentShaderSource) con
     }
 
     return fragmentShader;
+}
+
+
+
+void Shader::use() const
+{
+    glUseProgram(ID);
+}
+
+void Shader::setBool(const std::string &name, bool value) const
+{
+    glUniform1i(glGetUniformLocation(ID, name.c_str()), (int)value);
+}
+
+void Shader::setInt(const std::string &name, int value) const
+{
+    glUniform1i(glGetUniformLocation(ID, name.c_str()), value);
+}
+
+void Shader::setFloat(const std::string &name, float value) const
+{
+    glUniform1f(glGetUniformLocation(ID, name.c_str()), value);
+}
+
+void Shader::setVec3(const std::string &name, float v1, float v2, float v3) const
+{
+    setVec3(name, glm::vec3(v1, v2, v3));
+}
+
+void Shader::setVec3(const std::string &name, glm::vec3 vec) const
+{
+    glUniform3fv(glGetUniformLocation(ID, name.c_str()), 1, glm::value_ptr(vec));
+}
+
+void Shader::setMat4(const std::string &name, glm::mat4 mat) const
+{
+    glUniformMatrix4fv(glGetUniformLocation(ID, name.c_str()), 1, GL_FALSE, glm::value_ptr(mat));
 }

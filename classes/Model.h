@@ -3,6 +3,7 @@
 
 #include <glm/glm.hpp>
 #include "Shader.h"
+#include <vector>
 
 /**
  * Represents a specific shape type
@@ -27,7 +28,7 @@ public:
      * @param position Position to draw to the screen
      * @param shader Shader to draw using
      */
-    virtual void draw(glm::vec3 position, Shader shader) = 0;
+    virtual void draw(glm::vec3 position, Shader &shader) = 0;
 
     /**
      * Binds the VAO
@@ -37,6 +38,26 @@ public:
 protected:
     unsigned int VAO;
     unsigned int VBO;
+    std::vector<int> attributeSizes;
+
+    /**
+     * Sets an individual attribute manually
+     * @param index Which attribute index it uses
+     * @param size Size of attribute
+     * @param stride Next element distance
+     * @param start Start index
+     */
+    static void setAttribute(int index, int size, int stride, int start);
+
+    /**
+     * Adds an attribute to the queue
+     * @param size Size of attribute
+     */
+    void addAttribute(int size);
+    /**
+     * Sets all attributes using the queue
+     */
+    void setAttributes();
 };
 
 
