@@ -22,6 +22,10 @@ namespace core {
         float lastFrame = 0.0f;
         GLFWwindow *window = nullptr;
         std::unique_ptr<Camera> camera = nullptr;
+
+        float distanceOpen = 1.0f;
+        bool closed = false;
+        bool ctrlPressed = false;
     } Data;
 
     /**

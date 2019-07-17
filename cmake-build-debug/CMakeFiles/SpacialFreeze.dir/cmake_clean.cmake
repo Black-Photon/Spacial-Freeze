@@ -7,6 +7,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/SpacialFreeze.dir/classes/CubeModel.cpp.o"
   "CMakeFiles/SpacialFreeze.dir/classes/SquareModel.cpp.o"
   "CMakeFiles/SpacialFreeze.dir/classes/Lightning.cpp.o"
+  "CMakeFiles/SpacialFreeze.dir/classes/Framebuffer.cpp.o"
   "SpacialFreeze.pdb"
   "SpacialFreeze"
 )

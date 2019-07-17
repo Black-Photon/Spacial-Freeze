@@ -12,11 +12,14 @@ set(CMAKE_C_COMPILER_ID "GNU")
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
   "../include"
+  "../include/assimp/include"
+  "../include/assimp/out/include"
   "../include/glfw-3.2.1/include"
   )
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Camera.cpp" "/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles/SpacialFreeze.dir/classes/Camera.cpp.o"
   "/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/CubeModel.cpp" "/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles/SpacialFreeze.dir/classes/CubeModel.cpp.o"
+  "/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Framebuffer.cpp" "/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles/SpacialFreeze.dir/classes/Framebuffer.cpp.o"
   "/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Lightning.cpp" "/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles/SpacialFreeze.dir/classes/Lightning.cpp.o"
   "/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Model.cpp" "/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles/SpacialFreeze.dir/classes/Model.cpp.o"
   "/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Shader.cpp" "/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles/SpacialFreeze.dir/classes/Shader.cpp.o"
@@ -28,12 +31,16 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../include"
+  "../include/assimp/include"
+  "../include/assimp/out/include"
   "../include/glfw-3.2.1/include"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
   "/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/include/glfw-3.2.1/src/CMakeFiles/glfw.dir/DependInfo.cmake"
+  "/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/include/assimp/code/CMakeFiles/assimp.dir/DependInfo.cmake"
+  "/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/include/assimp/contrib/irrXML/CMakeFiles/IrrXML.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

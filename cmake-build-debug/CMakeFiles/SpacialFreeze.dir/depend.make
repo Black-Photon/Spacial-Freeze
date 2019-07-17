@@ -337,6 +337,10 @@ CMakeFiles/SpacialFreeze.dir/classes/CubeModel.cpp.o: ../classes/CubeModel.h
 CMakeFiles/SpacialFreeze.dir/classes/CubeModel.cpp.o: ../classes/Model.h
 CMakeFiles/SpacialFreeze.dir/classes/CubeModel.cpp.o: ../classes/Shader.h
 
+CMakeFiles/SpacialFreeze.dir/classes/Framebuffer.cpp.o: ../include/glad/glad.h
+CMakeFiles/SpacialFreeze.dir/classes/Framebuffer.cpp.o: ../classes/Framebuffer.cpp
+CMakeFiles/SpacialFreeze.dir/classes/Framebuffer.cpp.o: ../classes/Framebuffer.h
+
 CMakeFiles/SpacialFreeze.dir/classes/Lightning.cpp.o: ../include/glad/glad.h
 CMakeFiles/SpacialFreeze.dir/classes/Lightning.cpp.o: ../classes/Lightning.cpp
 CMakeFiles/SpacialFreeze.dir/classes/Lightning.cpp.o: ../classes/Lightning.h
@@ -1123,6 +1127,7 @@ CMakeFiles/SpacialFreeze.dir/main.cpp.o: ../include/glm/vector_relational.hpp
 CMakeFiles/SpacialFreeze.dir/main.cpp.o: ../include/stb_image.h
 CMakeFiles/SpacialFreeze.dir/main.cpp.o: ../classes/Camera.h
 CMakeFiles/SpacialFreeze.dir/main.cpp.o: ../classes/CubeModel.h
+CMakeFiles/SpacialFreeze.dir/main.cpp.o: ../classes/Framebuffer.h
 CMakeFiles/SpacialFreeze.dir/main.cpp.o: ../classes/Lightning.h
 CMakeFiles/SpacialFreeze.dir/main.cpp.o: ../classes/Model.h
 CMakeFiles/SpacialFreeze.dir/main.cpp.o: ../classes/Shader.h
@@ -1134,7 +1139,6 @@ CMakeFiles/SpacialFreeze.dir/main.cpp.o: ../src/core/include.cpp
 CMakeFiles/SpacialFreeze.dir/main.cpp.o: ../src/core/init.cpp
 CMakeFiles/SpacialFreeze.dir/main.cpp.o: ../src/core/preInit.cpp
 CMakeFiles/SpacialFreeze.dir/main.cpp.o: ../src/core/util.cpp
-CMakeFiles/SpacialFreeze.dir/main.cpp.o: ../src/framebuffer.cpp
 CMakeFiles/SpacialFreeze.dir/main.cpp.o: ../src/logger.cpp
 CMakeFiles/SpacialFreeze.dir/main.cpp.o: ../src/stencil.cpp
 

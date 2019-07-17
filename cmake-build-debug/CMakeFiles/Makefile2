@@ -69,9 +69,11 @@ CMAKE_BINARY_DIR = /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cm
 
 # All Build rule for target.
 CMakeFiles/SpacialFreeze.dir/all: include/glfw-3.2.1/src/CMakeFiles/glfw.dir/all
+CMakeFiles/SpacialFreeze.dir/all: include/assimp/contrib/irrXML/CMakeFiles/IrrXML.dir/all
+CMakeFiles/SpacialFreeze.dir/all: include/assimp/code/CMakeFiles/assimp.dir/all
 	$(MAKE) -f CMakeFiles/SpacialFreeze.dir/build.make CMakeFiles/SpacialFreeze.dir/depend
 	$(MAKE) -f CMakeFiles/SpacialFreeze.dir/build.make CMakeFiles/SpacialFreeze.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9 "Built target SpacialFreeze"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles --progress-num=1,2,3 "Built target SpacialFreeze"
 .PHONY : CMakeFiles/SpacialFreeze.dir/all
 
 # Include target in all.
@@ -81,7 +83,7 @@ all: CMakeFiles/SpacialFreeze.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/SpacialFreeze.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles 25
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles 72
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/SpacialFreeze.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/SpacialFreeze.dir/rule
@@ -177,7 +179,7 @@ include/glfw-3.2.1/src/preinstall:
 include/glfw-3.2.1/src/CMakeFiles/glfw.dir/all:
 	$(MAKE) -f include/glfw-3.2.1/src/CMakeFiles/glfw.dir/build.make include/glfw-3.2.1/src/CMakeFiles/glfw.dir/depend
 	$(MAKE) -f include/glfw-3.2.1/src/CMakeFiles/glfw.dir/build.make include/glfw-3.2.1/src/CMakeFiles/glfw.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles --progress-num=10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25 "Built target glfw"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles --progress-num=70,71,72,73,74 "Built target glfw"
 .PHONY : include/glfw-3.2.1/src/CMakeFiles/glfw.dir/all
 
 # Include target in all.
@@ -187,7 +189,7 @@ all: include/glfw-3.2.1/src/CMakeFiles/glfw.dir/all
 
 # Build rule for subdir invocation for target.
 include/glfw-3.2.1/src/CMakeFiles/glfw.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles 16
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 include/glfw-3.2.1/src/CMakeFiles/glfw.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles 0
 .PHONY : include/glfw-3.2.1/src/CMakeFiles/glfw.dir/rule
@@ -206,6 +208,1217 @@ include/glfw-3.2.1/src/CMakeFiles/glfw.dir/clean:
 clean: include/glfw-3.2.1/src/CMakeFiles/glfw.dir/clean
 
 .PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory include/assimp
+
+# Convenience name for "all" pass in the directory.
+include/assimp/all: include/assimp/contrib/all
+include/assimp/all: include/assimp/code/all
+include/assimp/all: include/assimp/tools/assimp_cmd/all
+include/assimp/all: include/assimp/test/all
+
+.PHONY : include/assimp/all
+
+# Convenience name for "clean" pass in the directory.
+include/assimp/clean: include/assimp/contrib/clean
+include/assimp/clean: include/assimp/code/clean
+include/assimp/clean: include/assimp/tools/assimp_cmd/clean
+include/assimp/clean: include/assimp/test/clean
+
+.PHONY : include/assimp/clean
+
+# Convenience name for "preinstall" pass in the directory.
+include/assimp/preinstall: include/assimp/contrib/preinstall
+include/assimp/preinstall: include/assimp/code/preinstall
+include/assimp/preinstall: include/assimp/tools/assimp_cmd/preinstall
+include/assimp/preinstall: include/assimp/test/preinstall
+
+.PHONY : include/assimp/preinstall
+
+#=============================================================================
+# Directory level rules for directory include/assimp/contrib
+
+# Convenience name for "all" pass in the directory.
+include/assimp/contrib/all: include/assimp/contrib/irrXML/all
+
+.PHONY : include/assimp/contrib/all
+
+# Convenience name for "clean" pass in the directory.
+include/assimp/contrib/clean: include/assimp/contrib/irrXML/clean
+
+.PHONY : include/assimp/contrib/clean
+
+# Convenience name for "preinstall" pass in the directory.
+include/assimp/contrib/preinstall: include/assimp/contrib/irrXML/preinstall
+
+.PHONY : include/assimp/contrib/preinstall
+
+#=============================================================================
+# Directory level rules for directory include/assimp/contrib/irrXML
+
+# Convenience name for "all" pass in the directory.
+include/assimp/contrib/irrXML/all: include/assimp/contrib/irrXML/CMakeFiles/IrrXML.dir/all
+
+.PHONY : include/assimp/contrib/irrXML/all
+
+# Convenience name for "clean" pass in the directory.
+include/assimp/contrib/irrXML/clean: include/assimp/contrib/irrXML/CMakeFiles/IrrXML.dir/clean
+
+.PHONY : include/assimp/contrib/irrXML/clean
+
+# Convenience name for "preinstall" pass in the directory.
+include/assimp/contrib/irrXML/preinstall:
+
+.PHONY : include/assimp/contrib/irrXML/preinstall
+
+#=============================================================================
+# Target rules for target include/assimp/contrib/irrXML/CMakeFiles/IrrXML.dir
+
+# All Build rule for target.
+include/assimp/contrib/irrXML/CMakeFiles/IrrXML.dir/all:
+	$(MAKE) -f include/assimp/contrib/irrXML/CMakeFiles/IrrXML.dir/build.make include/assimp/contrib/irrXML/CMakeFiles/IrrXML.dir/depend
+	$(MAKE) -f include/assimp/contrib/irrXML/CMakeFiles/IrrXML.dir/build.make include/assimp/contrib/irrXML/CMakeFiles/IrrXML.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles --progress-num= "Built target IrrXML"
+.PHONY : include/assimp/contrib/irrXML/CMakeFiles/IrrXML.dir/all
+
+# Include target in all.
+all: include/assimp/contrib/irrXML/CMakeFiles/IrrXML.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+include/assimp/contrib/irrXML/CMakeFiles/IrrXML.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 include/assimp/contrib/irrXML/CMakeFiles/IrrXML.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles 0
+.PHONY : include/assimp/contrib/irrXML/CMakeFiles/IrrXML.dir/rule
+
+# Convenience name for target.
+IrrXML: include/assimp/contrib/irrXML/CMakeFiles/IrrXML.dir/rule
+
+.PHONY : IrrXML
+
+# clean rule for target.
+include/assimp/contrib/irrXML/CMakeFiles/IrrXML.dir/clean:
+	$(MAKE) -f include/assimp/contrib/irrXML/CMakeFiles/IrrXML.dir/build.make include/assimp/contrib/irrXML/CMakeFiles/IrrXML.dir/clean
+.PHONY : include/assimp/contrib/irrXML/CMakeFiles/IrrXML.dir/clean
+
+# clean rule for target.
+clean: include/assimp/contrib/irrXML/CMakeFiles/IrrXML.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory include/assimp/code
+
+# Convenience name for "all" pass in the directory.
+include/assimp/code/all: include/assimp/code/CMakeFiles/assimp.dir/all
+
+.PHONY : include/assimp/code/all
+
+# Convenience name for "clean" pass in the directory.
+include/assimp/code/clean: include/assimp/code/CMakeFiles/assimp.dir/clean
+
+.PHONY : include/assimp/code/clean
+
+# Convenience name for "preinstall" pass in the directory.
+include/assimp/code/preinstall:
+
+.PHONY : include/assimp/code/preinstall
+
+#=============================================================================
+# Target rules for target include/assimp/code/CMakeFiles/assimp.dir
+
+# All Build rule for target.
+include/assimp/code/CMakeFiles/assimp.dir/all: include/assimp/contrib/irrXML/CMakeFiles/IrrXML.dir/all
+	$(MAKE) -f include/assimp/code/CMakeFiles/assimp.dir/build.make include/assimp/code/CMakeFiles/assimp.dir/depend
+	$(MAKE) -f include/assimp/code/CMakeFiles/assimp.dir/build.make include/assimp/code/CMakeFiles/assimp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles --progress-num=4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67 "Built target assimp"
+.PHONY : include/assimp/code/CMakeFiles/assimp.dir/all
+
+# Include target in all.
+all: include/assimp/code/CMakeFiles/assimp.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+include/assimp/code/CMakeFiles/assimp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles 64
+	$(MAKE) -f CMakeFiles/Makefile2 include/assimp/code/CMakeFiles/assimp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles 0
+.PHONY : include/assimp/code/CMakeFiles/assimp.dir/rule
+
+# Convenience name for target.
+assimp: include/assimp/code/CMakeFiles/assimp.dir/rule
+
+.PHONY : assimp
+
+# clean rule for target.
+include/assimp/code/CMakeFiles/assimp.dir/clean:
+	$(MAKE) -f include/assimp/code/CMakeFiles/assimp.dir/build.make include/assimp/code/CMakeFiles/assimp.dir/clean
+.PHONY : include/assimp/code/CMakeFiles/assimp.dir/clean
+
+# clean rule for target.
+clean: include/assimp/code/CMakeFiles/assimp.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory include/assimp/tools/assimp_cmd
+
+# Convenience name for "all" pass in the directory.
+include/assimp/tools/assimp_cmd/all: include/assimp/tools/assimp_cmd/CMakeFiles/assimp_cmd.dir/all
+
+.PHONY : include/assimp/tools/assimp_cmd/all
+
+# Convenience name for "clean" pass in the directory.
+include/assimp/tools/assimp_cmd/clean: include/assimp/tools/assimp_cmd/CMakeFiles/assimp_cmd.dir/clean
+
+.PHONY : include/assimp/tools/assimp_cmd/clean
+
+# Convenience name for "preinstall" pass in the directory.
+include/assimp/tools/assimp_cmd/preinstall:
+
+.PHONY : include/assimp/tools/assimp_cmd/preinstall
+
+#=============================================================================
+# Target rules for target include/assimp/tools/assimp_cmd/CMakeFiles/assimp_cmd.dir
+
+# All Build rule for target.
+include/assimp/tools/assimp_cmd/CMakeFiles/assimp_cmd.dir/all: include/assimp/contrib/irrXML/CMakeFiles/IrrXML.dir/all
+include/assimp/tools/assimp_cmd/CMakeFiles/assimp_cmd.dir/all: include/assimp/code/CMakeFiles/assimp.dir/all
+	$(MAKE) -f include/assimp/tools/assimp_cmd/CMakeFiles/assimp_cmd.dir/build.make include/assimp/tools/assimp_cmd/CMakeFiles/assimp_cmd.dir/depend
+	$(MAKE) -f include/assimp/tools/assimp_cmd/CMakeFiles/assimp_cmd.dir/build.make include/assimp/tools/assimp_cmd/CMakeFiles/assimp_cmd.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles --progress-num=68,69 "Built target assimp_cmd"
+.PHONY : include/assimp/tools/assimp_cmd/CMakeFiles/assimp_cmd.dir/all
+
+# Include target in all.
+all: include/assimp/tools/assimp_cmd/CMakeFiles/assimp_cmd.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+include/assimp/tools/assimp_cmd/CMakeFiles/assimp_cmd.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles 66
+	$(MAKE) -f CMakeFiles/Makefile2 include/assimp/tools/assimp_cmd/CMakeFiles/assimp_cmd.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles 0
+.PHONY : include/assimp/tools/assimp_cmd/CMakeFiles/assimp_cmd.dir/rule
+
+# Convenience name for target.
+assimp_cmd: include/assimp/tools/assimp_cmd/CMakeFiles/assimp_cmd.dir/rule
+
+.PHONY : assimp_cmd
+
+# clean rule for target.
+include/assimp/tools/assimp_cmd/CMakeFiles/assimp_cmd.dir/clean:
+	$(MAKE) -f include/assimp/tools/assimp_cmd/CMakeFiles/assimp_cmd.dir/build.make include/assimp/tools/assimp_cmd/CMakeFiles/assimp_cmd.dir/clean
+.PHONY : include/assimp/tools/assimp_cmd/CMakeFiles/assimp_cmd.dir/clean
+
+# clean rule for target.
+clean: include/assimp/tools/assimp_cmd/CMakeFiles/assimp_cmd.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory include/assimp/test
+
+# Convenience name for "all" pass in the directory.
+include/assimp/test/all: include/assimp/test/CMakeFiles/unit.dir/all
+include/assimp/test/all: include/assimp/test/headercheck/all
+
+.PHONY : include/assimp/test/all
+
+# Convenience name for "clean" pass in the directory.
+include/assimp/test/clean: include/assimp/test/CMakeFiles/ContinuousSubmit.dir/clean
+include/assimp/test/clean: include/assimp/test/CMakeFiles/ContinuousMemCheck.dir/clean
+include/assimp/test/clean: include/assimp/test/CMakeFiles/ContinuousConfigure.dir/clean
+include/assimp/test/clean: include/assimp/test/CMakeFiles/ExperimentalSubmit.dir/clean
+include/assimp/test/clean: include/assimp/test/CMakeFiles/ExperimentalMemCheck.dir/clean
+include/assimp/test/clean: include/assimp/test/CMakeFiles/ExperimentalTest.dir/clean
+include/assimp/test/clean: include/assimp/test/CMakeFiles/NightlyUpdate.dir/clean
+include/assimp/test/clean: include/assimp/test/CMakeFiles/NightlyStart.dir/clean
+include/assimp/test/clean: include/assimp/test/CMakeFiles/NightlyMemoryCheck.dir/clean
+include/assimp/test/clean: include/assimp/test/CMakeFiles/NightlyBuild.dir/clean
+include/assimp/test/clean: include/assimp/test/CMakeFiles/ExperimentalUpdate.dir/clean
+include/assimp/test/clean: include/assimp/test/CMakeFiles/unit.dir/clean
+include/assimp/test/clean: include/assimp/test/CMakeFiles/ContinuousBuild.dir/clean
+include/assimp/test/clean: include/assimp/test/CMakeFiles/Continuous.dir/clean
+include/assimp/test/clean: include/assimp/test/CMakeFiles/Experimental.dir/clean
+include/assimp/test/clean: include/assimp/test/CMakeFiles/ExperimentalConfigure.dir/clean
+include/assimp/test/clean: include/assimp/test/CMakeFiles/NightlyTest.dir/clean
+include/assimp/test/clean: include/assimp/test/CMakeFiles/NightlyCoverage.dir/clean
+include/assimp/test/clean: include/assimp/test/CMakeFiles/ExperimentalCoverage.dir/clean
+include/assimp/test/clean: include/assimp/test/CMakeFiles/NightlyMemCheck.dir/clean
+include/assimp/test/clean: include/assimp/test/CMakeFiles/ContinuousStart.dir/clean
+include/assimp/test/clean: include/assimp/test/CMakeFiles/NightlySubmit.dir/clean
+include/assimp/test/clean: include/assimp/test/CMakeFiles/ContinuousCoverage.dir/clean
+include/assimp/test/clean: include/assimp/test/CMakeFiles/Nightly.dir/clean
+include/assimp/test/clean: include/assimp/test/CMakeFiles/NightlyConfigure.dir/clean
+include/assimp/test/clean: include/assimp/test/CMakeFiles/ExperimentalStart.dir/clean
+include/assimp/test/clean: include/assimp/test/CMakeFiles/ContinuousTest.dir/clean
+include/assimp/test/clean: include/assimp/test/CMakeFiles/ContinuousUpdate.dir/clean
+include/assimp/test/clean: include/assimp/test/CMakeFiles/ExperimentalBuild.dir/clean
+include/assimp/test/clean: include/assimp/test/headercheck/clean
+
+.PHONY : include/assimp/test/clean
+
+# Convenience name for "preinstall" pass in the directory.
+include/assimp/test/preinstall: include/assimp/test/headercheck/preinstall
+
+.PHONY : include/assimp/test/preinstall
+
+#=============================================================================
+# Target rules for target include/assimp/test/CMakeFiles/ContinuousSubmit.dir
+
+# All Build rule for target.
+include/assimp/test/CMakeFiles/ContinuousSubmit.dir/all:
+	$(MAKE) -f include/assimp/test/CMakeFiles/ContinuousSubmit.dir/build.make include/assimp/test/CMakeFiles/ContinuousSubmit.dir/depend
+	$(MAKE) -f include/assimp/test/CMakeFiles/ContinuousSubmit.dir/build.make include/assimp/test/CMakeFiles/ContinuousSubmit.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles --progress-num= "Built target ContinuousSubmit"
+.PHONY : include/assimp/test/CMakeFiles/ContinuousSubmit.dir/all
+
+# Build rule for subdir invocation for target.
+include/assimp/test/CMakeFiles/ContinuousSubmit.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 include/assimp/test/CMakeFiles/ContinuousSubmit.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles 0
+.PHONY : include/assimp/test/CMakeFiles/ContinuousSubmit.dir/rule
+
+# Convenience name for target.
+ContinuousSubmit: include/assimp/test/CMakeFiles/ContinuousSubmit.dir/rule
+
+.PHONY : ContinuousSubmit
+
+# clean rule for target.
+include/assimp/test/CMakeFiles/ContinuousSubmit.dir/clean:
+	$(MAKE) -f include/assimp/test/CMakeFiles/ContinuousSubmit.dir/build.make include/assimp/test/CMakeFiles/ContinuousSubmit.dir/clean
+.PHONY : include/assimp/test/CMakeFiles/ContinuousSubmit.dir/clean
+
+# clean rule for target.
+clean: include/assimp/test/CMakeFiles/ContinuousSubmit.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target include/assimp/test/CMakeFiles/ContinuousMemCheck.dir
+
+# All Build rule for target.
+include/assimp/test/CMakeFiles/ContinuousMemCheck.dir/all:
+	$(MAKE) -f include/assimp/test/CMakeFiles/ContinuousMemCheck.dir/build.make include/assimp/test/CMakeFiles/ContinuousMemCheck.dir/depend
+	$(MAKE) -f include/assimp/test/CMakeFiles/ContinuousMemCheck.dir/build.make include/assimp/test/CMakeFiles/ContinuousMemCheck.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles --progress-num= "Built target ContinuousMemCheck"
+.PHONY : include/assimp/test/CMakeFiles/ContinuousMemCheck.dir/all
+
+# Build rule for subdir invocation for target.
+include/assimp/test/CMakeFiles/ContinuousMemCheck.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 include/assimp/test/CMakeFiles/ContinuousMemCheck.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles 0
+.PHONY : include/assimp/test/CMakeFiles/ContinuousMemCheck.dir/rule
+
+# Convenience name for target.
+ContinuousMemCheck: include/assimp/test/CMakeFiles/ContinuousMemCheck.dir/rule
+
+.PHONY : ContinuousMemCheck
+
+# clean rule for target.
+include/assimp/test/CMakeFiles/ContinuousMemCheck.dir/clean:
+	$(MAKE) -f include/assimp/test/CMakeFiles/ContinuousMemCheck.dir/build.make include/assimp/test/CMakeFiles/ContinuousMemCheck.dir/clean
+.PHONY : include/assimp/test/CMakeFiles/ContinuousMemCheck.dir/clean
+
+# clean rule for target.
+clean: include/assimp/test/CMakeFiles/ContinuousMemCheck.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target include/assimp/test/CMakeFiles/ContinuousConfigure.dir
+
+# All Build rule for target.
+include/assimp/test/CMakeFiles/ContinuousConfigure.dir/all:
+	$(MAKE) -f include/assimp/test/CMakeFiles/ContinuousConfigure.dir/build.make include/assimp/test/CMakeFiles/ContinuousConfigure.dir/depend
+	$(MAKE) -f include/assimp/test/CMakeFiles/ContinuousConfigure.dir/build.make include/assimp/test/CMakeFiles/ContinuousConfigure.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles --progress-num= "Built target ContinuousConfigure"
+.PHONY : include/assimp/test/CMakeFiles/ContinuousConfigure.dir/all
+
+# Build rule for subdir invocation for target.
+include/assimp/test/CMakeFiles/ContinuousConfigure.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 include/assimp/test/CMakeFiles/ContinuousConfigure.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles 0
+.PHONY : include/assimp/test/CMakeFiles/ContinuousConfigure.dir/rule
+
+# Convenience name for target.
+ContinuousConfigure: include/assimp/test/CMakeFiles/ContinuousConfigure.dir/rule
+
+.PHONY : ContinuousConfigure
+
+# clean rule for target.
+include/assimp/test/CMakeFiles/ContinuousConfigure.dir/clean:
+	$(MAKE) -f include/assimp/test/CMakeFiles/ContinuousConfigure.dir/build.make include/assimp/test/CMakeFiles/ContinuousConfigure.dir/clean
+.PHONY : include/assimp/test/CMakeFiles/ContinuousConfigure.dir/clean
+
+# clean rule for target.
+clean: include/assimp/test/CMakeFiles/ContinuousConfigure.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target include/assimp/test/CMakeFiles/ExperimentalSubmit.dir
+
+# All Build rule for target.
+include/assimp/test/CMakeFiles/ExperimentalSubmit.dir/all:
+	$(MAKE) -f include/assimp/test/CMakeFiles/ExperimentalSubmit.dir/build.make include/assimp/test/CMakeFiles/ExperimentalSubmit.dir/depend
+	$(MAKE) -f include/assimp/test/CMakeFiles/ExperimentalSubmit.dir/build.make include/assimp/test/CMakeFiles/ExperimentalSubmit.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles --progress-num= "Built target ExperimentalSubmit"
+.PHONY : include/assimp/test/CMakeFiles/ExperimentalSubmit.dir/all
+
+# Build rule for subdir invocation for target.
+include/assimp/test/CMakeFiles/ExperimentalSubmit.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 include/assimp/test/CMakeFiles/ExperimentalSubmit.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles 0
+.PHONY : include/assimp/test/CMakeFiles/ExperimentalSubmit.dir/rule
+
+# Convenience name for target.
+ExperimentalSubmit: include/assimp/test/CMakeFiles/ExperimentalSubmit.dir/rule
+
+.PHONY : ExperimentalSubmit
+
+# clean rule for target.
+include/assimp/test/CMakeFiles/ExperimentalSubmit.dir/clean:
+	$(MAKE) -f include/assimp/test/CMakeFiles/ExperimentalSubmit.dir/build.make include/assimp/test/CMakeFiles/ExperimentalSubmit.dir/clean
+.PHONY : include/assimp/test/CMakeFiles/ExperimentalSubmit.dir/clean
+
+# clean rule for target.
+clean: include/assimp/test/CMakeFiles/ExperimentalSubmit.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target include/assimp/test/CMakeFiles/ExperimentalMemCheck.dir
+
+# All Build rule for target.
+include/assimp/test/CMakeFiles/ExperimentalMemCheck.dir/all:
+	$(MAKE) -f include/assimp/test/CMakeFiles/ExperimentalMemCheck.dir/build.make include/assimp/test/CMakeFiles/ExperimentalMemCheck.dir/depend
+	$(MAKE) -f include/assimp/test/CMakeFiles/ExperimentalMemCheck.dir/build.make include/assimp/test/CMakeFiles/ExperimentalMemCheck.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles --progress-num= "Built target ExperimentalMemCheck"
+.PHONY : include/assimp/test/CMakeFiles/ExperimentalMemCheck.dir/all
+
+# Build rule for subdir invocation for target.
+include/assimp/test/CMakeFiles/ExperimentalMemCheck.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 include/assimp/test/CMakeFiles/ExperimentalMemCheck.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles 0
+.PHONY : include/assimp/test/CMakeFiles/ExperimentalMemCheck.dir/rule
+
+# Convenience name for target.
+ExperimentalMemCheck: include/assimp/test/CMakeFiles/ExperimentalMemCheck.dir/rule
+
+.PHONY : ExperimentalMemCheck
+
+# clean rule for target.
+include/assimp/test/CMakeFiles/ExperimentalMemCheck.dir/clean:
+	$(MAKE) -f include/assimp/test/CMakeFiles/ExperimentalMemCheck.dir/build.make include/assimp/test/CMakeFiles/ExperimentalMemCheck.dir/clean
+.PHONY : include/assimp/test/CMakeFiles/ExperimentalMemCheck.dir/clean
+
+# clean rule for target.
+clean: include/assimp/test/CMakeFiles/ExperimentalMemCheck.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target include/assimp/test/CMakeFiles/ExperimentalTest.dir
+
+# All Build rule for target.
+include/assimp/test/CMakeFiles/ExperimentalTest.dir/all:
+	$(MAKE) -f include/assimp/test/CMakeFiles/ExperimentalTest.dir/build.make include/assimp/test/CMakeFiles/ExperimentalTest.dir/depend
+	$(MAKE) -f include/assimp/test/CMakeFiles/ExperimentalTest.dir/build.make include/assimp/test/CMakeFiles/ExperimentalTest.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles --progress-num= "Built target ExperimentalTest"
+.PHONY : include/assimp/test/CMakeFiles/ExperimentalTest.dir/all
+
+# Build rule for subdir invocation for target.
+include/assimp/test/CMakeFiles/ExperimentalTest.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 include/assimp/test/CMakeFiles/ExperimentalTest.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles 0
+.PHONY : include/assimp/test/CMakeFiles/ExperimentalTest.dir/rule
+
+# Convenience name for target.
+ExperimentalTest: include/assimp/test/CMakeFiles/ExperimentalTest.dir/rule
+
+.PHONY : ExperimentalTest
+
+# clean rule for target.
+include/assimp/test/CMakeFiles/ExperimentalTest.dir/clean:
+	$(MAKE) -f include/assimp/test/CMakeFiles/ExperimentalTest.dir/build.make include/assimp/test/CMakeFiles/ExperimentalTest.dir/clean
+.PHONY : include/assimp/test/CMakeFiles/ExperimentalTest.dir/clean
+
+# clean rule for target.
+clean: include/assimp/test/CMakeFiles/ExperimentalTest.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target include/assimp/test/CMakeFiles/NightlyUpdate.dir
+
+# All Build rule for target.
+include/assimp/test/CMakeFiles/NightlyUpdate.dir/all:
+	$(MAKE) -f include/assimp/test/CMakeFiles/NightlyUpdate.dir/build.make include/assimp/test/CMakeFiles/NightlyUpdate.dir/depend
+	$(MAKE) -f include/assimp/test/CMakeFiles/NightlyUpdate.dir/build.make include/assimp/test/CMakeFiles/NightlyUpdate.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles --progress-num= "Built target NightlyUpdate"
+.PHONY : include/assimp/test/CMakeFiles/NightlyUpdate.dir/all
+
+# Build rule for subdir invocation for target.
+include/assimp/test/CMakeFiles/NightlyUpdate.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 include/assimp/test/CMakeFiles/NightlyUpdate.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles 0
+.PHONY : include/assimp/test/CMakeFiles/NightlyUpdate.dir/rule
+
+# Convenience name for target.
+NightlyUpdate: include/assimp/test/CMakeFiles/NightlyUpdate.dir/rule
+
+.PHONY : NightlyUpdate
+
+# clean rule for target.
+include/assimp/test/CMakeFiles/NightlyUpdate.dir/clean:
+	$(MAKE) -f include/assimp/test/CMakeFiles/NightlyUpdate.dir/build.make include/assimp/test/CMakeFiles/NightlyUpdate.dir/clean
+.PHONY : include/assimp/test/CMakeFiles/NightlyUpdate.dir/clean
+
+# clean rule for target.
+clean: include/assimp/test/CMakeFiles/NightlyUpdate.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target include/assimp/test/CMakeFiles/NightlyStart.dir
+
+# All Build rule for target.
+include/assimp/test/CMakeFiles/NightlyStart.dir/all:
+	$(MAKE) -f include/assimp/test/CMakeFiles/NightlyStart.dir/build.make include/assimp/test/CMakeFiles/NightlyStart.dir/depend
+	$(MAKE) -f include/assimp/test/CMakeFiles/NightlyStart.dir/build.make include/assimp/test/CMakeFiles/NightlyStart.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles --progress-num= "Built target NightlyStart"
+.PHONY : include/assimp/test/CMakeFiles/NightlyStart.dir/all
+
+# Build rule for subdir invocation for target.
+include/assimp/test/CMakeFiles/NightlyStart.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 include/assimp/test/CMakeFiles/NightlyStart.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles 0
+.PHONY : include/assimp/test/CMakeFiles/NightlyStart.dir/rule
+
+# Convenience name for target.
+NightlyStart: include/assimp/test/CMakeFiles/NightlyStart.dir/rule
+
+.PHONY : NightlyStart
+
+# clean rule for target.
+include/assimp/test/CMakeFiles/NightlyStart.dir/clean:
+	$(MAKE) -f include/assimp/test/CMakeFiles/NightlyStart.dir/build.make include/assimp/test/CMakeFiles/NightlyStart.dir/clean
+.PHONY : include/assimp/test/CMakeFiles/NightlyStart.dir/clean
+
+# clean rule for target.
+clean: include/assimp/test/CMakeFiles/NightlyStart.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target include/assimp/test/CMakeFiles/NightlyMemoryCheck.dir
+
+# All Build rule for target.
+include/assimp/test/CMakeFiles/NightlyMemoryCheck.dir/all:
+	$(MAKE) -f include/assimp/test/CMakeFiles/NightlyMemoryCheck.dir/build.make include/assimp/test/CMakeFiles/NightlyMemoryCheck.dir/depend
+	$(MAKE) -f include/assimp/test/CMakeFiles/NightlyMemoryCheck.dir/build.make include/assimp/test/CMakeFiles/NightlyMemoryCheck.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles --progress-num= "Built target NightlyMemoryCheck"
+.PHONY : include/assimp/test/CMakeFiles/NightlyMemoryCheck.dir/all
+
+# Build rule for subdir invocation for target.
+include/assimp/test/CMakeFiles/NightlyMemoryCheck.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 include/assimp/test/CMakeFiles/NightlyMemoryCheck.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles 0
+.PHONY : include/assimp/test/CMakeFiles/NightlyMemoryCheck.dir/rule
+
+# Convenience name for target.
+NightlyMemoryCheck: include/assimp/test/CMakeFiles/NightlyMemoryCheck.dir/rule
+
+.PHONY : NightlyMemoryCheck
+
+# clean rule for target.
+include/assimp/test/CMakeFiles/NightlyMemoryCheck.dir/clean:
+	$(MAKE) -f include/assimp/test/CMakeFiles/NightlyMemoryCheck.dir/build.make include/assimp/test/CMakeFiles/NightlyMemoryCheck.dir/clean
+.PHONY : include/assimp/test/CMakeFiles/NightlyMemoryCheck.dir/clean
+
+# clean rule for target.
+clean: include/assimp/test/CMakeFiles/NightlyMemoryCheck.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target include/assimp/test/CMakeFiles/NightlyBuild.dir
+
+# All Build rule for target.
+include/assimp/test/CMakeFiles/NightlyBuild.dir/all:
+	$(MAKE) -f include/assimp/test/CMakeFiles/NightlyBuild.dir/build.make include/assimp/test/CMakeFiles/NightlyBuild.dir/depend
+	$(MAKE) -f include/assimp/test/CMakeFiles/NightlyBuild.dir/build.make include/assimp/test/CMakeFiles/NightlyBuild.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles --progress-num= "Built target NightlyBuild"
+.PHONY : include/assimp/test/CMakeFiles/NightlyBuild.dir/all
+
+# Build rule for subdir invocation for target.
+include/assimp/test/CMakeFiles/NightlyBuild.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 include/assimp/test/CMakeFiles/NightlyBuild.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles 0
+.PHONY : include/assimp/test/CMakeFiles/NightlyBuild.dir/rule
+
+# Convenience name for target.
+NightlyBuild: include/assimp/test/CMakeFiles/NightlyBuild.dir/rule
+
+.PHONY : NightlyBuild
+
+# clean rule for target.
+include/assimp/test/CMakeFiles/NightlyBuild.dir/clean:
+	$(MAKE) -f include/assimp/test/CMakeFiles/NightlyBuild.dir/build.make include/assimp/test/CMakeFiles/NightlyBuild.dir/clean
+.PHONY : include/assimp/test/CMakeFiles/NightlyBuild.dir/clean
+
+# clean rule for target.
+clean: include/assimp/test/CMakeFiles/NightlyBuild.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target include/assimp/test/CMakeFiles/ExperimentalUpdate.dir
+
+# All Build rule for target.
+include/assimp/test/CMakeFiles/ExperimentalUpdate.dir/all:
+	$(MAKE) -f include/assimp/test/CMakeFiles/ExperimentalUpdate.dir/build.make include/assimp/test/CMakeFiles/ExperimentalUpdate.dir/depend
+	$(MAKE) -f include/assimp/test/CMakeFiles/ExperimentalUpdate.dir/build.make include/assimp/test/CMakeFiles/ExperimentalUpdate.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles --progress-num= "Built target ExperimentalUpdate"
+.PHONY : include/assimp/test/CMakeFiles/ExperimentalUpdate.dir/all
+
+# Build rule for subdir invocation for target.
+include/assimp/test/CMakeFiles/ExperimentalUpdate.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 include/assimp/test/CMakeFiles/ExperimentalUpdate.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles 0
+.PHONY : include/assimp/test/CMakeFiles/ExperimentalUpdate.dir/rule
+
+# Convenience name for target.
+ExperimentalUpdate: include/assimp/test/CMakeFiles/ExperimentalUpdate.dir/rule
+
+.PHONY : ExperimentalUpdate
+
+# clean rule for target.
+include/assimp/test/CMakeFiles/ExperimentalUpdate.dir/clean:
+	$(MAKE) -f include/assimp/test/CMakeFiles/ExperimentalUpdate.dir/build.make include/assimp/test/CMakeFiles/ExperimentalUpdate.dir/clean
+.PHONY : include/assimp/test/CMakeFiles/ExperimentalUpdate.dir/clean
+
+# clean rule for target.
+clean: include/assimp/test/CMakeFiles/ExperimentalUpdate.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target include/assimp/test/CMakeFiles/unit.dir
+
+# All Build rule for target.
+include/assimp/test/CMakeFiles/unit.dir/all: include/assimp/contrib/irrXML/CMakeFiles/IrrXML.dir/all
+include/assimp/test/CMakeFiles/unit.dir/all: include/assimp/code/CMakeFiles/assimp.dir/all
+	$(MAKE) -f include/assimp/test/CMakeFiles/unit.dir/build.make include/assimp/test/CMakeFiles/unit.dir/depend
+	$(MAKE) -f include/assimp/test/CMakeFiles/unit.dir/build.make include/assimp/test/CMakeFiles/unit.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles --progress-num=75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100 "Built target unit"
+.PHONY : include/assimp/test/CMakeFiles/unit.dir/all
+
+# Include target in all.
+all: include/assimp/test/CMakeFiles/unit.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+include/assimp/test/CMakeFiles/unit.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles 90
+	$(MAKE) -f CMakeFiles/Makefile2 include/assimp/test/CMakeFiles/unit.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles 0
+.PHONY : include/assimp/test/CMakeFiles/unit.dir/rule
+
+# Convenience name for target.
+unit: include/assimp/test/CMakeFiles/unit.dir/rule
+
+.PHONY : unit
+
+# clean rule for target.
+include/assimp/test/CMakeFiles/unit.dir/clean:
+	$(MAKE) -f include/assimp/test/CMakeFiles/unit.dir/build.make include/assimp/test/CMakeFiles/unit.dir/clean
+.PHONY : include/assimp/test/CMakeFiles/unit.dir/clean
+
+# clean rule for target.
+clean: include/assimp/test/CMakeFiles/unit.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target include/assimp/test/CMakeFiles/ContinuousBuild.dir
+
+# All Build rule for target.
+include/assimp/test/CMakeFiles/ContinuousBuild.dir/all:
+	$(MAKE) -f include/assimp/test/CMakeFiles/ContinuousBuild.dir/build.make include/assimp/test/CMakeFiles/ContinuousBuild.dir/depend
+	$(MAKE) -f include/assimp/test/CMakeFiles/ContinuousBuild.dir/build.make include/assimp/test/CMakeFiles/ContinuousBuild.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles --progress-num= "Built target ContinuousBuild"
+.PHONY : include/assimp/test/CMakeFiles/ContinuousBuild.dir/all
+
+# Build rule for subdir invocation for target.
+include/assimp/test/CMakeFiles/ContinuousBuild.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 include/assimp/test/CMakeFiles/ContinuousBuild.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles 0
+.PHONY : include/assimp/test/CMakeFiles/ContinuousBuild.dir/rule
+
+# Convenience name for target.
+ContinuousBuild: include/assimp/test/CMakeFiles/ContinuousBuild.dir/rule
+
+.PHONY : ContinuousBuild
+
+# clean rule for target.
+include/assimp/test/CMakeFiles/ContinuousBuild.dir/clean:
+	$(MAKE) -f include/assimp/test/CMakeFiles/ContinuousBuild.dir/build.make include/assimp/test/CMakeFiles/ContinuousBuild.dir/clean
+.PHONY : include/assimp/test/CMakeFiles/ContinuousBuild.dir/clean
+
+# clean rule for target.
+clean: include/assimp/test/CMakeFiles/ContinuousBuild.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target include/assimp/test/CMakeFiles/Continuous.dir
+
+# All Build rule for target.
+include/assimp/test/CMakeFiles/Continuous.dir/all:
+	$(MAKE) -f include/assimp/test/CMakeFiles/Continuous.dir/build.make include/assimp/test/CMakeFiles/Continuous.dir/depend
+	$(MAKE) -f include/assimp/test/CMakeFiles/Continuous.dir/build.make include/assimp/test/CMakeFiles/Continuous.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles --progress-num= "Built target Continuous"
+.PHONY : include/assimp/test/CMakeFiles/Continuous.dir/all
+
+# Build rule for subdir invocation for target.
+include/assimp/test/CMakeFiles/Continuous.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 include/assimp/test/CMakeFiles/Continuous.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles 0
+.PHONY : include/assimp/test/CMakeFiles/Continuous.dir/rule
+
+# Convenience name for target.
+Continuous: include/assimp/test/CMakeFiles/Continuous.dir/rule
+
+.PHONY : Continuous
+
+# clean rule for target.
+include/assimp/test/CMakeFiles/Continuous.dir/clean:
+	$(MAKE) -f include/assimp/test/CMakeFiles/Continuous.dir/build.make include/assimp/test/CMakeFiles/Continuous.dir/clean
+.PHONY : include/assimp/test/CMakeFiles/Continuous.dir/clean
+
+# clean rule for target.
+clean: include/assimp/test/CMakeFiles/Continuous.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target include/assimp/test/CMakeFiles/Experimental.dir
+
+# All Build rule for target.
+include/assimp/test/CMakeFiles/Experimental.dir/all:
+	$(MAKE) -f include/assimp/test/CMakeFiles/Experimental.dir/build.make include/assimp/test/CMakeFiles/Experimental.dir/depend
+	$(MAKE) -f include/assimp/test/CMakeFiles/Experimental.dir/build.make include/assimp/test/CMakeFiles/Experimental.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles --progress-num= "Built target Experimental"
+.PHONY : include/assimp/test/CMakeFiles/Experimental.dir/all
+
+# Build rule for subdir invocation for target.
+include/assimp/test/CMakeFiles/Experimental.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 include/assimp/test/CMakeFiles/Experimental.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles 0
+.PHONY : include/assimp/test/CMakeFiles/Experimental.dir/rule
+
+# Convenience name for target.
+Experimental: include/assimp/test/CMakeFiles/Experimental.dir/rule
+
+.PHONY : Experimental
+
+# clean rule for target.
+include/assimp/test/CMakeFiles/Experimental.dir/clean:
+	$(MAKE) -f include/assimp/test/CMakeFiles/Experimental.dir/build.make include/assimp/test/CMakeFiles/Experimental.dir/clean
+.PHONY : include/assimp/test/CMakeFiles/Experimental.dir/clean
+
+# clean rule for target.
+clean: include/assimp/test/CMakeFiles/Experimental.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target include/assimp/test/CMakeFiles/ExperimentalConfigure.dir
+
+# All Build rule for target.
+include/assimp/test/CMakeFiles/ExperimentalConfigure.dir/all:
+	$(MAKE) -f include/assimp/test/CMakeFiles/ExperimentalConfigure.dir/build.make include/assimp/test/CMakeFiles/ExperimentalConfigure.dir/depend
+	$(MAKE) -f include/assimp/test/CMakeFiles/ExperimentalConfigure.dir/build.make include/assimp/test/CMakeFiles/ExperimentalConfigure.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles --progress-num= "Built target ExperimentalConfigure"
+.PHONY : include/assimp/test/CMakeFiles/ExperimentalConfigure.dir/all
+
+# Build rule for subdir invocation for target.
+include/assimp/test/CMakeFiles/ExperimentalConfigure.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 include/assimp/test/CMakeFiles/ExperimentalConfigure.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles 0
+.PHONY : include/assimp/test/CMakeFiles/ExperimentalConfigure.dir/rule
+
+# Convenience name for target.
+ExperimentalConfigure: include/assimp/test/CMakeFiles/ExperimentalConfigure.dir/rule
+
+.PHONY : ExperimentalConfigure
+
+# clean rule for target.
+include/assimp/test/CMakeFiles/ExperimentalConfigure.dir/clean:
+	$(MAKE) -f include/assimp/test/CMakeFiles/ExperimentalConfigure.dir/build.make include/assimp/test/CMakeFiles/ExperimentalConfigure.dir/clean
+.PHONY : include/assimp/test/CMakeFiles/ExperimentalConfigure.dir/clean
+
+# clean rule for target.
+clean: include/assimp/test/CMakeFiles/ExperimentalConfigure.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target include/assimp/test/CMakeFiles/NightlyTest.dir
+
+# All Build rule for target.
+include/assimp/test/CMakeFiles/NightlyTest.dir/all:
+	$(MAKE) -f include/assimp/test/CMakeFiles/NightlyTest.dir/build.make include/assimp/test/CMakeFiles/NightlyTest.dir/depend
+	$(MAKE) -f include/assimp/test/CMakeFiles/NightlyTest.dir/build.make include/assimp/test/CMakeFiles/NightlyTest.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles --progress-num= "Built target NightlyTest"
+.PHONY : include/assimp/test/CMakeFiles/NightlyTest.dir/all
+
+# Build rule for subdir invocation for target.
+include/assimp/test/CMakeFiles/NightlyTest.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 include/assimp/test/CMakeFiles/NightlyTest.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles 0
+.PHONY : include/assimp/test/CMakeFiles/NightlyTest.dir/rule
+
+# Convenience name for target.
+NightlyTest: include/assimp/test/CMakeFiles/NightlyTest.dir/rule
+
+.PHONY : NightlyTest
+
+# clean rule for target.
+include/assimp/test/CMakeFiles/NightlyTest.dir/clean:
+	$(MAKE) -f include/assimp/test/CMakeFiles/NightlyTest.dir/build.make include/assimp/test/CMakeFiles/NightlyTest.dir/clean
+.PHONY : include/assimp/test/CMakeFiles/NightlyTest.dir/clean
+
+# clean rule for target.
+clean: include/assimp/test/CMakeFiles/NightlyTest.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target include/assimp/test/CMakeFiles/NightlyCoverage.dir
+
+# All Build rule for target.
+include/assimp/test/CMakeFiles/NightlyCoverage.dir/all:
+	$(MAKE) -f include/assimp/test/CMakeFiles/NightlyCoverage.dir/build.make include/assimp/test/CMakeFiles/NightlyCoverage.dir/depend
+	$(MAKE) -f include/assimp/test/CMakeFiles/NightlyCoverage.dir/build.make include/assimp/test/CMakeFiles/NightlyCoverage.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles --progress-num= "Built target NightlyCoverage"
+.PHONY : include/assimp/test/CMakeFiles/NightlyCoverage.dir/all
+
+# Build rule for subdir invocation for target.
+include/assimp/test/CMakeFiles/NightlyCoverage.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 include/assimp/test/CMakeFiles/NightlyCoverage.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles 0
+.PHONY : include/assimp/test/CMakeFiles/NightlyCoverage.dir/rule
+
+# Convenience name for target.
+NightlyCoverage: include/assimp/test/CMakeFiles/NightlyCoverage.dir/rule
+
+.PHONY : NightlyCoverage
+
+# clean rule for target.
+include/assimp/test/CMakeFiles/NightlyCoverage.dir/clean:
+	$(MAKE) -f include/assimp/test/CMakeFiles/NightlyCoverage.dir/build.make include/assimp/test/CMakeFiles/NightlyCoverage.dir/clean
+.PHONY : include/assimp/test/CMakeFiles/NightlyCoverage.dir/clean
+
+# clean rule for target.
+clean: include/assimp/test/CMakeFiles/NightlyCoverage.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target include/assimp/test/CMakeFiles/ExperimentalCoverage.dir
+
+# All Build rule for target.
+include/assimp/test/CMakeFiles/ExperimentalCoverage.dir/all:
+	$(MAKE) -f include/assimp/test/CMakeFiles/ExperimentalCoverage.dir/build.make include/assimp/test/CMakeFiles/ExperimentalCoverage.dir/depend
+	$(MAKE) -f include/assimp/test/CMakeFiles/ExperimentalCoverage.dir/build.make include/assimp/test/CMakeFiles/ExperimentalCoverage.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles --progress-num= "Built target ExperimentalCoverage"
+.PHONY : include/assimp/test/CMakeFiles/ExperimentalCoverage.dir/all
+
+# Build rule for subdir invocation for target.
+include/assimp/test/CMakeFiles/ExperimentalCoverage.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 include/assimp/test/CMakeFiles/ExperimentalCoverage.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles 0
+.PHONY : include/assimp/test/CMakeFiles/ExperimentalCoverage.dir/rule
+
+# Convenience name for target.
+ExperimentalCoverage: include/assimp/test/CMakeFiles/ExperimentalCoverage.dir/rule
+
+.PHONY : ExperimentalCoverage
+
+# clean rule for target.
+include/assimp/test/CMakeFiles/ExperimentalCoverage.dir/clean:
+	$(MAKE) -f include/assimp/test/CMakeFiles/ExperimentalCoverage.dir/build.make include/assimp/test/CMakeFiles/ExperimentalCoverage.dir/clean
+.PHONY : include/assimp/test/CMakeFiles/ExperimentalCoverage.dir/clean
+
+# clean rule for target.
+clean: include/assimp/test/CMakeFiles/ExperimentalCoverage.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target include/assimp/test/CMakeFiles/NightlyMemCheck.dir
+
+# All Build rule for target.
+include/assimp/test/CMakeFiles/NightlyMemCheck.dir/all:
+	$(MAKE) -f include/assimp/test/CMakeFiles/NightlyMemCheck.dir/build.make include/assimp/test/CMakeFiles/NightlyMemCheck.dir/depend
+	$(MAKE) -f include/assimp/test/CMakeFiles/NightlyMemCheck.dir/build.make include/assimp/test/CMakeFiles/NightlyMemCheck.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles --progress-num= "Built target NightlyMemCheck"
+.PHONY : include/assimp/test/CMakeFiles/NightlyMemCheck.dir/all
+
+# Build rule for subdir invocation for target.
+include/assimp/test/CMakeFiles/NightlyMemCheck.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 include/assimp/test/CMakeFiles/NightlyMemCheck.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles 0
+.PHONY : include/assimp/test/CMakeFiles/NightlyMemCheck.dir/rule
+
+# Convenience name for target.
+NightlyMemCheck: include/assimp/test/CMakeFiles/NightlyMemCheck.dir/rule
+
+.PHONY : NightlyMemCheck
+
+# clean rule for target.
+include/assimp/test/CMakeFiles/NightlyMemCheck.dir/clean:
+	$(MAKE) -f include/assimp/test/CMakeFiles/NightlyMemCheck.dir/build.make include/assimp/test/CMakeFiles/NightlyMemCheck.dir/clean
+.PHONY : include/assimp/test/CMakeFiles/NightlyMemCheck.dir/clean
+
+# clean rule for target.
+clean: include/assimp/test/CMakeFiles/NightlyMemCheck.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target include/assimp/test/CMakeFiles/ContinuousStart.dir
+
+# All Build rule for target.
+include/assimp/test/CMakeFiles/ContinuousStart.dir/all:
+	$(MAKE) -f include/assimp/test/CMakeFiles/ContinuousStart.dir/build.make include/assimp/test/CMakeFiles/ContinuousStart.dir/depend
+	$(MAKE) -f include/assimp/test/CMakeFiles/ContinuousStart.dir/build.make include/assimp/test/CMakeFiles/ContinuousStart.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles --progress-num= "Built target ContinuousStart"
+.PHONY : include/assimp/test/CMakeFiles/ContinuousStart.dir/all
+
+# Build rule for subdir invocation for target.
+include/assimp/test/CMakeFiles/ContinuousStart.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 include/assimp/test/CMakeFiles/ContinuousStart.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles 0
+.PHONY : include/assimp/test/CMakeFiles/ContinuousStart.dir/rule
+
+# Convenience name for target.
+ContinuousStart: include/assimp/test/CMakeFiles/ContinuousStart.dir/rule
+
+.PHONY : ContinuousStart
+
+# clean rule for target.
+include/assimp/test/CMakeFiles/ContinuousStart.dir/clean:
+	$(MAKE) -f include/assimp/test/CMakeFiles/ContinuousStart.dir/build.make include/assimp/test/CMakeFiles/ContinuousStart.dir/clean
+.PHONY : include/assimp/test/CMakeFiles/ContinuousStart.dir/clean
+
+# clean rule for target.
+clean: include/assimp/test/CMakeFiles/ContinuousStart.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target include/assimp/test/CMakeFiles/NightlySubmit.dir
+
+# All Build rule for target.
+include/assimp/test/CMakeFiles/NightlySubmit.dir/all:
+	$(MAKE) -f include/assimp/test/CMakeFiles/NightlySubmit.dir/build.make include/assimp/test/CMakeFiles/NightlySubmit.dir/depend
+	$(MAKE) -f include/assimp/test/CMakeFiles/NightlySubmit.dir/build.make include/assimp/test/CMakeFiles/NightlySubmit.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles --progress-num= "Built target NightlySubmit"
+.PHONY : include/assimp/test/CMakeFiles/NightlySubmit.dir/all
+
+# Build rule for subdir invocation for target.
+include/assimp/test/CMakeFiles/NightlySubmit.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 include/assimp/test/CMakeFiles/NightlySubmit.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles 0
+.PHONY : include/assimp/test/CMakeFiles/NightlySubmit.dir/rule
+
+# Convenience name for target.
+NightlySubmit: include/assimp/test/CMakeFiles/NightlySubmit.dir/rule
+
+.PHONY : NightlySubmit
+
+# clean rule for target.
+include/assimp/test/CMakeFiles/NightlySubmit.dir/clean:
+	$(MAKE) -f include/assimp/test/CMakeFiles/NightlySubmit.dir/build.make include/assimp/test/CMakeFiles/NightlySubmit.dir/clean
+.PHONY : include/assimp/test/CMakeFiles/NightlySubmit.dir/clean
+
+# clean rule for target.
+clean: include/assimp/test/CMakeFiles/NightlySubmit.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target include/assimp/test/CMakeFiles/ContinuousCoverage.dir
+
+# All Build rule for target.
+include/assimp/test/CMakeFiles/ContinuousCoverage.dir/all:
+	$(MAKE) -f include/assimp/test/CMakeFiles/ContinuousCoverage.dir/build.make include/assimp/test/CMakeFiles/ContinuousCoverage.dir/depend
+	$(MAKE) -f include/assimp/test/CMakeFiles/ContinuousCoverage.dir/build.make include/assimp/test/CMakeFiles/ContinuousCoverage.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles --progress-num= "Built target ContinuousCoverage"
+.PHONY : include/assimp/test/CMakeFiles/ContinuousCoverage.dir/all
+
+# Build rule for subdir invocation for target.
+include/assimp/test/CMakeFiles/ContinuousCoverage.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 include/assimp/test/CMakeFiles/ContinuousCoverage.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles 0
+.PHONY : include/assimp/test/CMakeFiles/ContinuousCoverage.dir/rule
+
+# Convenience name for target.
+ContinuousCoverage: include/assimp/test/CMakeFiles/ContinuousCoverage.dir/rule
+
+.PHONY : ContinuousCoverage
+
+# clean rule for target.
+include/assimp/test/CMakeFiles/ContinuousCoverage.dir/clean:
+	$(MAKE) -f include/assimp/test/CMakeFiles/ContinuousCoverage.dir/build.make include/assimp/test/CMakeFiles/ContinuousCoverage.dir/clean
+.PHONY : include/assimp/test/CMakeFiles/ContinuousCoverage.dir/clean
+
+# clean rule for target.
+clean: include/assimp/test/CMakeFiles/ContinuousCoverage.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target include/assimp/test/CMakeFiles/Nightly.dir
+
+# All Build rule for target.
+include/assimp/test/CMakeFiles/Nightly.dir/all:
+	$(MAKE) -f include/assimp/test/CMakeFiles/Nightly.dir/build.make include/assimp/test/CMakeFiles/Nightly.dir/depend
+	$(MAKE) -f include/assimp/test/CMakeFiles/Nightly.dir/build.make include/assimp/test/CMakeFiles/Nightly.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles --progress-num= "Built target Nightly"
+.PHONY : include/assimp/test/CMakeFiles/Nightly.dir/all
+
+# Build rule for subdir invocation for target.
+include/assimp/test/CMakeFiles/Nightly.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 include/assimp/test/CMakeFiles/Nightly.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles 0
+.PHONY : include/assimp/test/CMakeFiles/Nightly.dir/rule
+
+# Convenience name for target.
+Nightly: include/assimp/test/CMakeFiles/Nightly.dir/rule
+
+.PHONY : Nightly
+
+# clean rule for target.
+include/assimp/test/CMakeFiles/Nightly.dir/clean:
+	$(MAKE) -f include/assimp/test/CMakeFiles/Nightly.dir/build.make include/assimp/test/CMakeFiles/Nightly.dir/clean
+.PHONY : include/assimp/test/CMakeFiles/Nightly.dir/clean
+
+# clean rule for target.
+clean: include/assimp/test/CMakeFiles/Nightly.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target include/assimp/test/CMakeFiles/NightlyConfigure.dir
+
+# All Build rule for target.
+include/assimp/test/CMakeFiles/NightlyConfigure.dir/all:
+	$(MAKE) -f include/assimp/test/CMakeFiles/NightlyConfigure.dir/build.make include/assimp/test/CMakeFiles/NightlyConfigure.dir/depend
+	$(MAKE) -f include/assimp/test/CMakeFiles/NightlyConfigure.dir/build.make include/assimp/test/CMakeFiles/NightlyConfigure.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles --progress-num= "Built target NightlyConfigure"
+.PHONY : include/assimp/test/CMakeFiles/NightlyConfigure.dir/all
+
+# Build rule for subdir invocation for target.
+include/assimp/test/CMakeFiles/NightlyConfigure.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 include/assimp/test/CMakeFiles/NightlyConfigure.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles 0
+.PHONY : include/assimp/test/CMakeFiles/NightlyConfigure.dir/rule
+
+# Convenience name for target.
+NightlyConfigure: include/assimp/test/CMakeFiles/NightlyConfigure.dir/rule
+
+.PHONY : NightlyConfigure
+
+# clean rule for target.
+include/assimp/test/CMakeFiles/NightlyConfigure.dir/clean:
+	$(MAKE) -f include/assimp/test/CMakeFiles/NightlyConfigure.dir/build.make include/assimp/test/CMakeFiles/NightlyConfigure.dir/clean
+.PHONY : include/assimp/test/CMakeFiles/NightlyConfigure.dir/clean
+
+# clean rule for target.
+clean: include/assimp/test/CMakeFiles/NightlyConfigure.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target include/assimp/test/CMakeFiles/ExperimentalStart.dir
+
+# All Build rule for target.
+include/assimp/test/CMakeFiles/ExperimentalStart.dir/all:
+	$(MAKE) -f include/assimp/test/CMakeFiles/ExperimentalStart.dir/build.make include/assimp/test/CMakeFiles/ExperimentalStart.dir/depend
+	$(MAKE) -f include/assimp/test/CMakeFiles/ExperimentalStart.dir/build.make include/assimp/test/CMakeFiles/ExperimentalStart.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles --progress-num= "Built target ExperimentalStart"
+.PHONY : include/assimp/test/CMakeFiles/ExperimentalStart.dir/all
+
+# Build rule for subdir invocation for target.
+include/assimp/test/CMakeFiles/ExperimentalStart.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 include/assimp/test/CMakeFiles/ExperimentalStart.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles 0
+.PHONY : include/assimp/test/CMakeFiles/ExperimentalStart.dir/rule
+
+# Convenience name for target.
+ExperimentalStart: include/assimp/test/CMakeFiles/ExperimentalStart.dir/rule
+
+.PHONY : ExperimentalStart
+
+# clean rule for target.
+include/assimp/test/CMakeFiles/ExperimentalStart.dir/clean:
+	$(MAKE) -f include/assimp/test/CMakeFiles/ExperimentalStart.dir/build.make include/assimp/test/CMakeFiles/ExperimentalStart.dir/clean
+.PHONY : include/assimp/test/CMakeFiles/ExperimentalStart.dir/clean
+
+# clean rule for target.
+clean: include/assimp/test/CMakeFiles/ExperimentalStart.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target include/assimp/test/CMakeFiles/ContinuousTest.dir
+
+# All Build rule for target.
+include/assimp/test/CMakeFiles/ContinuousTest.dir/all:
+	$(MAKE) -f include/assimp/test/CMakeFiles/ContinuousTest.dir/build.make include/assimp/test/CMakeFiles/ContinuousTest.dir/depend
+	$(MAKE) -f include/assimp/test/CMakeFiles/ContinuousTest.dir/build.make include/assimp/test/CMakeFiles/ContinuousTest.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles --progress-num= "Built target ContinuousTest"
+.PHONY : include/assimp/test/CMakeFiles/ContinuousTest.dir/all
+
+# Build rule for subdir invocation for target.
+include/assimp/test/CMakeFiles/ContinuousTest.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 include/assimp/test/CMakeFiles/ContinuousTest.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles 0
+.PHONY : include/assimp/test/CMakeFiles/ContinuousTest.dir/rule
+
+# Convenience name for target.
+ContinuousTest: include/assimp/test/CMakeFiles/ContinuousTest.dir/rule
+
+.PHONY : ContinuousTest
+
+# clean rule for target.
+include/assimp/test/CMakeFiles/ContinuousTest.dir/clean:
+	$(MAKE) -f include/assimp/test/CMakeFiles/ContinuousTest.dir/build.make include/assimp/test/CMakeFiles/ContinuousTest.dir/clean
+.PHONY : include/assimp/test/CMakeFiles/ContinuousTest.dir/clean
+
+# clean rule for target.
+clean: include/assimp/test/CMakeFiles/ContinuousTest.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target include/assimp/test/CMakeFiles/ContinuousUpdate.dir
+
+# All Build rule for target.
+include/assimp/test/CMakeFiles/ContinuousUpdate.dir/all:
+	$(MAKE) -f include/assimp/test/CMakeFiles/ContinuousUpdate.dir/build.make include/assimp/test/CMakeFiles/ContinuousUpdate.dir/depend
+	$(MAKE) -f include/assimp/test/CMakeFiles/ContinuousUpdate.dir/build.make include/assimp/test/CMakeFiles/ContinuousUpdate.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles --progress-num= "Built target ContinuousUpdate"
+.PHONY : include/assimp/test/CMakeFiles/ContinuousUpdate.dir/all
+
+# Build rule for subdir invocation for target.
+include/assimp/test/CMakeFiles/ContinuousUpdate.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 include/assimp/test/CMakeFiles/ContinuousUpdate.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles 0
+.PHONY : include/assimp/test/CMakeFiles/ContinuousUpdate.dir/rule
+
+# Convenience name for target.
+ContinuousUpdate: include/assimp/test/CMakeFiles/ContinuousUpdate.dir/rule
+
+.PHONY : ContinuousUpdate
+
+# clean rule for target.
+include/assimp/test/CMakeFiles/ContinuousUpdate.dir/clean:
+	$(MAKE) -f include/assimp/test/CMakeFiles/ContinuousUpdate.dir/build.make include/assimp/test/CMakeFiles/ContinuousUpdate.dir/clean
+.PHONY : include/assimp/test/CMakeFiles/ContinuousUpdate.dir/clean
+
+# clean rule for target.
+clean: include/assimp/test/CMakeFiles/ContinuousUpdate.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target include/assimp/test/CMakeFiles/ExperimentalBuild.dir
+
+# All Build rule for target.
+include/assimp/test/CMakeFiles/ExperimentalBuild.dir/all:
+	$(MAKE) -f include/assimp/test/CMakeFiles/ExperimentalBuild.dir/build.make include/assimp/test/CMakeFiles/ExperimentalBuild.dir/depend
+	$(MAKE) -f include/assimp/test/CMakeFiles/ExperimentalBuild.dir/build.make include/assimp/test/CMakeFiles/ExperimentalBuild.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles --progress-num= "Built target ExperimentalBuild"
+.PHONY : include/assimp/test/CMakeFiles/ExperimentalBuild.dir/all
+
+# Build rule for subdir invocation for target.
+include/assimp/test/CMakeFiles/ExperimentalBuild.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 include/assimp/test/CMakeFiles/ExperimentalBuild.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles 0
+.PHONY : include/assimp/test/CMakeFiles/ExperimentalBuild.dir/rule
+
+# Convenience name for target.
+ExperimentalBuild: include/assimp/test/CMakeFiles/ExperimentalBuild.dir/rule
+
+.PHONY : ExperimentalBuild
+
+# clean rule for target.
+include/assimp/test/CMakeFiles/ExperimentalBuild.dir/clean:
+	$(MAKE) -f include/assimp/test/CMakeFiles/ExperimentalBuild.dir/build.make include/assimp/test/CMakeFiles/ExperimentalBuild.dir/clean
+.PHONY : include/assimp/test/CMakeFiles/ExperimentalBuild.dir/clean
+
+# clean rule for target.
+clean: include/assimp/test/CMakeFiles/ExperimentalBuild.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory include/assimp/test/headercheck
+
+# Convenience name for "all" pass in the directory.
+include/assimp/test/headercheck/all:
+
+.PHONY : include/assimp/test/headercheck/all
+
+# Convenience name for "clean" pass in the directory.
+include/assimp/test/headercheck/clean:
+
+.PHONY : include/assimp/test/headercheck/clean
+
+# Convenience name for "preinstall" pass in the directory.
+include/assimp/test/headercheck/preinstall:
+
+.PHONY : include/assimp/test/headercheck/preinstall
 
 #=============================================================================
 # Special targets to cleanup operation of make.

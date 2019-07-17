@@ -81,6 +81,8 @@ namespace core {
     void framebuffer_size_callback(GLFWwindow *window, int width, int height) {
         // Simply makes the viewport in the whole screen - bottom left to top right
         glViewport(0, 0, width, height);
+        Data.SCR_WIDTH = width;
+        Data.SCR_HEIGHT = height;
     }
 
     void mouse_callback(GLFWwindow *window, double xpos, double ypos) {

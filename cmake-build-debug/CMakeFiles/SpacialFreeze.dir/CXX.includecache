@@ -1490,6 +1490,12 @@ Shader.h
 Model.h
 /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Model.h
 
+/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Framebuffer.h
+string
+-
+exception
+-
+
 /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Lightning.h
 random
 -
@@ -1547,10 +1553,10 @@ src/core/util.cpp
 /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/src/core/util.cpp
 src/logger.cpp
 /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/src/logger.cpp
-src/framebuffer.cpp
-/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/src/framebuffer.cpp
 src/stencil.cpp
 /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/src/stencil.cpp
+classes/Framebuffer.h
+/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Framebuffer.h
 
 /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/src/core/data.cpp
 include.cpp
@@ -1611,8 +1617,6 @@ data.cpp
 /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/src/core/data.cpp
 
 /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/src/core/util.cpp
-
-/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/src/framebuffer.cpp
 
 /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/src/logger.cpp
 

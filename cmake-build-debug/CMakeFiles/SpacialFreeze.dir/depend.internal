@@ -337,6 +337,10 @@ CMakeFiles/SpacialFreeze.dir/classes/CubeModel.cpp.o
  /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/CubeModel.h
  /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Model.h
  /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Shader.h
+CMakeFiles/SpacialFreeze.dir/classes/Framebuffer.cpp.o
+ ../include/glad/glad.h
+ /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Framebuffer.cpp
+ /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Framebuffer.h
 CMakeFiles/SpacialFreeze.dir/classes/Lightning.cpp.o
  ../include/glad/glad.h
  /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Lightning.cpp
@@ -1124,6 +1128,7 @@ CMakeFiles/SpacialFreeze.dir/main.cpp.o
  ../include/stb_image.h
  /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Camera.h
  /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/CubeModel.h
+ /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Framebuffer.h
  /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Lightning.h
  /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Model.h
  /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Shader.h
@@ -1135,6 +1140,5 @@ CMakeFiles/SpacialFreeze.dir/main.cpp.o
  /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/src/core/init.cpp
  /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/src/core/preInit.cpp
  /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/src/core/util.cpp
- /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/src/framebuffer.cpp
  /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/src/logger.cpp
  /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/src/stencil.cpp

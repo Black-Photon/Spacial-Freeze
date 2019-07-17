@@ -40,6 +40,7 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/include/glfw-3.2.1/cmake_install.cmake")
+  include("/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/include/assimp/cmake_install.cmake")
 
 endif()
 

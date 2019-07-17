@@ -26,6 +26,7 @@ namespace core {
         glEnable(GL_DEPTH_TEST);
         glEnable(GL_STENCIL_TEST);
         glEnable(GL_CULL_FACE);
+        glEnable(GL_SCISSOR_TEST);
 
         // Flips Textures to correct orientation
         stbi_set_flip_vertically_on_load(true);

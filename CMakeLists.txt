@@ -3,22 +3,31 @@ project(SpacialFreeze)
 
 set(CMAKE_CXX_STANDARD 17)
 
-# GLaDOS
+# Project Files
+add_executable(
+        SpacialFreeze
 
-include_directories(include)
-
-add_executable(SpacialFreeze
         ./main.cpp
+
+        # Library Includes
         src/glad.c
         include/glad/glad.h
         include/stb_image.h
-        classes/Camera.cpp classes/Shader.cpp classes/Model.cpp classes/CubeModel.cpp classes/SquareModel.cpp classes/Lightning.cpp)
 
-# GLFW
+        # Class files
+        classes/Camera.cpp classes/Shader.cpp classes/Model.cpp classes/CubeModel.cpp classes/SquareModel.cpp
+        classes/Lightning.cpp classes/Framebuffer.cpp
+        )
 
-set(GLFW_BUILD_DOCS OFF CACHE BOOL "" FORCE)
-set(GLFW_BUILD_TESTS OFF CACHE BOOL "" FORCE)
-set(GLFW_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
-
+# GLFW / GLAD
 add_subdirectory("/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/include/glfw-3.2.1/")
-target_link_libraries(SpacialFreeze glfw)
+include_directories(include)
+
+# Assimp
+add_subdirectory(include/assimp)
+include_directories(include/assimp/include include/assimp/out/include)
+set(BUILD_ASSIMP_TOOLS  ON)
+set(ASSIMP_BUILD_STATIC_LIB ON)
+
+# Link all
+target_link_libraries(SpacialFreeze glfw assimp)

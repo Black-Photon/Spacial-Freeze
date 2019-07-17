@@ -50,6 +50,10 @@ namespace core {
         if(glfwGetKey(Data.window, GLFW_KEY_LEFT_SHIFT) == GLFW_PRESS) {
             Data.camera->moveOnPlane(BACKWARD, Z, deltaT);
         }
+        if(glfwGetKey(Data.window, GLFW_KEY_LEFT_CONTROL) == GLFW_PRESS && !Data.ctrlPressed) {
+            Data.closed = !Data.closed;
+            Data.ctrlPressed = true;
+        } else if(glfwGetKey(Data.window, GLFW_KEY_LEFT_CONTROL) != GLFW_PRESS) Data.ctrlPressed = false;
     }
 
     void prerender(float r, float g, float b) {

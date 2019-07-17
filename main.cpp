@@ -9,8 +9,8 @@
 #include "src/core/frame.cpp"
 #include "src/core/util.cpp"
 #include "src/logger.cpp"
-#include "src/framebuffer.cpp"
 #include "src/stencil.cpp"
+#include "classes/Framebuffer.h"
 
 namespace core {
     void drawLandscape(Shader &modelShader, float size) {
@@ -49,27 +49,40 @@ namespace core {
 
         stencil::startTrace(1);
         modelShader.setVec4("colour", 0.0f, 0.0f, 0.0f, 0.0f);
-        drawLandscape(modelShader, 1.0f);
+        drawLandscape(modelShader, 0.99f);
 
         stencil::startDrawInvert(1);
         modelShader.setVec4("colour", 1.0f, 0.5f, 0.0f, 1.0f);
-        drawLandscape(modelShader, 1.02f);
+        drawLandscape(modelShader, 1.01f);
 
         stencil::disable();
     }
 
-    void frame(unsigned int framebuffer, unsigned int fbTex, Lightning &lightningX, Lightning &lightningY) {
-        float currentFrame = glfwGetTime();
-        float deltaTime = currentFrame - Data.lastFrame;
-        Data.lastFrame = currentFrame;
-        processInput(deltaTime);
-        prerender(0.1, 0.1, 0.1);
+    void renderSceneNormal(Framebuffer &fbMain) {
+        fbMain.startWrite();
+        prerender(1, 1, 1);
+        Shader singleColourShader("basic3d.vert", "solidColour.frag", Path.shaders);
+        singleColourShader.use();
+        singleColourShader.setVec4("colour", 1.0f, 0.0f, 0.0f, 1.0f);
+        drawLandscape(singleColourShader, 1.0f);
+        fbMain.endWrite(Data.SCR_WIDTH, Data.SCR_HEIGHT);
+    }
 
-        framebuffer::startWrite(Data.SCR_WIDTH, Data.SCR_HEIGHT, framebuffer);
+    void renderSceneLightning(Framebuffer &fbLightning) {
+        fbLightning.startWrite();
         Shader singleColourShader("basic3d.vert", "solidColour.frag", Path.shaders);
         renderOutline(singleColourShader);
-        framebuffer::endWrite();
+        fbLightning.endWrite(Data.SCR_WIDTH, Data.SCR_HEIGHT);
+    }
 
+    void drawSceneNormal(Framebuffer &fbMain) {
+        Shader postProcessing("basic2d.vert", "texture.frag", Path.shaders);
+        postProcessing.use();
+        postProcessing.setFloat("zPos", 0.0f);
+        drawTexture(postProcessing, fbMain.texture);
+    }
+
+    void drawSceneLightning(Framebuffer &fbLightning, Lightning &lightningX, Lightning &lightningY) {
         lightningX.update(0.004);
         lightningY.update(0.004);
         Shader postProcessing("basic2d.vert", "lightning.frag", Path.shaders);
@@ -80,7 +93,30 @@ namespace core {
         postProcessing.setInt("lightningY", 2);
         glActiveTexture(GL_TEXTURE2);
         glBindTexture(GL_TEXTURE_1D, lightningY.getTexture());
-        drawTexture(postProcessing, fbTex);
+        postProcessing.setFloat("zPos", 0.1f);
+        drawTexture(postProcessing, fbLightning.texture);
+    }
+
+    void frame(Framebuffer &framebuffer, Lightning &lightningX, Lightning &lightningY) {
+        float currentFrame = glfwGetTime();
+        float deltaTime = currentFrame - Data.lastFrame;
+        Data.lastFrame = currentFrame;
+        processInput(deltaTime);
+
+        if(Data.closed && Data.distanceOpen > 0) Data.distanceOpen -= deltaTime * 5;
+        else if(!Data.closed && Data.distanceOpen < 1) Data.distanceOpen += deltaTime * 5;
+        if(Data.distanceOpen > 1) Data.distanceOpen = 1;
+        else if(Data.distanceOpen < 0) Data.distanceOpen = 0;
+
+        framebuffer.updateSize(Data.SCR_WIDTH, Data.SCR_HEIGHT); // Done in case of window size change
+        prerender(0.1, 0.1, 0.1);
+        renderSceneLightning(framebuffer);
+        drawSceneLightning(framebuffer, lightningX, lightningY);
+        glScissor(Data.SCR_WIDTH/4, Data.SCR_HEIGHT * (1 - Data.distanceOpen) / 2, Data.SCR_WIDTH/2, Data.SCR_HEIGHT * Data.distanceOpen);
+        renderSceneNormal(framebuffer);
+        drawSceneNormal(framebuffer);
+        glScissor(0, 0, Data.SCR_WIDTH, Data.SCR_HEIGHT);
+
 
         glCheckError();
         glfwPollEvents();
@@ -95,14 +131,12 @@ namespace core {
         init(true);
         logger::message("Initialisation Complete");
 
-        unsigned int framebuffer;
-        unsigned int fbTex;
-        framebuffer::setup(Data.SCR_WIDTH, Data.SCR_HEIGHT, true, &framebuffer, &fbTex);
+        Framebuffer framebuffer(Data.SCR_WIDTH, Data.SCR_HEIGHT, true);
 
         Lightning lightningX;
         Lightning lightningY;
         logger::message("Starting Draw Phase");
-        while (!shouldClose()) frame(framebuffer, fbTex, lightningX, lightningY);
+        while (!shouldClose()) frame(framebuffer, lightningX, lightningY);
 
         close();
     }
@@ -115,7 +149,7 @@ int main() {
         logger::fatal(e.what());
     } catch (shaderException &e) {
         logger::fatal(e.what());
-    } catch (framebuffer::framebufferException &e) {
+    } catch (framebufferException &e) {
         logger::fatal(e.what());
     }
 }

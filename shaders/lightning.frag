@@ -18,8 +18,6 @@ void main()
 
     // Shift coordinates depending on value
     vec2 newCoords = vec2(TexCoords.x + lightningValX, TexCoords.y + lightningValY);
-    while (newCoords.x > 1.0) newCoords.x = newCoords.x - 1.0;
-    while (newCoords.x < 0.0) newCoords.x = newCoords.x + 1.0;
 
     FragColor = texture(texture2D, newCoords) * vec4(vec3(1.0), 1.0);
 }
