@@ -638,33 +638,6 @@ classes/Camera.cpp.s:
 	$(MAKE) -f CMakeFiles/SpacialFreeze.dir/build.make CMakeFiles/SpacialFreeze.dir/classes/Camera.cpp.s
 .PHONY : classes/Camera.cpp.s
 
-classes/CubeModel.o: classes/CubeModel.cpp.o
-
-.PHONY : classes/CubeModel.o
-
-# target to build an object file
-classes/CubeModel.cpp.o:
-	$(MAKE) -f CMakeFiles/SpacialFreeze.dir/build.make CMakeFiles/SpacialFreeze.dir/classes/CubeModel.cpp.o
-.PHONY : classes/CubeModel.cpp.o
-
-classes/CubeModel.i: classes/CubeModel.cpp.i
-
-.PHONY : classes/CubeModel.i
-
-# target to preprocess a source file
-classes/CubeModel.cpp.i:
-	$(MAKE) -f CMakeFiles/SpacialFreeze.dir/build.make CMakeFiles/SpacialFreeze.dir/classes/CubeModel.cpp.i
-.PHONY : classes/CubeModel.cpp.i
-
-classes/CubeModel.s: classes/CubeModel.cpp.s
-
-.PHONY : classes/CubeModel.s
-
-# target to generate assembly for a file
-classes/CubeModel.cpp.s:
-	$(MAKE) -f CMakeFiles/SpacialFreeze.dir/build.make CMakeFiles/SpacialFreeze.dir/classes/CubeModel.cpp.s
-.PHONY : classes/CubeModel.cpp.s
-
 classes/Framebuffer.o: classes/Framebuffer.cpp.o
 
 .PHONY : classes/Framebuffer.o
@@ -718,6 +691,33 @@ classes/Lightning.s: classes/Lightning.cpp.s
 classes/Lightning.cpp.s:
 	$(MAKE) -f CMakeFiles/SpacialFreeze.dir/build.make CMakeFiles/SpacialFreeze.dir/classes/Lightning.cpp.s
 .PHONY : classes/Lightning.cpp.s
+
+classes/Mesh.o: classes/Mesh.cpp.o
+
+.PHONY : classes/Mesh.o
+
+# target to build an object file
+classes/Mesh.cpp.o:
+	$(MAKE) -f CMakeFiles/SpacialFreeze.dir/build.make CMakeFiles/SpacialFreeze.dir/classes/Mesh.cpp.o
+.PHONY : classes/Mesh.cpp.o
+
+classes/Mesh.i: classes/Mesh.cpp.i
+
+.PHONY : classes/Mesh.i
+
+# target to preprocess a source file
+classes/Mesh.cpp.i:
+	$(MAKE) -f CMakeFiles/SpacialFreeze.dir/build.make CMakeFiles/SpacialFreeze.dir/classes/Mesh.cpp.i
+.PHONY : classes/Mesh.cpp.i
+
+classes/Mesh.s: classes/Mesh.cpp.s
+
+.PHONY : classes/Mesh.s
+
+# target to generate assembly for a file
+classes/Mesh.cpp.s:
+	$(MAKE) -f CMakeFiles/SpacialFreeze.dir/build.make CMakeFiles/SpacialFreeze.dir/classes/Mesh.cpp.s
+.PHONY : classes/Mesh.cpp.s
 
 classes/Model.o: classes/Model.cpp.o
 
@@ -773,32 +773,32 @@ classes/Shader.cpp.s:
 	$(MAKE) -f CMakeFiles/SpacialFreeze.dir/build.make CMakeFiles/SpacialFreeze.dir/classes/Shader.cpp.s
 .PHONY : classes/Shader.cpp.s
 
-classes/SquareModel.o: classes/SquareModel.cpp.o
+classes/SquareMesh.o: classes/SquareMesh.cpp.o
 
-.PHONY : classes/SquareModel.o
+.PHONY : classes/SquareMesh.o
 
 # target to build an object file
-classes/SquareModel.cpp.o:
-	$(MAKE) -f CMakeFiles/SpacialFreeze.dir/build.make CMakeFiles/SpacialFreeze.dir/classes/SquareModel.cpp.o
-.PHONY : classes/SquareModel.cpp.o
+classes/SquareMesh.cpp.o:
+	$(MAKE) -f CMakeFiles/SpacialFreeze.dir/build.make CMakeFiles/SpacialFreeze.dir/classes/SquareMesh.cpp.o
+.PHONY : classes/SquareMesh.cpp.o
 
-classes/SquareModel.i: classes/SquareModel.cpp.i
+classes/SquareMesh.i: classes/SquareMesh.cpp.i
 
-.PHONY : classes/SquareModel.i
+.PHONY : classes/SquareMesh.i
 
 # target to preprocess a source file
-classes/SquareModel.cpp.i:
-	$(MAKE) -f CMakeFiles/SpacialFreeze.dir/build.make CMakeFiles/SpacialFreeze.dir/classes/SquareModel.cpp.i
-.PHONY : classes/SquareModel.cpp.i
+classes/SquareMesh.cpp.i:
+	$(MAKE) -f CMakeFiles/SpacialFreeze.dir/build.make CMakeFiles/SpacialFreeze.dir/classes/SquareMesh.cpp.i
+.PHONY : classes/SquareMesh.cpp.i
 
-classes/SquareModel.s: classes/SquareModel.cpp.s
+classes/SquareMesh.s: classes/SquareMesh.cpp.s
 
-.PHONY : classes/SquareModel.s
+.PHONY : classes/SquareMesh.s
 
 # target to generate assembly for a file
-classes/SquareModel.cpp.s:
-	$(MAKE) -f CMakeFiles/SpacialFreeze.dir/build.make CMakeFiles/SpacialFreeze.dir/classes/SquareModel.cpp.s
-.PHONY : classes/SquareModel.cpp.s
+classes/SquareMesh.cpp.s:
+	$(MAKE) -f CMakeFiles/SpacialFreeze.dir/build.make CMakeFiles/SpacialFreeze.dir/classes/SquareMesh.cpp.s
+.PHONY : classes/SquareMesh.cpp.s
 
 main.o: main.cpp.o
 
@@ -827,6 +827,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/SpacialFreeze.dir/build.make CMakeFiles/SpacialFreeze.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+src/error.o: src/error.cpp.o
+
+.PHONY : src/error.o
+
+# target to build an object file
+src/error.cpp.o:
+	$(MAKE) -f CMakeFiles/SpacialFreeze.dir/build.make CMakeFiles/SpacialFreeze.dir/src/error.cpp.o
+.PHONY : src/error.cpp.o
+
+src/error.i: src/error.cpp.i
+
+.PHONY : src/error.i
+
+# target to preprocess a source file
+src/error.cpp.i:
+	$(MAKE) -f CMakeFiles/SpacialFreeze.dir/build.make CMakeFiles/SpacialFreeze.dir/src/error.cpp.i
+.PHONY : src/error.cpp.i
+
+src/error.s: src/error.cpp.s
+
+.PHONY : src/error.s
+
+# target to generate assembly for a file
+src/error.cpp.s:
+	$(MAKE) -f CMakeFiles/SpacialFreeze.dir/build.make CMakeFiles/SpacialFreeze.dir/src/error.cpp.s
+.PHONY : src/error.cpp.s
+
 src/glad.o: src/glad.c.o
 
 .PHONY : src/glad.o
@@ -853,6 +880,60 @@ src/glad.s: src/glad.c.s
 src/glad.c.s:
 	$(MAKE) -f CMakeFiles/SpacialFreeze.dir/build.make CMakeFiles/SpacialFreeze.dir/src/glad.c.s
 .PHONY : src/glad.c.s
+
+src/logger.o: src/logger.cpp.o
+
+.PHONY : src/logger.o
+
+# target to build an object file
+src/logger.cpp.o:
+	$(MAKE) -f CMakeFiles/SpacialFreeze.dir/build.make CMakeFiles/SpacialFreeze.dir/src/logger.cpp.o
+.PHONY : src/logger.cpp.o
+
+src/logger.i: src/logger.cpp.i
+
+.PHONY : src/logger.i
+
+# target to preprocess a source file
+src/logger.cpp.i:
+	$(MAKE) -f CMakeFiles/SpacialFreeze.dir/build.make CMakeFiles/SpacialFreeze.dir/src/logger.cpp.i
+.PHONY : src/logger.cpp.i
+
+src/logger.s: src/logger.cpp.s
+
+.PHONY : src/logger.s
+
+# target to generate assembly for a file
+src/logger.cpp.s:
+	$(MAKE) -f CMakeFiles/SpacialFreeze.dir/build.make CMakeFiles/SpacialFreeze.dir/src/logger.cpp.s
+.PHONY : src/logger.cpp.s
+
+src/texture.o: src/texture.cpp.o
+
+.PHONY : src/texture.o
+
+# target to build an object file
+src/texture.cpp.o:
+	$(MAKE) -f CMakeFiles/SpacialFreeze.dir/build.make CMakeFiles/SpacialFreeze.dir/src/texture.cpp.o
+.PHONY : src/texture.cpp.o
+
+src/texture.i: src/texture.cpp.i
+
+.PHONY : src/texture.i
+
+# target to preprocess a source file
+src/texture.cpp.i:
+	$(MAKE) -f CMakeFiles/SpacialFreeze.dir/build.make CMakeFiles/SpacialFreeze.dir/src/texture.cpp.i
+.PHONY : src/texture.cpp.i
+
+src/texture.s: src/texture.cpp.s
+
+.PHONY : src/texture.s
+
+# target to generate assembly for a file
+src/texture.cpp.s:
+	$(MAKE) -f CMakeFiles/SpacialFreeze.dir/build.make CMakeFiles/SpacialFreeze.dir/src/texture.cpp.s
+.PHONY : src/texture.cpp.s
 
 # Help Target
 help:
@@ -904,30 +985,39 @@ help:
 	@echo "... classes/Camera.o"
 	@echo "... classes/Camera.i"
 	@echo "... classes/Camera.s"
-	@echo "... classes/CubeModel.o"
-	@echo "... classes/CubeModel.i"
-	@echo "... classes/CubeModel.s"
 	@echo "... classes/Framebuffer.o"
 	@echo "... classes/Framebuffer.i"
 	@echo "... classes/Framebuffer.s"
 	@echo "... classes/Lightning.o"
 	@echo "... classes/Lightning.i"
 	@echo "... classes/Lightning.s"
+	@echo "... classes/Mesh.o"
+	@echo "... classes/Mesh.i"
+	@echo "... classes/Mesh.s"
 	@echo "... classes/Model.o"
 	@echo "... classes/Model.i"
 	@echo "... classes/Model.s"
 	@echo "... classes/Shader.o"
 	@echo "... classes/Shader.i"
 	@echo "... classes/Shader.s"
-	@echo "... classes/SquareModel.o"
-	@echo "... classes/SquareModel.i"
-	@echo "... classes/SquareModel.s"
+	@echo "... classes/SquareMesh.o"
+	@echo "... classes/SquareMesh.i"
+	@echo "... classes/SquareMesh.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... src/error.o"
+	@echo "... src/error.i"
+	@echo "... src/error.s"
 	@echo "... src/glad.o"
 	@echo "... src/glad.i"
 	@echo "... src/glad.s"
+	@echo "... src/logger.o"
+	@echo "... src/logger.i"
+	@echo "... src/logger.s"
+	@echo "... src/texture.o"
+	@echo "... src/texture.i"
+	@echo "... src/texture.s"
 .PHONY : help
 
 

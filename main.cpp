@@ -1,41 +1,31 @@
 #include "classes/Shader.h"
-#include "classes/CubeModel.h"
-#include "classes/SquareModel.h"
+#include "classes/SquareMesh.h"
 #include "classes/Lightning.h"
+#include "classes/Framebuffer.h"
+#include "classes/Model.h"
 #include "src/core/include.cpp"
 #include "src/core/data.cpp"
 #include "src/core/preInit.cpp"
 #include "src/core/init.cpp"
 #include "src/core/frame.cpp"
 #include "src/core/util.cpp"
-#include "src/logger.cpp"
 #include "src/stencil.cpp"
-#include "classes/Framebuffer.h"
+#include "headers/logger.h"
+#include "headers/error.h"
 
 namespace core {
+    Model *model;
     void drawLandscape(Shader &modelShader, float size) {
-        CubeModel cube;
-        makeModel(modelShader, Data.camera.operator*());
-        cube.bind();
-        modelShader.use();
-        glm::mat4 scale = glm::scale(glm::mat4(1.0f), glm::vec3(size));
-        modelShader.setMat4("scale", scale);
-
-        glm::vec3 pos = glm::vec3(0.0f, 0.0f, -2.0f);
-        cube.draw(pos, modelShader);
-        pos = glm::vec3(3.0f, -1.0f, -4.0f);
-        cube.draw(pos, modelShader);
-        pos = glm::vec3(7.0f, 2.0f, 1.0f);
-        cube.draw(pos, modelShader);
-        pos = glm::vec3(-1.0f, 1.0f, 4.0f);
-        cube.draw(pos, modelShader);
-        pos = glm::vec3(0.0f, -5.0f, 0.0f);
-        cube.draw(pos, modelShader);
+        makeModel(modelShader, *Data.camera);
+        glm::mat4 modelMat = glm::translate(glm::mat4(1.0f), glm::vec3(0.0f, 0.0f, 0.0f));
+        modelMat = glm::scale(modelMat, glm::vec3(size * 0.1f));
+        modelMat = glm::translate(modelMat, glm::vec3(0.0f, -10.0f, 0.0f));
+        modelShader.setMat4("model", modelMat);
+        model->draw(modelShader);
     }
 
     void drawTexture(Shader &postProcessing, unsigned int tex) {
-        SquareModel square;
-        square.bind();
+        SquareMesh square;
         postProcessing.use();
         postProcessing.setInt("texture2D", 0);
         glActiveTexture(GL_TEXTURE0);
@@ -43,35 +33,33 @@ namespace core {
         square.draw(postProcessing);
     }
 
-    void renderOutline(Shader &modelShader) {
+    void renderOutline(Shader &modelShader, float diff) {
         stencil::enable();
         modelShader.use();
 
         stencil::startTrace(1);
-        modelShader.setVec4("colour", 0.0f, 0.0f, 0.0f, 0.0f);
-        drawLandscape(modelShader, 0.99f);
+        modelShader.setVec4("colour", 0.1f, 0.1f, 0.1f, 0.0f);
+        drawLandscape(modelShader, 1.0f - diff);
 
         stencil::startDrawInvert(1);
         modelShader.setVec4("colour", 1.0f, 0.5f, 0.0f, 1.0f);
-        drawLandscape(modelShader, 1.01f);
+        drawLandscape(modelShader, 1.0f + diff);
 
         stencil::disable();
     }
 
     void renderSceneNormal(Framebuffer &fbMain) {
         fbMain.startWrite();
-        prerender(1, 1, 1);
-        Shader singleColourShader("basic3d.vert", "solidColour.frag", Path.shaders);
-        singleColourShader.use();
-        singleColourShader.setVec4("colour", 1.0f, 0.0f, 0.0f, 1.0f);
-        drawLandscape(singleColourShader, 1.0f);
+        prerender(0, 0, 0);
+        Shader shader("basic3d.vert", "model.frag", Path.shaders);
+        drawLandscape(shader, 1.0f);
         fbMain.endWrite(Data.SCR_WIDTH, Data.SCR_HEIGHT);
     }
 
     void renderSceneLightning(Framebuffer &fbLightning) {
         fbLightning.startWrite();
         Shader singleColourShader("basic3d.vert", "solidColour.frag", Path.shaders);
-        renderOutline(singleColourShader);
+        renderOutline(singleColourShader, 0.02f);
         fbLightning.endWrite(Data.SCR_WIDTH, Data.SCR_HEIGHT);
     }
 
@@ -110,6 +98,7 @@ namespace core {
 
         framebuffer.updateSize(Data.SCR_WIDTH, Data.SCR_HEIGHT); // Done in case of window size change
         prerender(0.1, 0.1, 0.1);
+
         renderSceneLightning(framebuffer);
         drawSceneLightning(framebuffer, lightningX, lightningY);
         glScissor(Data.SCR_WIDTH/4, Data.SCR_HEIGHT * (1 - Data.distanceOpen) / 2, Data.SCR_WIDTH/2, Data.SCR_HEIGHT * Data.distanceOpen);
@@ -121,7 +110,6 @@ namespace core {
         glCheckError();
         glfwPollEvents();
         glfwSwapBuffers(Data.window);
-        glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
     }
 
     void run() {
@@ -135,7 +123,9 @@ namespace core {
 
         Lightning lightningX;
         Lightning lightningY;
-        logger::message("Starting Draw Phase");
+        Model model(Path.models + "nanosuit/nanosuit.obj");
+        core::model = &model;
+        logger::message("Starting draw Phase");
         while (!shouldClose()) frame(framebuffer, lightningX, lightningY);
 
         close();

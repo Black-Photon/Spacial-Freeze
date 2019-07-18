@@ -172,8 +172,17 @@ CMakeFiles/SpacialFreeze.dir/classes/Camera.cpp.o
  ../include/glm/vector_relational.hpp
  /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Camera.cpp
  /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Camera.h
-CMakeFiles/SpacialFreeze.dir/classes/CubeModel.cpp.o
+CMakeFiles/SpacialFreeze.dir/classes/Framebuffer.cpp.o
  ../include/glad/glad.h
+ /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Framebuffer.cpp
+ /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Framebuffer.h
+CMakeFiles/SpacialFreeze.dir/classes/Lightning.cpp.o
+ ../include/glad/glad.h
+ /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Lightning.cpp
+ /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Lightning.h
+CMakeFiles/SpacialFreeze.dir/classes/Mesh.cpp.o
+ ../include/glad/glad.h
+ ../include/glm/./detail/setup.hpp
  ../include/glm/./detail/type_mat2x2.hpp
  ../include/glm/./detail/type_mat2x2.inl
  ../include/glm/./detail/type_mat2x3.hpp
@@ -301,15 +310,9 @@ CMakeFiles/SpacialFreeze.dir/classes/CubeModel.cpp.o
  ../include/glm/detail/type_vec4.inl
  ../include/glm/detail/type_vec4_simd.inl
  ../include/glm/exponential.hpp
- ../include/glm/ext/matrix_transform.hpp
- ../include/glm/ext/matrix_transform.inl
- ../include/glm/ext/scalar_constants.hpp
- ../include/glm/ext/scalar_constants.inl
  ../include/glm/fwd.hpp
  ../include/glm/geometric.hpp
  ../include/glm/glm.hpp
- ../include/glm/gtc/constants.hpp
- ../include/glm/gtc/constants.inl
  ../include/glm/integer.hpp
  ../include/glm/mat2x2.hpp
  ../include/glm/mat2x3.hpp
@@ -333,21 +336,42 @@ CMakeFiles/SpacialFreeze.dir/classes/CubeModel.cpp.o
  ../include/glm/vec3.hpp
  ../include/glm/vec4.hpp
  ../include/glm/vector_relational.hpp
- /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/CubeModel.cpp
- /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/CubeModel.h
- /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Model.h
+ /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Mesh.cpp
+ /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Mesh.h
  /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Shader.h
-CMakeFiles/SpacialFreeze.dir/classes/Framebuffer.cpp.o
- ../include/glad/glad.h
- /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Framebuffer.cpp
- /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Framebuffer.h
-CMakeFiles/SpacialFreeze.dir/classes/Lightning.cpp.o
- ../include/glad/glad.h
- /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Lightning.cpp
- /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Lightning.h
+ /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/headers/error.h
+ /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/headers/texture.h
 CMakeFiles/SpacialFreeze.dir/classes/Model.cpp.o
+ ../include/assimp/include/assimp/./Compiler/poppack1.h
+ ../include/assimp/include/assimp/./Compiler/pushpack1.h
+ ../include/assimp/include/assimp/Compiler/pstdint.h
+ ../include/assimp/include/assimp/Importer.hpp
+ ../include/assimp/include/assimp/anim.h
+ ../include/assimp/include/assimp/camera.h
+ ../include/assimp/include/assimp/color4.h
+ ../include/assimp/include/assimp/color4.inl
+ ../include/assimp/include/assimp/defs.h
+ ../include/assimp/include/assimp/light.h
+ ../include/assimp/include/assimp/material.h
+ ../include/assimp/include/assimp/material.inl
+ ../include/assimp/include/assimp/matrix3x3.h
+ ../include/assimp/include/assimp/matrix3x3.inl
+ ../include/assimp/include/assimp/matrix4x4.h
+ ../include/assimp/include/assimp/matrix4x4.inl
+ ../include/assimp/include/assimp/mesh.h
+ ../include/assimp/include/assimp/metadata.h
+ ../include/assimp/include/assimp/postprocess.h
+ ../include/assimp/include/assimp/quaternion.h
+ ../include/assimp/include/assimp/quaternion.inl
+ ../include/assimp/include/assimp/scene.h
+ ../include/assimp/include/assimp/texture.h
+ ../include/assimp/include/assimp/types.h
+ ../include/assimp/include/assimp/vector2.h
+ ../include/assimp/include/assimp/vector2.inl
+ ../include/assimp/include/assimp/vector3.h
+ ../include/assimp/include/assimp/vector3.inl
+ ../include/assimp/out/include/assimp/config.h
  ../include/glad/glad.h
- ../include/glm/./detail/./compute_vector_relational.hpp
  ../include/glm/./detail/setup.hpp
  ../include/glm/./detail/type_mat2x2.hpp
  ../include/glm/./detail/type_mat2x2.inl
@@ -357,14 +381,20 @@ CMakeFiles/SpacialFreeze.dir/classes/Model.cpp.o
  ../include/glm/./detail/type_mat2x4.inl
  ../include/glm/./detail/type_mat3x2.hpp
  ../include/glm/./detail/type_mat3x2.inl
+ ../include/glm/./detail/type_mat3x3.hpp
+ ../include/glm/./detail/type_mat3x3.inl
  ../include/glm/./detail/type_mat3x4.hpp
  ../include/glm/./detail/type_mat3x4.inl
  ../include/glm/./detail/type_mat4x2.hpp
  ../include/glm/./detail/type_mat4x2.inl
  ../include/glm/./detail/type_mat4x3.hpp
  ../include/glm/./detail/type_mat4x3.inl
+ ../include/glm/./detail/type_mat4x4.hpp
+ ../include/glm/./detail/type_mat4x4.inl
+ ../include/glm/./detail/type_mat4x4_simd.inl
  ../include/glm/./detail/type_vec2.hpp
- ../include/glm/./detail/type_vec2.inl
+ ../include/glm/./detail/type_vec3.hpp
+ ../include/glm/./detail/type_vec4.hpp
  ../include/glm/./ext/matrix_double2x2.hpp
  ../include/glm/./ext/matrix_double2x2_precision.hpp
  ../include/glm/./ext/matrix_double2x3.hpp
@@ -432,6 +462,7 @@ CMakeFiles/SpacialFreeze.dir/classes/Model.cpp.o
  ../include/glm/./ext/vector_uint4.hpp
  ../include/glm/./ext/vector_uint4_precision.hpp
  ../include/glm/common.hpp
+ ../include/glm/detail/./compute_vector_relational.hpp
  ../include/glm/detail/_fixes.hpp
  ../include/glm/detail/_swizzle.hpp
  ../include/glm/detail/_swizzle_func.hpp
@@ -456,75 +487,22 @@ CMakeFiles/SpacialFreeze.dir/classes/Model.cpp.o
  ../include/glm/detail/func_vector_relational_simd.inl
  ../include/glm/detail/qualifier.hpp
  ../include/glm/detail/setup.hpp
- ../include/glm/detail/type_float.hpp
  ../include/glm/detail/type_half.hpp
  ../include/glm/detail/type_half.inl
- ../include/glm/detail/type_mat3x3.hpp
- ../include/glm/detail/type_mat3x3.inl
  ../include/glm/detail/type_mat4x4.hpp
- ../include/glm/detail/type_mat4x4.inl
- ../include/glm/detail/type_mat4x4_simd.inl
- ../include/glm/detail/type_quat.hpp
- ../include/glm/detail/type_quat.inl
- ../include/glm/detail/type_quat_simd.inl
  ../include/glm/detail/type_vec1.hpp
  ../include/glm/detail/type_vec1.inl
  ../include/glm/detail/type_vec2.hpp
+ ../include/glm/detail/type_vec2.inl
  ../include/glm/detail/type_vec3.hpp
  ../include/glm/detail/type_vec3.inl
  ../include/glm/detail/type_vec4.hpp
  ../include/glm/detail/type_vec4.inl
  ../include/glm/detail/type_vec4_simd.inl
  ../include/glm/exponential.hpp
- ../include/glm/ext/matrix_clip_space.hpp
- ../include/glm/ext/matrix_clip_space.inl
- ../include/glm/ext/matrix_projection.hpp
- ../include/glm/ext/matrix_projection.inl
- ../include/glm/ext/matrix_transform.hpp
- ../include/glm/ext/quaternion_common.hpp
- ../include/glm/ext/quaternion_common.inl
- ../include/glm/ext/quaternion_common_simd.inl
- ../include/glm/ext/quaternion_double.hpp
- ../include/glm/ext/quaternion_double_precision.hpp
- ../include/glm/ext/quaternion_float.hpp
- ../include/glm/ext/quaternion_float_precision.hpp
- ../include/glm/ext/quaternion_geometric.hpp
- ../include/glm/ext/quaternion_geometric.inl
- ../include/glm/ext/quaternion_relational.hpp
- ../include/glm/ext/quaternion_relational.inl
- ../include/glm/ext/quaternion_transform.hpp
- ../include/glm/ext/quaternion_transform.inl
- ../include/glm/ext/quaternion_trigonometric.hpp
- ../include/glm/ext/quaternion_trigonometric.inl
- ../include/glm/ext/scalar_constants.hpp
- ../include/glm/ext/scalar_constants.inl
- ../include/glm/ext/vector_bool1.hpp
- ../include/glm/ext/vector_bool1_precision.hpp
- ../include/glm/ext/vector_double1.hpp
- ../include/glm/ext/vector_double1_precision.hpp
- ../include/glm/ext/vector_float1.hpp
- ../include/glm/ext/vector_float1_precision.hpp
- ../include/glm/ext/vector_int1.hpp
- ../include/glm/ext/vector_int1_precision.hpp
- ../include/glm/ext/vector_relational.hpp
- ../include/glm/ext/vector_relational.inl
- ../include/glm/ext/vector_uint1.hpp
- ../include/glm/ext/vector_uint1_precision.hpp
  ../include/glm/fwd.hpp
  ../include/glm/geometric.hpp
  ../include/glm/glm.hpp
- ../include/glm/gtc/constants.hpp
- ../include/glm/gtc/constants.inl
- ../include/glm/gtc/epsilon.hpp
- ../include/glm/gtc/epsilon.inl
- ../include/glm/gtc/matrix_transform.hpp
- ../include/glm/gtc/matrix_transform.inl
- ../include/glm/gtc/quaternion.hpp
- ../include/glm/gtc/quaternion.inl
- ../include/glm/gtc/quaternion_simd.inl
- ../include/glm/gtc/type_ptr.hpp
- ../include/glm/gtc/type_ptr.inl
- ../include/glm/gtc/vec1.hpp
  ../include/glm/integer.hpp
  ../include/glm/mat2x2.hpp
  ../include/glm/mat2x3.hpp
@@ -548,9 +526,13 @@ CMakeFiles/SpacialFreeze.dir/classes/Model.cpp.o
  ../include/glm/vec3.hpp
  ../include/glm/vec4.hpp
  ../include/glm/vector_relational.hpp
+ ../include/stb_image.h
+ /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Mesh.h
  /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Model.cpp
  /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Model.h
  /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Shader.h
+ /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/headers/logger.h
+ /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/headers/texture.h
 CMakeFiles/SpacialFreeze.dir/classes/Shader.cpp.o
  ../include/glad/glad.h
  ../include/glm/./detail/setup.hpp
@@ -756,7 +738,7 @@ CMakeFiles/SpacialFreeze.dir/classes/Shader.cpp.o
  ../include/glm/vector_relational.hpp
  /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Shader.cpp
  /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Shader.h
-CMakeFiles/SpacialFreeze.dir/classes/SquareModel.cpp.o
+CMakeFiles/SpacialFreeze.dir/classes/SquareMesh.cpp.o
  ../include/glad/glad.h
  ../include/glm/./detail/type_mat2x2.hpp
  ../include/glm/./detail/type_mat2x2.inl
@@ -766,20 +748,13 @@ CMakeFiles/SpacialFreeze.dir/classes/SquareModel.cpp.o
  ../include/glm/./detail/type_mat2x4.inl
  ../include/glm/./detail/type_mat3x2.hpp
  ../include/glm/./detail/type_mat3x2.inl
- ../include/glm/./detail/type_mat3x3.hpp
- ../include/glm/./detail/type_mat3x3.inl
  ../include/glm/./detail/type_mat3x4.hpp
  ../include/glm/./detail/type_mat3x4.inl
  ../include/glm/./detail/type_mat4x2.hpp
  ../include/glm/./detail/type_mat4x2.inl
  ../include/glm/./detail/type_mat4x3.hpp
  ../include/glm/./detail/type_mat4x3.inl
- ../include/glm/./detail/type_mat4x4.hpp
- ../include/glm/./detail/type_mat4x4.inl
- ../include/glm/./detail/type_mat4x4_simd.inl
  ../include/glm/./detail/type_vec2.hpp
- ../include/glm/./detail/type_vec3.hpp
- ../include/glm/./detail/type_vec4.hpp
  ../include/glm/./ext/matrix_double2x2.hpp
  ../include/glm/./ext/matrix_double2x2_precision.hpp
  ../include/glm/./ext/matrix_double2x3.hpp
@@ -872,9 +847,17 @@ CMakeFiles/SpacialFreeze.dir/classes/SquareModel.cpp.o
  ../include/glm/detail/func_vector_relational_simd.inl
  ../include/glm/detail/qualifier.hpp
  ../include/glm/detail/setup.hpp
+ ../include/glm/detail/type_float.hpp
  ../include/glm/detail/type_half.hpp
  ../include/glm/detail/type_half.inl
+ ../include/glm/detail/type_mat3x3.hpp
+ ../include/glm/detail/type_mat3x3.inl
  ../include/glm/detail/type_mat4x4.hpp
+ ../include/glm/detail/type_mat4x4.inl
+ ../include/glm/detail/type_mat4x4_simd.inl
+ ../include/glm/detail/type_quat.hpp
+ ../include/glm/detail/type_quat.inl
+ ../include/glm/detail/type_quat_simd.inl
  ../include/glm/detail/type_vec1.hpp
  ../include/glm/detail/type_vec1.inl
  ../include/glm/detail/type_vec2.hpp
@@ -885,15 +868,55 @@ CMakeFiles/SpacialFreeze.dir/classes/SquareModel.cpp.o
  ../include/glm/detail/type_vec4.inl
  ../include/glm/detail/type_vec4_simd.inl
  ../include/glm/exponential.hpp
+ ../include/glm/ext/matrix_clip_space.hpp
+ ../include/glm/ext/matrix_clip_space.inl
+ ../include/glm/ext/matrix_projection.hpp
+ ../include/glm/ext/matrix_projection.inl
  ../include/glm/ext/matrix_transform.hpp
  ../include/glm/ext/matrix_transform.inl
+ ../include/glm/ext/quaternion_common.hpp
+ ../include/glm/ext/quaternion_common.inl
+ ../include/glm/ext/quaternion_common_simd.inl
+ ../include/glm/ext/quaternion_double.hpp
+ ../include/glm/ext/quaternion_double_precision.hpp
+ ../include/glm/ext/quaternion_float.hpp
+ ../include/glm/ext/quaternion_float_precision.hpp
+ ../include/glm/ext/quaternion_geometric.hpp
+ ../include/glm/ext/quaternion_geometric.inl
+ ../include/glm/ext/quaternion_relational.hpp
+ ../include/glm/ext/quaternion_relational.inl
+ ../include/glm/ext/quaternion_transform.hpp
+ ../include/glm/ext/quaternion_transform.inl
+ ../include/glm/ext/quaternion_trigonometric.hpp
+ ../include/glm/ext/quaternion_trigonometric.inl
  ../include/glm/ext/scalar_constants.hpp
  ../include/glm/ext/scalar_constants.inl
+ ../include/glm/ext/vector_bool1.hpp
+ ../include/glm/ext/vector_bool1_precision.hpp
+ ../include/glm/ext/vector_double1.hpp
+ ../include/glm/ext/vector_double1_precision.hpp
+ ../include/glm/ext/vector_float1.hpp
+ ../include/glm/ext/vector_float1_precision.hpp
+ ../include/glm/ext/vector_int1.hpp
+ ../include/glm/ext/vector_int1_precision.hpp
+ ../include/glm/ext/vector_relational.hpp
+ ../include/glm/ext/vector_relational.inl
+ ../include/glm/ext/vector_uint1.hpp
+ ../include/glm/ext/vector_uint1_precision.hpp
  ../include/glm/fwd.hpp
  ../include/glm/geometric.hpp
  ../include/glm/glm.hpp
  ../include/glm/gtc/constants.hpp
  ../include/glm/gtc/constants.inl
+ ../include/glm/gtc/epsilon.hpp
+ ../include/glm/gtc/epsilon.inl
+ ../include/glm/gtc/matrix_transform.hpp
+ ../include/glm/gtc/quaternion.hpp
+ ../include/glm/gtc/quaternion.inl
+ ../include/glm/gtc/quaternion_simd.inl
+ ../include/glm/gtc/type_ptr.hpp
+ ../include/glm/gtc/type_ptr.inl
+ ../include/glm/gtc/vec1.hpp
  ../include/glm/integer.hpp
  ../include/glm/mat2x2.hpp
  ../include/glm/mat2x3.hpp
@@ -917,11 +940,37 @@ CMakeFiles/SpacialFreeze.dir/classes/SquareModel.cpp.o
  ../include/glm/vec3.hpp
  ../include/glm/vec4.hpp
  ../include/glm/vector_relational.hpp
- /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Model.h
  /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Shader.h
- /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/SquareModel.cpp
- /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/SquareModel.h
+ /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/SquareMesh.cpp
+ /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/SquareMesh.h
 CMakeFiles/SpacialFreeze.dir/main.cpp.o
+ ../include/assimp/include/assimp/./Compiler/poppack1.h
+ ../include/assimp/include/assimp/./Compiler/pushpack1.h
+ ../include/assimp/include/assimp/Compiler/pstdint.h
+ ../include/assimp/include/assimp/anim.h
+ ../include/assimp/include/assimp/camera.h
+ ../include/assimp/include/assimp/color4.h
+ ../include/assimp/include/assimp/color4.inl
+ ../include/assimp/include/assimp/defs.h
+ ../include/assimp/include/assimp/light.h
+ ../include/assimp/include/assimp/material.h
+ ../include/assimp/include/assimp/material.inl
+ ../include/assimp/include/assimp/matrix3x3.h
+ ../include/assimp/include/assimp/matrix3x3.inl
+ ../include/assimp/include/assimp/matrix4x4.h
+ ../include/assimp/include/assimp/matrix4x4.inl
+ ../include/assimp/include/assimp/mesh.h
+ ../include/assimp/include/assimp/metadata.h
+ ../include/assimp/include/assimp/quaternion.h
+ ../include/assimp/include/assimp/quaternion.inl
+ ../include/assimp/include/assimp/scene.h
+ ../include/assimp/include/assimp/texture.h
+ ../include/assimp/include/assimp/types.h
+ ../include/assimp/include/assimp/vector2.h
+ ../include/assimp/include/assimp/vector2.inl
+ ../include/assimp/include/assimp/vector3.h
+ ../include/assimp/include/assimp/vector3.inl
+ ../include/assimp/out/include/assimp/config.h
  ../include/glad/glad.h
  ../include/glfw-3.2.1/include/GLFW/glfw3.h
  ../include/glm/./detail/setup.hpp
@@ -1092,13 +1141,9 @@ CMakeFiles/SpacialFreeze.dir/main.cpp.o
  ../include/glm/glm.hpp
  ../include/glm/gtc/constants.hpp
  ../include/glm/gtc/constants.inl
- ../include/glm/gtc/epsilon.hpp
- ../include/glm/gtc/epsilon.inl
  ../include/glm/gtc/matrix_transform.hpp
  ../include/glm/gtc/matrix_transform.inl
  ../include/glm/gtc/quaternion.hpp
- ../include/glm/gtc/quaternion.inl
- ../include/glm/gtc/quaternion_simd.inl
  ../include/glm/gtc/type_ptr.hpp
  ../include/glm/gtc/type_ptr.inl
  ../include/glm/gtc/vec1.hpp
@@ -1127,12 +1172,15 @@ CMakeFiles/SpacialFreeze.dir/main.cpp.o
  ../include/glm/vector_relational.hpp
  ../include/stb_image.h
  /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Camera.h
- /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/CubeModel.h
  /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Framebuffer.h
  /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Lightning.h
+ /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Mesh.h
  /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Model.h
  /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Shader.h
- /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/SquareModel.h
+ /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/SquareMesh.h
+ /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/headers/error.h
+ /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/headers/logger.h
+ /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/headers/texture.h
  /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/main.cpp
  /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/src/core/data.cpp
  /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/src/core/frame.cpp
@@ -1140,5 +1188,17 @@ CMakeFiles/SpacialFreeze.dir/main.cpp.o
  /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/src/core/init.cpp
  /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/src/core/preInit.cpp
  /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/src/core/util.cpp
- /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/src/logger.cpp
  /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/src/stencil.cpp
+CMakeFiles/SpacialFreeze.dir/src/error.cpp.o
+ ../include/glad/glad.h
+ /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/headers/error.h
+ /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/src/error.cpp
+CMakeFiles/SpacialFreeze.dir/src/logger.cpp.o
+ /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/headers/logger.h
+ /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/src/logger.cpp
+CMakeFiles/SpacialFreeze.dir/src/texture.cpp.o
+ ../include/glad/glad.h
+ ../include/stb_image.h
+ /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/headers/logger.h
+ /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/headers/texture.h
+ /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/src/texture.cpp

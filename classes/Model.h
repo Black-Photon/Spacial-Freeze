@@ -1,57 +1,48 @@
-#ifndef OPENGLPROJECT_MODEL_H
-#define OPENGLPROJECT_MODEL_H
+#ifndef SPACIALFREEZE_MODEL_H
+#define SPACIALFREEZE_MODEL_H
 
-#include <glm/glm.hpp>
-#include "Shader.h"
 #include <vector>
+#include <string>
+#include <assimp/include/assimp/scene.h>
+#include <memory>
+#include "Shader.h"
+#include "Mesh.h"
 
-/**
- * Represents a specific shape type
- *
- * Holds reused information to make copies of the same shape with different positions
- */
 class Model {
 public:
-    /**
-     * Builds a model with the given Vertices
-     * @param vertices Vertices of the points
-     * @param length Length of the vertex array
-     */
-    Model(float vertices[], int length);
-    /**
-     * Deletes saved resources
-     */
-    ~Model();
+    explicit Model(std::string path) {
+        loadModel(path);
+    }
+    void draw(Shader shader);
+private:
+    std::vector<std::unique_ptr<Mesh>> meshes;
+    std::vector<Texture> texturesLoaded;
+    std::string directory;
+    
+    void loadModel(std::string &path);
+    void processNode(aiNode *node, const aiScene *scene);
+    std::unique_ptr<Mesh> processMesh(aiMesh *mesh, const aiScene *scene);
+    std::vector<Texture> loadMaterialTextures(aiMaterial *mat, aiTextureType type,
+                                         std::string typeName);
 
-    /**
-     * Binds the VAO
-     */
-    void bind() const;
+    glm::vec2 convertAVec2(aiVector3t<float> vec);
+    glm::vec3 convertAVec3(aiVector3t<float> vec);
+};
 
-protected:
-    unsigned int VAO;
-    unsigned int VBO;
-    std::vector<int> attributeSizes;
+/**
+ * Indicated an error occurred in a model loading
+ */
+struct modelLoadingException : public std::exception {
+    std::string s;
 
-    /**
-     * Sets an individual attribute manually
-     * @param index Which attribute index it uses
-     * @param size Size of attribute
-     * @param stride Next element distance
-     * @param start Start index
-     */
-    static void setAttribute(int index, int size, int stride, int start);
+    explicit modelLoadingException(const std::string &string) {
+        s = string;
+    }
 
-    /**
-     * Adds an attribute to the queue
-     * @param size Size of attribute
-     */
-    void addAttribute(int size);
-    /**
-     * Sets all attributes using the queue
-     */
-    void setAttributes();
+    const char *what() const noexcept(true) override {
+        return s.c_str();
+    }
 };
 
 
-#endif //OPENGLPROJECT_MODEL_H
+#endif //SPACIALFREEZE_MODEL_H

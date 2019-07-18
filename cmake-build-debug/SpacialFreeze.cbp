@@ -494,12 +494,6 @@
 		<Unit filename="/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Camera.h">
 			<Option target="SpacialFreeze"/>
 		</Unit>
-		<Unit filename="/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/CubeModel.cpp">
-			<Option target="SpacialFreeze"/>
-		</Unit>
-		<Unit filename="/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/CubeModel.h">
-			<Option target="SpacialFreeze"/>
-		</Unit>
 		<Unit filename="/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Framebuffer.cpp">
 			<Option target="SpacialFreeze"/>
 		</Unit>
@@ -510,6 +504,12 @@
 			<Option target="SpacialFreeze"/>
 		</Unit>
 		<Unit filename="/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Lightning.h">
+			<Option target="SpacialFreeze"/>
+		</Unit>
+		<Unit filename="/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Mesh.cpp">
+			<Option target="SpacialFreeze"/>
+		</Unit>
+		<Unit filename="/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Mesh.h">
 			<Option target="SpacialFreeze"/>
 		</Unit>
 		<Unit filename="/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Model.cpp">
@@ -524,10 +524,10 @@
 		<Unit filename="/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Shader.h">
 			<Option target="SpacialFreeze"/>
 		</Unit>
-		<Unit filename="/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/SquareModel.cpp">
+		<Unit filename="/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/SquareMesh.cpp">
 			<Option target="SpacialFreeze"/>
 		</Unit>
-		<Unit filename="/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/SquareModel.h">
+		<Unit filename="/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/SquareMesh.h">
 			<Option target="SpacialFreeze"/>
 		</Unit>
 		<Unit filename="/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/include/assimp/include/assimp/config.h">
@@ -2400,7 +2400,16 @@
 		<Unit filename="/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/main.cpp">
 			<Option target="SpacialFreeze"/>
 		</Unit>
+		<Unit filename="/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/src/error.cpp">
+			<Option target="SpacialFreeze"/>
+		</Unit>
 		<Unit filename="/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/src/glad.c">
+			<Option target="SpacialFreeze"/>
+		</Unit>
+		<Unit filename="/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/src/logger.cpp">
+			<Option target="SpacialFreeze"/>
+		</Unit>
+		<Unit filename="/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/src/texture.cpp">
 			<Option target="SpacialFreeze"/>
 		</Unit>
 		<Unit filename="/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/CMakeLists.txt">

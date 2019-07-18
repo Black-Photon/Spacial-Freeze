@@ -7,7 +7,6 @@
 #include "include.cpp"
 #include "../../classes/Shader.h"
 #include "../../classes/Camera.h"
-#include "../../classes/Model.h"
 
 #include <memory>
 
@@ -45,6 +44,8 @@ namespace core {
         const std::string root = "../";
         const std::string assets = root + "assets/";
         const std::string shaders = root + "shaders/";
+        const std::string texture = assets + "textures/";
+        const std::string models = assets + "models/";
     } Path;
 
     /**

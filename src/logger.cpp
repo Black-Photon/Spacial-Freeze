@@ -1,4 +1,5 @@
-#pragma once
+#include <iostream>
+#include "../headers/logger.h"
 
 using std::cout;
 using std::cerr;

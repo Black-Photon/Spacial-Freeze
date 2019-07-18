@@ -109,9 +109,22 @@ CMakeFiles/SpacialFreeze.dir/classes/Shader.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpacialFreeze.dir/classes/Shader.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Shader.cpp -o CMakeFiles/SpacialFreeze.dir/classes/Shader.cpp.s
 
+CMakeFiles/SpacialFreeze.dir/classes/SquareMesh.cpp.o: CMakeFiles/SpacialFreeze.dir/flags.make
+CMakeFiles/SpacialFreeze.dir/classes/SquareMesh.cpp.o: ../classes/SquareMesh.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/SpacialFreeze.dir/classes/SquareMesh.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SpacialFreeze.dir/classes/SquareMesh.cpp.o -c /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/SquareMesh.cpp
+
+CMakeFiles/SpacialFreeze.dir/classes/SquareMesh.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SpacialFreeze.dir/classes/SquareMesh.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/SquareMesh.cpp > CMakeFiles/SpacialFreeze.dir/classes/SquareMesh.cpp.i
+
+CMakeFiles/SpacialFreeze.dir/classes/SquareMesh.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpacialFreeze.dir/classes/SquareMesh.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/SquareMesh.cpp -o CMakeFiles/SpacialFreeze.dir/classes/SquareMesh.cpp.s
+
 CMakeFiles/SpacialFreeze.dir/classes/Model.cpp.o: CMakeFiles/SpacialFreeze.dir/flags.make
 CMakeFiles/SpacialFreeze.dir/classes/Model.cpp.o: ../classes/Model.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/SpacialFreeze.dir/classes/Model.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/SpacialFreeze.dir/classes/Model.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SpacialFreeze.dir/classes/Model.cpp.o -c /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Model.cpp
 
 CMakeFiles/SpacialFreeze.dir/classes/Model.cpp.i: cmake_force
@@ -122,35 +135,9 @@ CMakeFiles/SpacialFreeze.dir/classes/Model.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpacialFreeze.dir/classes/Model.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Model.cpp -o CMakeFiles/SpacialFreeze.dir/classes/Model.cpp.s
 
-CMakeFiles/SpacialFreeze.dir/classes/CubeModel.cpp.o: CMakeFiles/SpacialFreeze.dir/flags.make
-CMakeFiles/SpacialFreeze.dir/classes/CubeModel.cpp.o: ../classes/CubeModel.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/SpacialFreeze.dir/classes/CubeModel.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SpacialFreeze.dir/classes/CubeModel.cpp.o -c /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/CubeModel.cpp
-
-CMakeFiles/SpacialFreeze.dir/classes/CubeModel.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SpacialFreeze.dir/classes/CubeModel.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/CubeModel.cpp > CMakeFiles/SpacialFreeze.dir/classes/CubeModel.cpp.i
-
-CMakeFiles/SpacialFreeze.dir/classes/CubeModel.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpacialFreeze.dir/classes/CubeModel.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/CubeModel.cpp -o CMakeFiles/SpacialFreeze.dir/classes/CubeModel.cpp.s
-
-CMakeFiles/SpacialFreeze.dir/classes/SquareModel.cpp.o: CMakeFiles/SpacialFreeze.dir/flags.make
-CMakeFiles/SpacialFreeze.dir/classes/SquareModel.cpp.o: ../classes/SquareModel.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/SpacialFreeze.dir/classes/SquareModel.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SpacialFreeze.dir/classes/SquareModel.cpp.o -c /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/SquareModel.cpp
-
-CMakeFiles/SpacialFreeze.dir/classes/SquareModel.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SpacialFreeze.dir/classes/SquareModel.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/SquareModel.cpp > CMakeFiles/SpacialFreeze.dir/classes/SquareModel.cpp.i
-
-CMakeFiles/SpacialFreeze.dir/classes/SquareModel.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpacialFreeze.dir/classes/SquareModel.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/SquareModel.cpp -o CMakeFiles/SpacialFreeze.dir/classes/SquareModel.cpp.s
-
 CMakeFiles/SpacialFreeze.dir/classes/Lightning.cpp.o: CMakeFiles/SpacialFreeze.dir/flags.make
 CMakeFiles/SpacialFreeze.dir/classes/Lightning.cpp.o: ../classes/Lightning.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/SpacialFreeze.dir/classes/Lightning.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/SpacialFreeze.dir/classes/Lightning.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SpacialFreeze.dir/classes/Lightning.cpp.o -c /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Lightning.cpp
 
 CMakeFiles/SpacialFreeze.dir/classes/Lightning.cpp.i: cmake_force
@@ -163,7 +150,7 @@ CMakeFiles/SpacialFreeze.dir/classes/Lightning.cpp.s: cmake_force
 
 CMakeFiles/SpacialFreeze.dir/classes/Framebuffer.cpp.o: CMakeFiles/SpacialFreeze.dir/flags.make
 CMakeFiles/SpacialFreeze.dir/classes/Framebuffer.cpp.o: ../classes/Framebuffer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/SpacialFreeze.dir/classes/Framebuffer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/SpacialFreeze.dir/classes/Framebuffer.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SpacialFreeze.dir/classes/Framebuffer.cpp.o -c /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Framebuffer.cpp
 
 CMakeFiles/SpacialFreeze.dir/classes/Framebuffer.cpp.i: cmake_force
@@ -174,17 +161,72 @@ CMakeFiles/SpacialFreeze.dir/classes/Framebuffer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpacialFreeze.dir/classes/Framebuffer.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Framebuffer.cpp -o CMakeFiles/SpacialFreeze.dir/classes/Framebuffer.cpp.s
 
+CMakeFiles/SpacialFreeze.dir/classes/Mesh.cpp.o: CMakeFiles/SpacialFreeze.dir/flags.make
+CMakeFiles/SpacialFreeze.dir/classes/Mesh.cpp.o: ../classes/Mesh.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/SpacialFreeze.dir/classes/Mesh.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SpacialFreeze.dir/classes/Mesh.cpp.o -c /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Mesh.cpp
+
+CMakeFiles/SpacialFreeze.dir/classes/Mesh.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SpacialFreeze.dir/classes/Mesh.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Mesh.cpp > CMakeFiles/SpacialFreeze.dir/classes/Mesh.cpp.i
+
+CMakeFiles/SpacialFreeze.dir/classes/Mesh.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpacialFreeze.dir/classes/Mesh.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Mesh.cpp -o CMakeFiles/SpacialFreeze.dir/classes/Mesh.cpp.s
+
+CMakeFiles/SpacialFreeze.dir/src/logger.cpp.o: CMakeFiles/SpacialFreeze.dir/flags.make
+CMakeFiles/SpacialFreeze.dir/src/logger.cpp.o: ../src/logger.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/SpacialFreeze.dir/src/logger.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SpacialFreeze.dir/src/logger.cpp.o -c /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/src/logger.cpp
+
+CMakeFiles/SpacialFreeze.dir/src/logger.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SpacialFreeze.dir/src/logger.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/src/logger.cpp > CMakeFiles/SpacialFreeze.dir/src/logger.cpp.i
+
+CMakeFiles/SpacialFreeze.dir/src/logger.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpacialFreeze.dir/src/logger.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/src/logger.cpp -o CMakeFiles/SpacialFreeze.dir/src/logger.cpp.s
+
+CMakeFiles/SpacialFreeze.dir/src/texture.cpp.o: CMakeFiles/SpacialFreeze.dir/flags.make
+CMakeFiles/SpacialFreeze.dir/src/texture.cpp.o: ../src/texture.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/SpacialFreeze.dir/src/texture.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SpacialFreeze.dir/src/texture.cpp.o -c /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/src/texture.cpp
+
+CMakeFiles/SpacialFreeze.dir/src/texture.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SpacialFreeze.dir/src/texture.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/src/texture.cpp > CMakeFiles/SpacialFreeze.dir/src/texture.cpp.i
+
+CMakeFiles/SpacialFreeze.dir/src/texture.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpacialFreeze.dir/src/texture.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/src/texture.cpp -o CMakeFiles/SpacialFreeze.dir/src/texture.cpp.s
+
+CMakeFiles/SpacialFreeze.dir/src/error.cpp.o: CMakeFiles/SpacialFreeze.dir/flags.make
+CMakeFiles/SpacialFreeze.dir/src/error.cpp.o: ../src/error.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/SpacialFreeze.dir/src/error.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SpacialFreeze.dir/src/error.cpp.o -c /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/src/error.cpp
+
+CMakeFiles/SpacialFreeze.dir/src/error.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SpacialFreeze.dir/src/error.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/src/error.cpp > CMakeFiles/SpacialFreeze.dir/src/error.cpp.i
+
+CMakeFiles/SpacialFreeze.dir/src/error.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpacialFreeze.dir/src/error.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/src/error.cpp -o CMakeFiles/SpacialFreeze.dir/src/error.cpp.s
+
 # Object files for target SpacialFreeze
 SpacialFreeze_OBJECTS = \
 "CMakeFiles/SpacialFreeze.dir/main.cpp.o" \
 "CMakeFiles/SpacialFreeze.dir/src/glad.c.o" \
 "CMakeFiles/SpacialFreeze.dir/classes/Camera.cpp.o" \
 "CMakeFiles/SpacialFreeze.dir/classes/Shader.cpp.o" \
+"CMakeFiles/SpacialFreeze.dir/classes/SquareMesh.cpp.o" \
 "CMakeFiles/SpacialFreeze.dir/classes/Model.cpp.o" \
-"CMakeFiles/SpacialFreeze.dir/classes/CubeModel.cpp.o" \
-"CMakeFiles/SpacialFreeze.dir/classes/SquareModel.cpp.o" \
 "CMakeFiles/SpacialFreeze.dir/classes/Lightning.cpp.o" \
-"CMakeFiles/SpacialFreeze.dir/classes/Framebuffer.cpp.o"
+"CMakeFiles/SpacialFreeze.dir/classes/Framebuffer.cpp.o" \
+"CMakeFiles/SpacialFreeze.dir/classes/Mesh.cpp.o" \
+"CMakeFiles/SpacialFreeze.dir/src/logger.cpp.o" \
+"CMakeFiles/SpacialFreeze.dir/src/texture.cpp.o" \
+"CMakeFiles/SpacialFreeze.dir/src/error.cpp.o"
 
 # External object files for target SpacialFreeze
 SpacialFreeze_EXTERNAL_OBJECTS =
@@ -193,11 +235,14 @@ SpacialFreeze: CMakeFiles/SpacialFreeze.dir/main.cpp.o
 SpacialFreeze: CMakeFiles/SpacialFreeze.dir/src/glad.c.o
 SpacialFreeze: CMakeFiles/SpacialFreeze.dir/classes/Camera.cpp.o
 SpacialFreeze: CMakeFiles/SpacialFreeze.dir/classes/Shader.cpp.o
+SpacialFreeze: CMakeFiles/SpacialFreeze.dir/classes/SquareMesh.cpp.o
 SpacialFreeze: CMakeFiles/SpacialFreeze.dir/classes/Model.cpp.o
-SpacialFreeze: CMakeFiles/SpacialFreeze.dir/classes/CubeModel.cpp.o
-SpacialFreeze: CMakeFiles/SpacialFreeze.dir/classes/SquareModel.cpp.o
 SpacialFreeze: CMakeFiles/SpacialFreeze.dir/classes/Lightning.cpp.o
 SpacialFreeze: CMakeFiles/SpacialFreeze.dir/classes/Framebuffer.cpp.o
+SpacialFreeze: CMakeFiles/SpacialFreeze.dir/classes/Mesh.cpp.o
+SpacialFreeze: CMakeFiles/SpacialFreeze.dir/src/logger.cpp.o
+SpacialFreeze: CMakeFiles/SpacialFreeze.dir/src/texture.cpp.o
+SpacialFreeze: CMakeFiles/SpacialFreeze.dir/src/error.cpp.o
 SpacialFreeze: CMakeFiles/SpacialFreeze.dir/build.make
 SpacialFreeze: include/glfw-3.2.1/src/libglfw3d.a
 SpacialFreeze: include/assimp/code/libassimpd.a
@@ -211,7 +256,7 @@ SpacialFreeze: /usr/lib/libz.so
 SpacialFreeze: include/assimp/contrib/irrXML/libIrrXMLd.a
 SpacialFreeze: /usr/lib/librt.so
 SpacialFreeze: CMakeFiles/SpacialFreeze.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable SpacialFreeze"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable SpacialFreeze"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/SpacialFreeze.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

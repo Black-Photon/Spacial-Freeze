@@ -15,8 +15,11 @@ add_executable(
         include/stb_image.h
 
         # Class files
-        classes/Camera.cpp classes/Shader.cpp classes/Model.cpp classes/CubeModel.cpp classes/SquareModel.cpp
-        classes/Lightning.cpp classes/Framebuffer.cpp
+        classes/Camera.cpp classes/Shader.cpp classes/SquareMesh.cpp classes/Model.cpp
+        classes/Lightning.cpp classes/Framebuffer.cpp classes/Mesh.cpp
+
+        # Helper files
+        src/logger.cpp src/texture.cpp src/error.cpp
         )
 
 # GLFW / GLAD

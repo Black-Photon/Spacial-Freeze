@@ -1,58 +1,115 @@
-#include <glm/gtc/matrix_transform.hpp>
-#include <glm/gtc/type_ptr.hpp>
 #include "Model.h"
 
-Model::Model(float vertices[], int length)
-{
-    // Generates a Vertex Array Object
-    glGenVertexArrays(1, &VAO);
-    // Generates the Vertex Buffer Objects
-    glGenBuffers(1, &VBO);
+#include <assimp/Importer.hpp>
+#include <assimp/scene.h>
+#include <assimp/postprocess.h>
+#include <stb_image.h>
+#include <memory>
+#include "../headers/logger.h"
+#include "../headers/texture.h"
 
-    // Bind the Vertex Array Object first, then bind and set vertex buffer(s), and then configure vertex attributes(s).
-    // Binds the VAO so glVertexAttribPointer and glEnableVertexAttribArray work on this VAO
-    glBindVertexArray(VAO);
-
-    // Binds the buffer to the buffer type so glBufferData works on this
-    glBindBuffer(GL_ARRAY_BUFFER, VBO);
-    // Allocates memory for and stores the cubeVertices data
-    glBufferData(GL_ARRAY_BUFFER, length * sizeof(*vertices), vertices, GL_STATIC_DRAW);
+void Model::draw(Shader shader) {
+    shader.use();
+    for(auto &mesh : meshes)
+        mesh->draw(shader);
 }
 
-Model::~Model()
-{
-    // Deletes VAO and VBO data from memory
-    glDeleteVertexArrays(1, &VAO);
-    glDeleteBuffers(1, &VBO);
-}
+void Model::loadModel(std::string &path) {
+    Assimp::Importer importer;
+    const aiScene *scene = importer.ReadFile(path, aiProcess_Triangulate | aiProcess_FlipUVs);
 
-void Model::bind() const
-{
-    glBindVertexArray(VAO);
-}
-
-void Model::setAttribute(int index, int size, int stride, int start)
-{
-    // Index, Size, Type, Normalized, Stride, Pointer
-    glVertexAttribPointer(index, size, GL_FLOAT, GL_FALSE, stride * sizeof(float), (void *) (start * sizeof(float)));
-    glEnableVertexAttribArray(index);
-}
-
-void Model::addAttribute(int size)
-{
-    attributeSizes.push_back(size);
-}
-
-void Model::setAttributes()
-{
-    std::vector<int> startPos;
-    int sum = 0;
-    for(int i : attributeSizes) {
-        startPos.push_back(sum);
-        sum += i;
+    if(!scene || scene->mFlags & AI_SCENE_FLAGS_INCOMPLETE || !scene->mRootNode) {
+        throw modelLoadingException(importer.GetErrorString());
     }
-    for(int i = 0; i < attributeSizes.size(); i++) {
-        int v = attributeSizes.at(i);
-        setAttribute(i, v, sum, startPos.at(i));
+    directory = path.substr(0, path.find_last_of('/'));
+
+    processNode(scene->mRootNode, scene);
+}
+
+void Model::processNode(aiNode *node, const aiScene *scene) {
+    // Process this node
+    for(unsigned int i = 0; i < node->mNumMeshes; i++) {
+        aiMesh *mesh = scene->mMeshes[node->mMeshes[i]];
+        meshes.push_back(processMesh(mesh, scene));
     }
+
+    // Process sub-nodes
+    for(unsigned int i = 0; i < node->mNumChildren; i++) {
+        processNode(node->mChildren[i], scene);
+    }
+}
+
+std::unique_ptr<Mesh> Model::processMesh(aiMesh *mesh, const aiScene *scene) {
+    std::vector<Vertex> vertices;
+    std::vector<unsigned int> indices;
+    std::vector<Texture> textures;
+
+    for(unsigned int i = 0; i < mesh->mNumVertices; i++) {
+        Vertex vertex;
+
+        //Positions
+        glm::vec3 vector;
+        vector = convertAVec3(mesh->mVertices[i]);
+        vertex.Position = vector;
+
+        vector = convertAVec3(mesh->mNormals[i]);
+        vertex.Normal = vector;
+
+        if(mesh->mTextureCoords[0]) {
+            glm::vec2 vec;
+            vec = convertAVec2(mesh->mTextureCoords[0][i]);
+            vertex.TexCoords = vec;
+        } else vertex.TexCoords = glm::vec2(0.0f, 0.0f);
+
+        vertices.push_back(vertex);
+    }
+
+    for(unsigned int i = 0; i < mesh->mNumFaces; i++) {
+        aiFace face = mesh->mFaces[i];
+        for(unsigned int j = 0; j < face.mNumIndices; j++)
+            indices.push_back(face.mIndices[j]);
+    }
+
+    if(mesh->mMaterialIndex >= 0) {
+        aiMaterial *material = scene->mMaterials[mesh->mMaterialIndex];
+        std::vector<Texture> diffuseMaps = loadMaterialTextures(material,
+                                                           aiTextureType_DIFFUSE, "texture_diffuse");
+        textures.insert(textures.end(), diffuseMaps.begin(), diffuseMaps.end());
+        std::vector<Texture> specularMaps = loadMaterialTextures(material,
+                                                            aiTextureType_SPECULAR, "texture_specular");
+        textures.insert(textures.end(), specularMaps.begin(), specularMaps.end());
+    }
+
+    return std::make_unique<Mesh>(vertices, indices, textures);
+}
+
+std::vector<Texture> Model::loadMaterialTextures(aiMaterial *mat, aiTextureType type, std::string typeName) {
+    std::vector<Texture> textures;
+    for(unsigned int i = 0; i < mat->GetTextureCount(type); i++) {
+        aiString str;
+        mat->GetTexture(type, i, &str);
+        bool skip = false;
+        for(auto & tex : texturesLoaded) {
+            if(std::strcmp(tex.path.data(), str.C_Str()) == 0) {
+                textures.push_back(tex);
+                skip = true;
+                break;
+            }
+        }
+        if(!skip) {
+            Texture texture = texture::generateTexture(directory + "/" + str.C_Str(), true);
+            texture.type = typeName;
+            texture.path = str.C_Str();
+            textures.push_back(texture);
+        }
+    }
+    return textures;
+}
+
+glm::vec2 Model::convertAVec2(aiVector3t<float> vec) {
+    return glm::vec2(vec.x, vec.y);
+}
+
+glm::vec3 Model::convertAVec3(aiVector3t<float> vec) {
+    return glm::vec3(vec.x, vec.y, vec.z);
 }
