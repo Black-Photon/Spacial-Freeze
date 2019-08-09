@@ -16,7 +16,8 @@ add_executable(
 
         # Class files
         classes/Camera.cpp classes/Shader.cpp classes/SquareMesh.cpp classes/Model.cpp
-        classes/Lightning.cpp classes/Framebuffer.cpp classes/Mesh.cpp
+        classes/Lightning.cpp classes/Framebuffer.cpp classes/Mesh.cpp classes/Scene.cpp
+        classes/Instance.cpp
 
         # Helper files
         src/logger.cpp src/texture.cpp src/error.cpp

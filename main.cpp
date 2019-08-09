@@ -19,7 +19,7 @@ namespace core {
         makeModel(modelShader, *Data.camera);
         glm::mat4 modelMat = glm::translate(glm::mat4(1.0f), glm::vec3(0.0f, 0.0f, 0.0f));
         modelMat = glm::scale(modelMat, glm::vec3(size * 0.1f));
-        modelMat = glm::translate(modelMat, glm::vec3(0.0f, -10.0f, 0.0f));
+        modelMat = glm::translate(modelMat, glm::vec3(0.0f, 0.0f, 0.0f));
         modelShader.setMat4("model", modelMat);
         model->draw(modelShader);
     }
@@ -39,11 +39,12 @@ namespace core {
 
         stencil::startTrace(1);
         modelShader.setVec4("colour", 0.1f, 0.1f, 0.1f, 0.0f);
-        drawLandscape(modelShader, 1.0f - diff);
+        drawLandscape(modelShader, 1.0f);
 
         stencil::startDrawInvert(1);
         modelShader.setVec4("colour", 1.0f, 0.5f, 0.0f, 1.0f);
         drawLandscape(modelShader, 1.0f + diff);
+        drawLandscape(modelShader, 1.0f - diff);
 
         stencil::disable();
     }
@@ -59,7 +60,7 @@ namespace core {
     void renderSceneLightning(Framebuffer &fbLightning) {
         fbLightning.startWrite();
         Shader singleColourShader("basic3d.vert", "solidColour.frag", Path.shaders);
-        renderOutline(singleColourShader, 0.02f);
+        renderOutline(singleColourShader, 0.04f);
         fbLightning.endWrite(Data.SCR_WIDTH, Data.SCR_HEIGHT);
     }
 
@@ -123,7 +124,8 @@ namespace core {
 
         Lightning lightningX;
         Lightning lightningY;
-        Model model(Path.models + "nanosuit/nanosuit.obj");
+//        Model model(Path.models + "nanosuit/nanosuit.obj");
+        Model model(Path.models + "Table.obj");
         core::model = &model;
         logger::message("Starting draw Phase");
         while (!shouldClose()) frame(framebuffer, lightningX, lightningY);
