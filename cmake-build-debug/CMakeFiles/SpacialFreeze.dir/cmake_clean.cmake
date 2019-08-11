@@ -1,11 +1,9 @@
 file(REMOVE_RECURSE
   "CMakeFiles/SpacialFreeze.dir/classes/Camera.cpp.o"
   "CMakeFiles/SpacialFreeze.dir/classes/Framebuffer.cpp.o"
-  "CMakeFiles/SpacialFreeze.dir/classes/Instance.cpp.o"
   "CMakeFiles/SpacialFreeze.dir/classes/Lightning.cpp.o"
   "CMakeFiles/SpacialFreeze.dir/classes/Mesh.cpp.o"
   "CMakeFiles/SpacialFreeze.dir/classes/Model.cpp.o"
-  "CMakeFiles/SpacialFreeze.dir/classes/Scene.cpp.o"
   "CMakeFiles/SpacialFreeze.dir/classes/Shader.cpp.o"
   "CMakeFiles/SpacialFreeze.dir/classes/SquareMesh.cpp.o"
   "CMakeFiles/SpacialFreeze.dir/main.cpp.o"

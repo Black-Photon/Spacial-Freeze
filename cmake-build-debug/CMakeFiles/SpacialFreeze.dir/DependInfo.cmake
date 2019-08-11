@@ -19,11 +19,9 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Camera.cpp" "/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles/SpacialFreeze.dir/classes/Camera.cpp.o"
   "/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Framebuffer.cpp" "/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles/SpacialFreeze.dir/classes/Framebuffer.cpp.o"
-  "/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Instance.cpp" "/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles/SpacialFreeze.dir/classes/Instance.cpp.o"
   "/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Lightning.cpp" "/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles/SpacialFreeze.dir/classes/Lightning.cpp.o"
   "/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Mesh.cpp" "/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles/SpacialFreeze.dir/classes/Mesh.cpp.o"
   "/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Model.cpp" "/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles/SpacialFreeze.dir/classes/Model.cpp.o"
-  "/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Scene.cpp" "/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles/SpacialFreeze.dir/classes/Scene.cpp.o"
   "/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Shader.cpp" "/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles/SpacialFreeze.dir/classes/Shader.cpp.o"
   "/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/SquareMesh.cpp" "/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles/SpacialFreeze.dir/classes/SquareMesh.cpp.o"
   "/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/main.cpp" "/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles/SpacialFreeze.dir/main.cpp.o"

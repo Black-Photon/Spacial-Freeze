@@ -13,6 +13,9 @@
 #include "headers/logger.h"
 #include "headers/error.h"
 
+#include "classes/Scene.cpp"
+#include "classes/Instance.cpp"
+
 namespace core {
     Model *model;
     void drawLandscape(Shader &modelShader, float size) {

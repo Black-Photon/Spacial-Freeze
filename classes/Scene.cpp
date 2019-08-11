@@ -1,6 +1,8 @@
 #include "Scene.h"
 
-void Scene::addInstance(Instance instance) {
+void Scene::addInstance(Instance &instance) {
+    printVectors();
+
     Shader shader = instance.shader;
     int pos;
     bool found = false;
@@ -30,9 +32,13 @@ void Scene::addInstance(Instance instance) {
         newInstances.push_back(instance);
         instances.insert(std::pair(pos, newInstances));
     }
+
+    printVectors();
 }
 
-bool Scene::removeInstance(Instance instance) {
+bool Scene::removeInstance(Instance &instance) {
+    printVectors();
+
     Shader shader = instance.shader;
     int pos;
     bool found = false;
@@ -53,6 +59,7 @@ bool Scene::removeInstance(Instance instance) {
             for(int i = 0; i < pair.second.size(); i++) {
                 if(pair.second.at(i).ID == instance.ID) {
                     pair.second.erase(pair.second.begin() + i);
+                    printVectors();
                     return true;
                 }
             }
@@ -63,13 +70,24 @@ bool Scene::removeInstance(Instance instance) {
 }
 
 void Scene::replaceShader(Shader newShader, Shader oldShader) {
+    printVectors();
     for(int i = 0; i < shaders.size(); i++) {
         if(shaders.at(i).ID == oldShader.ID) {
             shaders.insert(shaders.begin(), i, newShader);
+            break;
         }
     }
+    printVectors();
 }
 
 void Scene::drawScene(float size) {
-
+    for(auto pair : instances) {
+        auto shader = shaders.at(pair.first);
+        auto instanceList = pair.second;
+        shader.use();
+        core::makeModel(shader, *core::Data.camera);
+        for(auto instance : instanceList) {
+            instance.draw();
+        }
+    }
 }

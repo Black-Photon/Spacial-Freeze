@@ -174,35 +174,9 @@ CMakeFiles/SpacialFreeze.dir/classes/Mesh.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpacialFreeze.dir/classes/Mesh.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Mesh.cpp -o CMakeFiles/SpacialFreeze.dir/classes/Mesh.cpp.s
 
-CMakeFiles/SpacialFreeze.dir/classes/Scene.cpp.o: CMakeFiles/SpacialFreeze.dir/flags.make
-CMakeFiles/SpacialFreeze.dir/classes/Scene.cpp.o: ../classes/Scene.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/SpacialFreeze.dir/classes/Scene.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SpacialFreeze.dir/classes/Scene.cpp.o -c /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Scene.cpp
-
-CMakeFiles/SpacialFreeze.dir/classes/Scene.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SpacialFreeze.dir/classes/Scene.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Scene.cpp > CMakeFiles/SpacialFreeze.dir/classes/Scene.cpp.i
-
-CMakeFiles/SpacialFreeze.dir/classes/Scene.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpacialFreeze.dir/classes/Scene.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Scene.cpp -o CMakeFiles/SpacialFreeze.dir/classes/Scene.cpp.s
-
-CMakeFiles/SpacialFreeze.dir/classes/Instance.cpp.o: CMakeFiles/SpacialFreeze.dir/flags.make
-CMakeFiles/SpacialFreeze.dir/classes/Instance.cpp.o: ../classes/Instance.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/SpacialFreeze.dir/classes/Instance.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SpacialFreeze.dir/classes/Instance.cpp.o -c /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Instance.cpp
-
-CMakeFiles/SpacialFreeze.dir/classes/Instance.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SpacialFreeze.dir/classes/Instance.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Instance.cpp > CMakeFiles/SpacialFreeze.dir/classes/Instance.cpp.i
-
-CMakeFiles/SpacialFreeze.dir/classes/Instance.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpacialFreeze.dir/classes/Instance.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Instance.cpp -o CMakeFiles/SpacialFreeze.dir/classes/Instance.cpp.s
-
 CMakeFiles/SpacialFreeze.dir/src/logger.cpp.o: CMakeFiles/SpacialFreeze.dir/flags.make
 CMakeFiles/SpacialFreeze.dir/src/logger.cpp.o: ../src/logger.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/SpacialFreeze.dir/src/logger.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/SpacialFreeze.dir/src/logger.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SpacialFreeze.dir/src/logger.cpp.o -c /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/src/logger.cpp
 
 CMakeFiles/SpacialFreeze.dir/src/logger.cpp.i: cmake_force
@@ -215,7 +189,7 @@ CMakeFiles/SpacialFreeze.dir/src/logger.cpp.s: cmake_force
 
 CMakeFiles/SpacialFreeze.dir/src/texture.cpp.o: CMakeFiles/SpacialFreeze.dir/flags.make
 CMakeFiles/SpacialFreeze.dir/src/texture.cpp.o: ../src/texture.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/SpacialFreeze.dir/src/texture.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/SpacialFreeze.dir/src/texture.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SpacialFreeze.dir/src/texture.cpp.o -c /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/src/texture.cpp
 
 CMakeFiles/SpacialFreeze.dir/src/texture.cpp.i: cmake_force
@@ -228,7 +202,7 @@ CMakeFiles/SpacialFreeze.dir/src/texture.cpp.s: cmake_force
 
 CMakeFiles/SpacialFreeze.dir/src/error.cpp.o: CMakeFiles/SpacialFreeze.dir/flags.make
 CMakeFiles/SpacialFreeze.dir/src/error.cpp.o: ../src/error.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/SpacialFreeze.dir/src/error.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/SpacialFreeze.dir/src/error.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SpacialFreeze.dir/src/error.cpp.o -c /home/joseph/Documents/Programming/Graphics/Spacial-Freeze/src/error.cpp
 
 CMakeFiles/SpacialFreeze.dir/src/error.cpp.i: cmake_force
@@ -250,8 +224,6 @@ SpacialFreeze_OBJECTS = \
 "CMakeFiles/SpacialFreeze.dir/classes/Lightning.cpp.o" \
 "CMakeFiles/SpacialFreeze.dir/classes/Framebuffer.cpp.o" \
 "CMakeFiles/SpacialFreeze.dir/classes/Mesh.cpp.o" \
-"CMakeFiles/SpacialFreeze.dir/classes/Scene.cpp.o" \
-"CMakeFiles/SpacialFreeze.dir/classes/Instance.cpp.o" \
 "CMakeFiles/SpacialFreeze.dir/src/logger.cpp.o" \
 "CMakeFiles/SpacialFreeze.dir/src/texture.cpp.o" \
 "CMakeFiles/SpacialFreeze.dir/src/error.cpp.o"
@@ -268,8 +240,6 @@ SpacialFreeze: CMakeFiles/SpacialFreeze.dir/classes/Model.cpp.o
 SpacialFreeze: CMakeFiles/SpacialFreeze.dir/classes/Lightning.cpp.o
 SpacialFreeze: CMakeFiles/SpacialFreeze.dir/classes/Framebuffer.cpp.o
 SpacialFreeze: CMakeFiles/SpacialFreeze.dir/classes/Mesh.cpp.o
-SpacialFreeze: CMakeFiles/SpacialFreeze.dir/classes/Scene.cpp.o
-SpacialFreeze: CMakeFiles/SpacialFreeze.dir/classes/Instance.cpp.o
 SpacialFreeze: CMakeFiles/SpacialFreeze.dir/src/logger.cpp.o
 SpacialFreeze: CMakeFiles/SpacialFreeze.dir/src/texture.cpp.o
 SpacialFreeze: CMakeFiles/SpacialFreeze.dir/src/error.cpp.o
@@ -286,7 +256,7 @@ SpacialFreeze: /usr/lib/libz.so
 SpacialFreeze: include/assimp/contrib/irrXML/libIrrXMLd.a
 SpacialFreeze: /usr/lib/librt.so
 SpacialFreeze: CMakeFiles/SpacialFreeze.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX executable SpacialFreeze"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable SpacialFreeze"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/SpacialFreeze.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

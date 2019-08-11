@@ -500,12 +500,6 @@
 		<Unit filename="/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Framebuffer.h">
 			<Option target="SpacialFreeze"/>
 		</Unit>
-		<Unit filename="/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Instance.cpp">
-			<Option target="SpacialFreeze"/>
-		</Unit>
-		<Unit filename="/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Instance.h">
-			<Option target="SpacialFreeze"/>
-		</Unit>
 		<Unit filename="/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Lightning.cpp">
 			<Option target="SpacialFreeze"/>
 		</Unit>
@@ -522,12 +516,6 @@
 			<Option target="SpacialFreeze"/>
 		</Unit>
 		<Unit filename="/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Model.h">
-			<Option target="SpacialFreeze"/>
-		</Unit>
-		<Unit filename="/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Scene.cpp">
-			<Option target="SpacialFreeze"/>
-		</Unit>
-		<Unit filename="/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Scene.h">
 			<Option target="SpacialFreeze"/>
 		</Unit>
 		<Unit filename="/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/classes/Shader.cpp">

@@ -665,33 +665,6 @@ classes/Framebuffer.cpp.s:
 	$(MAKE) -f CMakeFiles/SpacialFreeze.dir/build.make CMakeFiles/SpacialFreeze.dir/classes/Framebuffer.cpp.s
 .PHONY : classes/Framebuffer.cpp.s
 
-classes/Instance.o: classes/Instance.cpp.o
-
-.PHONY : classes/Instance.o
-
-# target to build an object file
-classes/Instance.cpp.o:
-	$(MAKE) -f CMakeFiles/SpacialFreeze.dir/build.make CMakeFiles/SpacialFreeze.dir/classes/Instance.cpp.o
-.PHONY : classes/Instance.cpp.o
-
-classes/Instance.i: classes/Instance.cpp.i
-
-.PHONY : classes/Instance.i
-
-# target to preprocess a source file
-classes/Instance.cpp.i:
-	$(MAKE) -f CMakeFiles/SpacialFreeze.dir/build.make CMakeFiles/SpacialFreeze.dir/classes/Instance.cpp.i
-.PHONY : classes/Instance.cpp.i
-
-classes/Instance.s: classes/Instance.cpp.s
-
-.PHONY : classes/Instance.s
-
-# target to generate assembly for a file
-classes/Instance.cpp.s:
-	$(MAKE) -f CMakeFiles/SpacialFreeze.dir/build.make CMakeFiles/SpacialFreeze.dir/classes/Instance.cpp.s
-.PHONY : classes/Instance.cpp.s
-
 classes/Lightning.o: classes/Lightning.cpp.o
 
 .PHONY : classes/Lightning.o
@@ -772,33 +745,6 @@ classes/Model.s: classes/Model.cpp.s
 classes/Model.cpp.s:
 	$(MAKE) -f CMakeFiles/SpacialFreeze.dir/build.make CMakeFiles/SpacialFreeze.dir/classes/Model.cpp.s
 .PHONY : classes/Model.cpp.s
-
-classes/Scene.o: classes/Scene.cpp.o
-
-.PHONY : classes/Scene.o
-
-# target to build an object file
-classes/Scene.cpp.o:
-	$(MAKE) -f CMakeFiles/SpacialFreeze.dir/build.make CMakeFiles/SpacialFreeze.dir/classes/Scene.cpp.o
-.PHONY : classes/Scene.cpp.o
-
-classes/Scene.i: classes/Scene.cpp.i
-
-.PHONY : classes/Scene.i
-
-# target to preprocess a source file
-classes/Scene.cpp.i:
-	$(MAKE) -f CMakeFiles/SpacialFreeze.dir/build.make CMakeFiles/SpacialFreeze.dir/classes/Scene.cpp.i
-.PHONY : classes/Scene.cpp.i
-
-classes/Scene.s: classes/Scene.cpp.s
-
-.PHONY : classes/Scene.s
-
-# target to generate assembly for a file
-classes/Scene.cpp.s:
-	$(MAKE) -f CMakeFiles/SpacialFreeze.dir/build.make CMakeFiles/SpacialFreeze.dir/classes/Scene.cpp.s
-.PHONY : classes/Scene.cpp.s
 
 classes/Shader.o: classes/Shader.cpp.o
 
@@ -1042,9 +988,6 @@ help:
 	@echo "... classes/Framebuffer.o"
 	@echo "... classes/Framebuffer.i"
 	@echo "... classes/Framebuffer.s"
-	@echo "... classes/Instance.o"
-	@echo "... classes/Instance.i"
-	@echo "... classes/Instance.s"
 	@echo "... classes/Lightning.o"
 	@echo "... classes/Lightning.i"
 	@echo "... classes/Lightning.s"
@@ -1054,9 +997,6 @@ help:
 	@echo "... classes/Model.o"
 	@echo "... classes/Model.i"
 	@echo "... classes/Model.s"
-	@echo "... classes/Scene.o"
-	@echo "... classes/Scene.i"
-	@echo "... classes/Scene.s"
 	@echo "... classes/Shader.o"
 	@echo "... classes/Shader.i"
 	@echo "... classes/Shader.s"
