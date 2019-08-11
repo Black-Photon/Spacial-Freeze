@@ -24,7 +24,7 @@ add_executable(
         )
 
 # GLFW / GLAD
-add_subdirectory("/home/joseph/Documents/Programming/Graphics/Spacial-Freeze/include/glfw-3.2.1/")
+add_subdirectory("include/glfw-3.2.1/")
 include_directories(include)
 
 # Assimp

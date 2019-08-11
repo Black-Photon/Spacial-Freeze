@@ -139,4 +139,6 @@ float Camera::modulus(float in)
     while (in > 180.0f) {
         in -= 360;
     }
+
+    return in;
 }
