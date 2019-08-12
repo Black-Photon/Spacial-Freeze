@@ -27,10 +27,11 @@ add_executable(
 add_subdirectory("include/glfw-3.2.1/")
 include_directories(include)
 include_directories(include/glfw-3.2.1/deps)
+include_directories(include/glad)
 
 # Assimp
 if(WIN32)
-        include_directories(include/assimp)
+        include_directories(include/win32/assimp)
 endif()
 if(UNIX)
         add_subdirectory(include/assimp-src)
