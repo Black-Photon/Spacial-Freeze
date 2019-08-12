@@ -21,15 +21,15 @@ namespace core {
     Scene *scene;
     Shader *shader;
     void drawLandscape(Shader &modelShader, float size) {
-//        makeModel(modelShader, *Data.camera);
-//        glm::mat4 modelMat = glm::translate(glm::mat4(1.0f), glm::vec3(0.0f, 0.0f, 0.0f));
-//        modelMat = glm::scale(modelMat, glm::vec3(size * 0.1f));
-//        modelMat = glm::translate(modelMat, glm::vec3(0.0f, 0.0f, 0.0f));
-//        modelShader.setMat4("model", modelMat);
-//        model->draw(modelShader);
-        scene->replaceShader(modelShader, *shader);
-        scene->drawScene(size);
-        scene->replaceShader(*shader, modelShader);
+        makeModel(modelShader, *Data.camera);
+        glm::mat4 modelMat = glm::translate(glm::mat4(1.0f), glm::vec3(0.0f, 0.0f, 0.0f));
+        modelMat = glm::scale(modelMat, glm::vec3(size * 0.1f));
+        modelMat = glm::translate(modelMat, glm::vec3(0.0f, 0.0f, 0.0f));
+        modelShader.setMat4("model", modelMat);
+        model->draw(modelShader);
+//        scene->replaceShader(modelShader, *shader);
+//        scene->drawScene(size);
+//        scene->replaceShader(*shader, modelShader);
     }
 
     void drawTexture(Shader &postProcessing, unsigned int tex) {

@@ -3,7 +3,7 @@
 
 #include <vector>
 #include <string>
-#include <assimp/include/assimp/scene.h>
+#include <assimp/scene.h>
 #include <memory>
 #include "Shader.h"
 #include "Mesh.h"
