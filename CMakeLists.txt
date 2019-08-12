@@ -31,6 +31,7 @@ include_directories(include/glad)
 
 # Assimp
 if(WIN32)
+        include_directories(include/win32)
         include_directories(include/win32/assimp)
 endif()
 if(UNIX)
