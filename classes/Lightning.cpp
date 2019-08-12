@@ -1,5 +1,12 @@
 #include <glad/glad.h>
+#include <iostream>
 #include "Lightning.h"
+
+Lightning::Lightning() : data() {
+    for(float & i : data) {
+        i = 0.0f;
+    }
+}
 
 void Lightning::update(float std) {
     for(float & i : data) {
@@ -7,12 +14,12 @@ void Lightning::update(float std) {
     }
 }
 
-int Lightning::getTexture() const {
+unsigned int Lightning::getTexture() const {
     unsigned int texture;
     glGenTextures(1, &texture);
     glBindTexture(GL_TEXTURE_1D, texture);
 
-    glTexImage1D(GL_TEXTURE_1D, 0, GL_DEPTH_COMPONENT, 1024, 0, GL_DEPTH_COMPONENT, GL_FLOAT, data);
+    glTexImage1D(GL_TEXTURE_1D, 0, GL_RED, 1024, 0, GL_RED, GL_FLOAT, data);
     glGenerateMipmap(GL_TEXTURE_1D);
     return texture;
 }

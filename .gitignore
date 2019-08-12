@@ -1,4 +1,4 @@
 .idea/
-include/assimp
 cmake-build-debug/include
 cmake-build-debug/
+include/assimp-src/

@@ -1,4 +1,5 @@
 #include <iostream>
+#include<string>
 #include "../headers/logger.h"
 
 using std::cout;

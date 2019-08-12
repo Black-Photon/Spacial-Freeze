@@ -6,7 +6,8 @@
 class Lightning {
 public:
     void update(float std);
-    int getTexture() const;
+    [[nodiscard]] unsigned int getTexture() const;
+    Lightning();
 
 private:
     std::random_device rd;
