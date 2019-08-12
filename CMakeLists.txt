@@ -29,11 +29,19 @@ include_directories(include)
 include_directories(include/glfw-3.2.1/deps)
 
 # Assimp
-include_directories(include/assimp)
+if(WIN32)
+        include_directories(include/assimp)
+endif()
+if(UNIX)
+        add_subdirectory(include/assimp-src)
+        include_directories(include/assimp-src/include include/assimp-src/out/include)
+endif()
 set(BUILD_ASSIMP_TOOLS  ON)
 set(ASSIMP_BUILD_STATIC_LIB ON)
 
 # Link all
-add_library( assimp STATIC IMPORTED )
-set_target_properties( assimp PROPERTIES IMPORTED_LOCATION "C:/Program Files/Assimp/lib/x64/assimp-vc140-mt.lib" )
+if(WIN32)
+        add_library( assimp STATIC IMPORTED )
+        set_target_properties( assimp PROPERTIES IMPORTED_LOCATION "C:/Program Files/Assimp/lib/x64/assimp-vc140-mt.lib" )
+endif()
 target_link_libraries(SpacialFreeze glfw assimp)
