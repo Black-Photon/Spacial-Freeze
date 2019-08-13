@@ -5,7 +5,18 @@ in vec2 TexCoords;
 in vec3 FragPos;
 in vec3 Normal;
 
-uniform sampler2D texture_diffuse1;
+struct Material {
+    sampler2D texture_diffuse1;
+    sampler2D texture_specular1;
+};
+
+uniform Material material;
+
+struct Camera {
+    vec3 viewDir;
+};
+
+uniform Camera camera;
 
 uniform vec4 colour;
 

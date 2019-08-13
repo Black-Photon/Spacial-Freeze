@@ -19,6 +19,7 @@ namespace core {
         float distanceOpen = 1.0f;
         bool closed = false;
         bool ctrlPressed = false;
+        Texture black;
     } Data;
 
     /**

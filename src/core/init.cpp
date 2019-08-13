@@ -26,6 +26,8 @@ namespace core {
         Data.camera = std::unique_ptr<Camera>(camera);
         Data.camera->rotate(YAW, -90.0f);
 
+        Data.black = texture::generateTexture(Path.texture + "Black.png", false);
+
         if(capture) {
             glfwSetInputMode(Data.window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
         }

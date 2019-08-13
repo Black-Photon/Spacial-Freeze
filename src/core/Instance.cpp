@@ -10,11 +10,11 @@ void Instance::draw() {
 }
 
 void Instance::draw(Shader &altShader) {
-    altShader.setMat4("model", transformation.getMatrix());
-    model->draw(altShader);
+    draw(altShader, transformation);
 }
 
 void Instance::draw(Shader &altShader, Transformation altTrans) {
     altShader.setMat4("model", altTrans.getMatrix());
+    altShader.setVec3("camera.viewDir", core::Data.camera->cameraFront);
     model->draw(altShader);
 }

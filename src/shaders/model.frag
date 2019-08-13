@@ -5,20 +5,31 @@ in vec2 TexCoords;
 in vec3 FragPos;
 in vec3 Normal;
 
-uniform sampler2D texture_diffuse1;
+struct Material {
+    sampler2D texture_diffuse1;
+    sampler2D texture_specular1;
+};
+
+uniform Material material;
+
+struct Camera {
+    vec3 viewDir;
+};
+
+uniform Camera camera;
 
 void main() {
-    float ambient = 0.2;
+    float ambient = 0.4;
 
     float diffuse = dot(vec3(1.0, 1.0, 1.0), Normal);
     if(diffuse < 0) diffuse = 0;
-    if(diffuse > 0.5) diffuse = 0.5;
+    if(diffuse > 0.3) diffuse = 0.3;
 
-    float specularStrength = 0.3;
-    vec3 viewDir = normalize(vec3(-1.0, -1.0, -1.0));
-    vec3 reflectDir = reflect(vec3(1.0, 1.0, 1.0), Normal);
-    float spec = pow(max(dot(viewDir, reflectDir), 0.0), 4);
+    float specularStrength = 8.0;
+    vec3 viewDir = normalize(camera.viewDir);
+    vec3 reflectDir = normalize(reflect(vec3(1.0, 1.0, 1.0), Normal));
+    float spec = pow(max(dot(viewDir, reflectDir), 0.0), 32);
     float specular = specularStrength * spec;
 
-    FragColor = texture(texture_diffuse1, TexCoords) * vec4(vec3(diffuse + ambient + specular), 1.0);
+    FragColor = texture(material.texture_diffuse1, TexCoords) * (texture(material.texture_specular1, TexCoords) * specular + vec4(vec3(diffuse + ambient), 1.0));
 }
