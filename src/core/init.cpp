@@ -1,17 +1,7 @@
-#include "data.cpp"
-#include "../../headers/logger.h"
-#include <memory>
-
 /**
  * Methods used in Initialisation
  */
 namespace core {
-
-    /**
-     * Performs all operations that are required for drawing
-     */
-    void init(bool capture);
-
     void init(bool capture) {
         // Enables basic features
 //        glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);

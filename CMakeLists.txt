@@ -7,7 +7,7 @@ set(CMAKE_CXX_STANDARD 17)
 add_executable(
         SpacialFreeze
 
-        ./main.cpp
+        src/main.cpp
 
         # Library Includes
         src/glad.c
@@ -15,12 +15,12 @@ add_executable(
         include/stb_image.h
 
         # Class files
-        classes/Camera.cpp classes/Shader.cpp classes/SquareMesh.cpp classes/Model.cpp
-        classes/Lightning.cpp classes/Framebuffer.cpp classes/Mesh.cpp #classes/Scene.cpp
-        #classes/Instance.cpp
+#        src/classes/Camera.cpp src/classes/Shader.cpp src/classes/SquareMesh.cpp src/classes/Model.cpp
+#        src/classes/Lightning.cpp src/classes/Framebuffer.cpp src/classes/Mesh.cpp classes/Scene.cpp
+#        classes/Instance.cpp
 
         # Helper files
-        src/logger.cpp src/texture.cpp src/error.cpp
+#        src/logger.cpp src/texture.cpp src/error.cpp
         )
 
 # GLFW / GLAD
