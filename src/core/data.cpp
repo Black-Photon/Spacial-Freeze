@@ -4,12 +4,6 @@
  * Holds static data structures holding necessary information for the program
  */
 
-#include "include.cpp"
-#include "../../classes/Shader.h"
-#include "../../classes/Camera.h"
-
-#include <memory>
-
 namespace core {
 
     /**
@@ -40,10 +34,11 @@ namespace core {
     /**
      * Holds path pre-pends for different locations
      */
-    const struct Path {
+    struct Path {
         const std::string root = "../";
+        const std::string source = root + "src/";
         const std::string assets = root + "assets/";
-        const std::string shaders = root + "shaders/";
+        const std::string shaders = source + "shaders/";
         const std::string texture = assets + "textures/";
         const std::string models = assets + "models/";
     } Path;
