@@ -174,3 +174,16 @@ void Shader::setMat4(const std::string &name, glm::mat4 mat) const
 {
     glUniformMatrix4fv(glGetUniformLocation(ID, name.c_str()), 1, GL_FALSE, glm::value_ptr(mat));
 }
+
+void Shader::setLight(const std::string &name, Light light) const
+{
+    setVec3(name + ".position", light.position);
+    setVec3(name + ".colour", light.colour);
+    setFloat(name + ".intensity", light.intensity);
+}
+
+void Shader::setCamera(const std::string &name, Camera camera) const
+{
+    setVec3(name + ".viewDir", camera.cameraFront);
+    setVec3(name + ".position", camera.cameraPos);
+}

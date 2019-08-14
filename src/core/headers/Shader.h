@@ -1,6 +1,8 @@
 #ifndef OPENGLPROJECT_SHADER_H
 #define OPENGLPROJECT_SHADER_H
 
+#include "Light.h"
+
 class Shader
 {
 public:
@@ -79,6 +81,10 @@ public:
      * @param vec Vector Value
      */
     void setMat4(const std::string &name, glm::mat4 mat) const;
+
+    void setLight(const std::string &name, Light light) const;
+
+    void setCamera(const std::string &name, Camera camera) const;
 
 private:
     /**

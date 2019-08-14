@@ -16,6 +16,14 @@ struct Camera {
     vec3 viewDir;
 };
 
+struct Light {
+    vec3 position;
+    vec3 colour;
+    float intensity;
+};
+
+uniform Light light;
+
 uniform Camera camera;
 
 uniform vec4 colour;

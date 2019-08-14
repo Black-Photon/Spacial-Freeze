@@ -4,7 +4,6 @@
 
 class Renderer {
 private:
-    Scene scene;
     Framebuffer framebuffer;
     Shader oldShader;
     Shader ppShader;
@@ -21,6 +20,7 @@ private:
     void drawSceneLightning(Lightning &lightningX, Lightning &lightningY);
 
 public:
+    Scene scene;
     Renderer(Scene &scene, Shader &oldShader);
     /**
      * Draws the scene normally

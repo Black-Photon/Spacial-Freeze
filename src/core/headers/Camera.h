@@ -30,7 +30,7 @@ const float MIN_DISTANCE = 0.1f;
 const float MAX_DISTANCE = 100.0f;
 
 // Camera Speed
-const float SPEED = 5.0f;
+const float SPEED = 2.5f;
 
 /**
  * Controls the camera

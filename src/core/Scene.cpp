@@ -75,6 +75,11 @@ void Scene::drawScene(float size) {
         auto shader = shaders.at(pair.first);
         auto instanceList = pair.second;
         shader.use();
+
+        for(auto &pair : lights) {
+            shader.setLight(pair.first, pair.second);
+        }
+
         core::makeModel(shader, *core::Data.camera);
         for(auto instance : instanceList) {
             Transformation sizedTrans = instance.transformation;
@@ -86,4 +91,21 @@ void Scene::drawScene(float size) {
 
 void Scene::drawScene() {
     drawScene(1.0f);
+}
+
+void Scene::addLight(std::string name, Light &light) {
+    lights.insert(std::pair(name, light));
+}
+
+bool Scene::removeLight(std::string name) {
+    return lights.erase(name) > 0;
+}
+
+Light& Scene::getLight(std::string name) {
+    try {
+        return lights.at(name);
+    } catch (std::out_of_range &e) {
+        logger::warn("Light '" + name + "' could not be found");
+        throw e;
+    }
 }

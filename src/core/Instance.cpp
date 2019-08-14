@@ -15,6 +15,6 @@ void Instance::draw(Shader &altShader) {
 
 void Instance::draw(Shader &altShader, Transformation altTrans) {
     altShader.setMat4("model", altTrans.getMatrix());
-    altShader.setVec3("camera.viewDir", core::Data.camera->cameraFront);
+    altShader.setCamera("camera", *core::Data.camera);
     model->draw(altShader);
 }

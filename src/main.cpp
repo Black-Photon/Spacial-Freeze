@@ -16,10 +16,13 @@ namespace core {
         renderer.updateFramebuffer();
         prerender(0.1, 0.1, 0.1);
 
-        renderer.drawLightning();
-        glScissor(Data.SCR_WIDTH/4, Data.SCR_HEIGHT * (1 - Data.distanceOpen) / 2, Data.SCR_WIDTH/2, Data.SCR_HEIGHT * Data.distanceOpen);
+        Light &light = renderer.scene.getLight("light");
+        light.position = glm::vec3(sin(currentFrame)/2, 0.0f, 0.0f);
+
+//        renderer.drawLightning();
+//        glScissor(Data.SCR_WIDTH/4, Data.SCR_HEIGHT * (1 - Data.distanceOpen) / 2, Data.SCR_WIDTH/2, Data.SCR_HEIGHT * Data.distanceOpen);
         renderer.draw();
-        glScissor(0, 0, Data.SCR_WIDTH, Data.SCR_HEIGHT);
+//        glScissor(0, 0, Data.SCR_WIDTH, Data.SCR_HEIGHT);
 
         glCheckError();
         glfwPollEvents();
@@ -44,6 +47,11 @@ namespace core {
         Scene scene;
         scene.addInstance(tableInstance);
         scene.addInstance(bookshelfInstance);
+
+        Light mainLight;
+        mainLight.position = glm::vec3(1.0f, 1.0f, 1.0f);
+
+        scene.addLight("light", mainLight);
 
         Renderer renderer(scene, modelShader);
 
