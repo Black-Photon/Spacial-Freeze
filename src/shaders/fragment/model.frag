@@ -1,9 +1,17 @@
+/**
+ * This shader displays the final scene using graphical techniques
+ */
+
 #version 330 core
 out vec4 FragColor;
 
 in vec2 TexCoords;
 in vec3 FragPos;
 in vec3 Normal;
+
+// ------------------------------------------------------------------------
+// --                            UNIFORMS                                --
+// ------------------------------------------------------------------------
 
 struct Material {
     sampler2D texture_diffuse1;
@@ -27,6 +35,10 @@ struct Camera {
 
 uniform Camera camera;
 
+// ------------------------------------------------------------------------
+// --                    PROTOTYPES + VARIABLES                          --
+// ------------------------------------------------------------------------
+
 vec4 calculateAmbient();
 vec4 calculateDiffuse(Light light);
 vec4 calculateSpecular(Camera camera, Light light);
@@ -44,6 +56,12 @@ float distanceBetween(vec3 first, vec3 second);
 float ambientLimit = 0.4;
 float diffuseLimit = 0.8;
 float specularLimit = 8.0;
+
+
+// ------------------------------------------------------------------------
+// --                         MAIN FUNCTIONS                             --
+// ------------------------------------------------------------------------
+
 
 void main() {
     vec4 ambient = calculateAmbient();

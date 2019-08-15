@@ -1,66 +1,79 @@
-Shader::Shader(std::string vertexPath, std::string fragmentPath)
+Shader::Shader(std::string vertexPath, std::string fragmentPath) :
+    Shader(vertexPath, fragmentPath, "") {}
+
+Shader::Shader(std::string vertexPath, std::string fragmentPath, std::string geometryPath)
 {
+    if(geometryPath.empty()) usesGeometry = false;
+
     vertexName = vertexPath;
     fragmentName = fragmentPath;
+    geometryName = geometryPath;
 
-    std::string vertexLocation;// = new std::string;
-    std::string fragmentLocation;// = new std::string;
-    readVertexFile((core::Path.shaders + vertexPath).c_str(), &vertexLocation);
-    readFragmentFile((core::Path.shaders + fragmentPath).c_str(), &fragmentLocation);
+    std::string vertexLocation;
+    std::string fragmentLocation;
+    std::string geometryLocation;
+    readVertexFile((core::Path.shaders + "vertex/" + vertexPath).c_str(), &vertexLocation);
+    readFragmentFile((core::Path.shaders + "fragment/" + fragmentPath).c_str(), &fragmentLocation);
+    if(usesGeometry) readGeometryFile((core::Path.shaders + "geometry/" + geometryPath).c_str(), &geometryLocation);
     const char* vShaderCode = (vertexLocation).c_str();
     const char* fShaderCode = (fragmentLocation).c_str();
+    const char* gShaderCode = (geometryLocation).c_str();
 
-    unsigned int vertex, fragment;
+    unsigned int vertex, fragment, geometry;
     vertex = createVertexShader(vShaderCode);
     fragment = createFragmentShader(fShaderCode);
+    if(usesGeometry) geometry = createGeometryShader(gShaderCode);
 
-    linkShaders(&ID, vertex, fragment);
+    if(usesGeometry) linkShaders(&ID, vertex, fragment, geometry);
+    else linkShaders(&ID, vertex, fragment);
     // Delete the shaders as they're linked into our program now and no longer necessery
     glDeleteShader(vertex);
     glDeleteShader(fragment);
+    if(usesGeometry) glDeleteShader(geometry);
 }
 
 void Shader::readVertexFile(const char* vertexPath, std::string * vertexCode) const
 {
-    std::ifstream vShaderFile;
-    // Ensure ifstream objects can throw exceptions:
-    vShaderFile.exceptions (std::ifstream::failbit | std::ifstream::badbit);
-    try{
-        // Open files
-        vShaderFile.open(vertexPath);
-        std::stringstream vShaderStream;
-        // Read file's buffer contents into streams
-        vShaderStream << vShaderFile.rdbuf();
-        // Close file handlers
-        vShaderFile.close();
-        // Convert stream into string
-        *vertexCode = vShaderStream.str();
-    } catch(std::ifstream::failure &e) {
-        throw shaderException("Couldn't read Vertex Shader: " + std::string(vertexPath));
-    }
+    readFile(vertexPath, vertexCode, "Vertex");
 }
 
 void Shader::readFragmentFile(const char* fragmentPath, std::string * fragmentCode) const
 {
-    std::ifstream fShaderFile;
+    readFile(fragmentPath, fragmentCode, "Fragment");
+}
+
+void Shader::readGeometryFile(const char *geometryPath, std::string * geometryCode) const
+{
+    readFile(geometryPath, geometryCode, "Geometry");
+}
+
+void Shader::readFile(const char *path, std::string * code, std::string name) const
+{
+    std::ifstream shaderFile;
     // Ensure ifstream objects can throw exceptions:
-    fShaderFile.exceptions (std::ifstream::failbit | std::ifstream::badbit);
+    shaderFile.exceptions (std::ifstream::failbit | std::ifstream::badbit);
     try {
         // Open files
-        fShaderFile.open(fragmentPath);
-        std::stringstream fShaderStream;
+        shaderFile.open(path);
+        std::stringstream shaderStream;
         // Read file's buffer contents into streams
-        fShaderStream << fShaderFile.rdbuf();
+        shaderStream << shaderFile.rdbuf();
         // Close file handlers
-        fShaderFile.close();
+        shaderFile.close();
         // Convert stream into string
-        *fragmentCode = fShaderStream.str();
+        *code = shaderStream.str();
     } catch(std::ifstream::failure &e) {
-        throw shaderException("Couldn't read Fragment Shader: " + std::string(fragmentPath));
+        throw shaderException("Couldn't read " + name + " Shader: " + std::string(path));
     }
 }
 
 void Shader::linkShaders(unsigned int * shaderProgram, unsigned int vertexShader, unsigned int fragmentShader)
+{
+    linkShaders(shaderProgram, vertexShader, fragmentShader, 0);
+}
+
+void Shader::linkShaders(unsigned int * shaderProgram, unsigned int vertexShader, unsigned int fragmentShader,
+                        unsigned int geometryShader)
 {
     int success;
     char infoLog[512];
@@ -71,6 +84,7 @@ void Shader::linkShaders(unsigned int * shaderProgram, unsigned int vertexShader
     // Attaches a compiled shader3d object to a program
     glAttachShader(*shaderProgram, vertexShader);
     glAttachShader(*shaderProgram, fragmentShader);
+    if(usesGeometry) glAttachShader(*shaderProgram, geometryShader);
     // Links all the shaders in the program together
     glLinkProgram(*shaderProgram);
 
@@ -84,51 +98,58 @@ void Shader::linkShaders(unsigned int * shaderProgram, unsigned int vertexShader
 
 unsigned int Shader::createVertexShader(const char * vertexShaderSource) const
 {
-    // VERTEX SHADERS
-    // Makes an empty vertex shader3d
-    unsigned int vertexShader = glCreateShader(GL_VERTEX_SHADER);
-    // Replaces the current shader3d source code with that given by the .vert files
-    glShaderSource(vertexShader, 1, &vertexShaderSource, nullptr);
-    // Compiles the shader3d object using source code just given
-    glCompileShader(vertexShader);
-
-    int success;
-    char infoLog[512];
-    // Gets specific info about an element of a shader3d
-    glGetShaderiv(vertexShader, GL_COMPILE_STATUS, &success);
-
-    if(!success) {
-        // Returns the error log
-        glGetShaderInfoLog(vertexShader, 512, nullptr, infoLog);
-        std::cerr << infoLog << std::endl;
-        throw shaderException("Couldn't compile Vertex Shader: \"" + vertexName + "\"");
-    }
-
-    return vertexShader;
+    return createShader(vertexShaderSource, GL_VERTEX_SHADER);
 }
 
 unsigned int Shader::createFragmentShader(const char * fragmentShaderSource) const
 {
-    // FRAGMENT SHADERS
+    return createShader(fragmentShaderSource, GL_FRAGMENT_SHADER);
+}
+
+unsigned int Shader::createGeometryShader(const char * geometryShaderSource) const
+{
+    return createShader(geometryShaderSource, GL_GEOMETRY_SHADER);
+}
+
+unsigned int Shader::createShader(const char * shaderSource, GLenum shaderType) const
+{
+    std::string name;
+    std::string path;
+    switch(shaderType) {
+        case GL_VERTEX_SHADER:
+            name = "Vertex";
+            path = vertexName;
+            break;
+        case GL_FRAGMENT_SHADER:
+            name = "Fragment";
+            path = fragmentName;
+            break;
+        case GL_GEOMETRY_SHADER:
+            name = "Geometry";
+            path = geometryName;
+            break;
+        default:
+            name = "Unknown";
+            path = "???";
+    }
+
     int success;
     char infoLog[512];
 
-    unsigned int fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
-    glShaderSource(fragmentShader, 1, &fragmentShaderSource, nullptr);
-    glCompileShader(fragmentShader);
+    unsigned int shader = glCreateShader(shaderType);
+    glShaderSource(shader, 1, &shaderSource, nullptr);
+    glCompileShader(shader);
 
-    glGetShaderiv(fragmentShader, GL_COMPILE_STATUS, &success);
+    glGetShaderiv(shader, GL_COMPILE_STATUS, &success);
 
     if(!success) {
-        glGetShaderInfoLog(fragmentShader, 512, nullptr, infoLog);
+        glGetShaderInfoLog(shader, 512, nullptr, infoLog);
         std::cerr << infoLog << std::endl;
-        throw shaderException("Couldn't compile Fragment Shader: \"" + fragmentName + "\"");
+        throw shaderException("Couldn't compile " + name + " Shader: \"" + path + "\"");
     }
 
-    return fragmentShader;
+    return shader;
 }
-
-
 
 void Shader::use() const
 {
@@ -186,4 +207,9 @@ void Shader::setCamera(const std::string &name, Camera camera) const
 {
     setVec3(name + ".viewDir", camera.cameraFront);
     setVec3(name + ".position", camera.cameraPos);
+}
+
+void Shader::setCubemapCamera(const std::string &name, Camera camera) const
+{
+    std::vector<glm::mat4> shadowTransforms = camera.getCubemapTransforms();
 }

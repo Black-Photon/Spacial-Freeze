@@ -125,6 +125,27 @@ glm::mat4 Camera::getPerspectiveTransformation() const
     return glm::perspective(glm::radians(fov), ASPECT_RATIO, MIN_DISTANCE, MAX_DISTANCE);
 }
 
+std::vector<glm::mat4> Camera::getCubemapTransforms() const
+{
+    glm::mat4 cubeProj = getPerspectiveTransformation();
+
+    std::vector<glm::mat4> shadowTransforms;
+    shadowTransforms.push_back(cubeProj *
+                               glm::lookAt(cameraPos, cameraPos + glm::vec3( 1.0, 0.0, 0.0), glm::vec3(0.0,-1.0, 0.0)));
+    shadowTransforms.push_back(cubeProj *
+                               glm::lookAt(cameraPos, cameraPos + glm::vec3(-1.0, 0.0, 0.0), glm::vec3(0.0,-1.0, 0.0)));
+    shadowTransforms.push_back(cubeProj *
+                               glm::lookAt(cameraPos, cameraPos + glm::vec3( 0.0, 1.0, 0.0), glm::vec3(0.0, 0.0, 1.0)));
+    shadowTransforms.push_back(cubeProj *
+                               glm::lookAt(cameraPos, cameraPos + glm::vec3( 0.0,-1.0, 0.0), glm::vec3(0.0, 0.0,-1.0)));
+    shadowTransforms.push_back(cubeProj *
+                               glm::lookAt(cameraPos, cameraPos + glm::vec3( 0.0, 0.0, 1.0), glm::vec3(0.0,-1.0, 0.0)));
+    shadowTransforms.push_back(cubeProj *
+                               glm::lookAt(cameraPos, cameraPos + glm::vec3( 0.0, 0.0,-1.0), glm::vec3(0.0,-1.0, 0.0)));
+
+    return shadowTransforms;
+}
+
 float Camera::modulus(float in)
 {
     while (in < -180.0f) {

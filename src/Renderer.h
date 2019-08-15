@@ -5,10 +5,12 @@
 class Renderer {
 private:
     Framebuffer framebuffer;
+    Framebuffer shadowBuffer;
     Shader oldShader;
     Shader ppShader;
     Shader lightningShader;
     Shader ppLightningShader;
+    Shader shadowShader;
     Lightning lightningX;
     Lightning lightningY;
     void drawScene(Shader &newShader, float size);
@@ -19,8 +21,11 @@ private:
     void renderSceneLightning();
     void drawSceneLightning(Lightning &lightningX, Lightning &lightningY);
 
+    void generateShadows();
+
 public:
     Scene scene;
+    Camera shadowCam;
     Renderer(Scene &scene, Shader &oldShader);
     /**
      * Draws the scene normally

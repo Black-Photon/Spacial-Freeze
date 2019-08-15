@@ -1,3 +1,8 @@
+/**
+ * This shader transforms a point to model space, then view, then final,
+ * while outputting useful position values
+ */
+
 #version 330 core
 layout (location = 0) in vec3 aPos;
 layout (location = 1) in vec3 aNormal;

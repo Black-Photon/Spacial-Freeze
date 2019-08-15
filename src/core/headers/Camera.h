@@ -122,6 +122,8 @@ public:
      */
     glm::mat4 getPerspectiveTransformation() const;
 
+    std::vector<glm::mat4> getCubemapTransforms() const;
+
 private:
     /**
      * Finds the modulus of a value, restricting it to between -180 and 180 degrees

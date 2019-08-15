@@ -11,7 +11,7 @@ public:
      *
      * @throws framebufferException if failed to create
      */
-    Framebuffer(int width, int height, bool rw);
+    Framebuffer(int width, int height, bool cubemap, bool rw);
     ~Framebuffer();
     /**
      * Causes all operations to act on the given framebuffer
@@ -19,10 +19,8 @@ public:
     void startWrite();
     /**
      * Ends writing to any active framebuffer switching to default buffer
-     * @param SCR_WIDTH Default screen width
-     * @param SCR_HEIGHT Default screen height
      */
-    void endWrite(int SCR_WIDTH, int SCR_HEIGHT);
+    void endWrite();
     /**
      * Updates the framebuffer to reflect the new size
      * @param width New width
@@ -36,6 +34,7 @@ private:
     unsigned int FBO;
     int width;
     int height;
+    bool cubemap;
     bool rw;
 };
 

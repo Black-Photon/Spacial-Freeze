@@ -12,6 +12,9 @@ public:
     // Shader name
     std::string vertexName;
     std::string fragmentName;
+    std::string geometryName;
+
+    bool usesGeometry = true;
 
     /**
      * Initialises and builds the shader
@@ -20,6 +23,7 @@ public:
      * @param location Location of shaders path (Use Path.shaders)
      */
     Shader(std::string vertexPath, std::string fragmentPath);
+    Shader(std::string vertexPath, std::string fragmentPath, std::string geometryPath);
     /**
      * Activates the shader as the one being used to draw
      */
@@ -86,6 +90,8 @@ public:
 
     void setCamera(const std::string &name, Camera camera) const;
 
+    void setCubemapCamera(const std::string &name, Camera camera) const;
+
 private:
     /**
      * Links the shader programs together into a single program
@@ -93,7 +99,9 @@ private:
      * @param vertexShader ID of Vertex Shader to use
      * @param fragmentShader ID of Fragment Shader to use
      */
-    static void linkShaders(unsigned int * shaderProgram, unsigned int vertexShader, unsigned int fragmentShader);
+    void linkShaders(unsigned int * shaderProgram, unsigned int vertexShader, unsigned int fragmentShader);
+    void linkShaders(unsigned int * shaderProgram, unsigned int vertexShader, unsigned int fragmentShader,
+                            unsigned int geometryShader);
     /**
      * Creates a vertex shader from the source code
      * @param vertexShaderSource Vertex Shader Source Code
@@ -106,6 +114,8 @@ private:
      * @return Fragment Shader ID
      */
     unsigned int createFragmentShader(const char * fragmentShaderSource) const;
+    unsigned int createGeometryShader(const char * geometryShaderSource) const;
+    unsigned int createShader(const char * shaderSource, GLenum shaderType) const;
     /**
      * Reads a vertex file, storing it as a string
      * @param vertexPath Path to vertex code file
@@ -118,6 +128,8 @@ private:
      * @param fragmentCode Location to store the source code extracted
      */
     void readFragmentFile(const char *fragmentPath, std::string * fragmentCode) const;
+    void readGeometryFile(const char *geometryPath, std::string * geometryCode) const;
+    void readFile(const char *path, std::string * code, std::string name) const;
 };
 
 /**

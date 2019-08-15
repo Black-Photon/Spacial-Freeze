@@ -2,12 +2,17 @@
 
 Renderer::Renderer(Scene &scene, Shader &oldShader):
     scene(scene),
-    framebuffer(core::Data.SCR_WIDTH, core::Data.SCR_HEIGHT, true),
+    framebuffer(core::Data.SCR_WIDTH, core::Data.SCR_HEIGHT, false, true),
+    shadowBuffer(2048, 2048, true, false),
     oldShader(oldShader),
     ppShader("basic2d.vert", "texture.frag"),
     lightningShader("basic3d.vert", "solidColour.frag"),
     ppLightningShader("basic2d.vert", "lightning.frag"),
-    lightningX(), lightningY() {}
+    shadowShader("shadow.vert", "shadow.frag", "shadow.geom"),
+    shadowCam(core::Data.SCR_WIDTH/core::Data.SCR_HEIGHT),
+    lightningX(), lightningY() {
+    shadowCam.fov = 90.0f;
+}
 
 void Renderer::drawScene(Shader &newShader, float size) {
     scene.replaceShader(newShader, oldShader);
@@ -44,7 +49,7 @@ void Renderer::renderSceneNormal() {
     framebuffer.startWrite();
     core::prerender(0, 0, 0);
     scene.drawScene();
-    framebuffer.endWrite(core::Data.SCR_WIDTH, core::Data.SCR_HEIGHT);
+    framebuffer.endWrite();
 }
 
 void Renderer::drawSceneNormal() {
@@ -56,7 +61,7 @@ void Renderer::drawSceneNormal() {
 void Renderer::renderSceneLightning() {
     framebuffer.startWrite();
     renderOutline(0.04f);
-    framebuffer.endWrite(core::Data.SCR_WIDTH, core::Data.SCR_HEIGHT);
+    framebuffer.endWrite();
 }
 
 void Renderer::drawSceneLightning(Lightning &lightningX, Lightning &lightningY) {
@@ -85,4 +90,12 @@ void Renderer::drawLightning() {
 
 void Renderer::updateFramebuffer() {
     framebuffer.updateSize(core::Data.SCR_WIDTH, core::Data.SCR_HEIGHT);
+}
+
+void Renderer::generateShadows() {
+    shadowBuffer.startWrite();
+    shadowShader.use();
+    glActiveTexture(GL_TEXTURE0);
+    glBindTexture(GL_TEXTURE_CUBE_MAP, shadowBuffer.texture);
+    shadowBuffer.endWrite();
 }

@@ -1,3 +1,8 @@
+/**
+ * This Post-Processing shader distorts an image horizontally and
+ * verically as described by the two lightning textures
+ */
+
 #version 330 core
 out vec4 FragColor;
 
