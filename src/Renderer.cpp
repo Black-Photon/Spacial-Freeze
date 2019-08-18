@@ -46,8 +46,15 @@ void Renderer::renderOutline(float diff) {
 }
 
 void Renderer::renderSceneNormal() {
+    generateShadows();
+
     framebuffer.startWrite();
-    core::prerender(0, 0, 0);
+    core::prerender(0.5, 0.5, 0.5);
+    oldShader.use();
+    oldShader.setInt("shadow_in.depthMap", 2);
+    oldShader.setFloat("shadow_in.far_plane", MAX_DISTANCE);
+    glActiveTexture(GL_TEXTURE2);
+    glBindTexture(GL_TEXTURE_CUBE_MAP, shadowBuffer.texture);
     scene.drawScene();
     framebuffer.endWrite();
 }
@@ -95,7 +102,11 @@ void Renderer::updateFramebuffer() {
 void Renderer::generateShadows() {
     shadowBuffer.startWrite();
     shadowShader.use();
-    glActiveTexture(GL_TEXTURE0);
-    glBindTexture(GL_TEXTURE_CUBE_MAP, shadowBuffer.texture);
+    shadowShader.setVec3("lightPos", scene.getLight("light").position);
+    shadowShader.setFloat("far_plane", MAX_DISTANCE);
+    Camera cam(core::Data.camera->ASPECT_RATIO);
+    cam.cameraPos = scene.getLight("light").position;
+    shadowShader.setCubemapCamera("shadowMatrices", cam);
+    drawScene(shadowShader, 1.0f);
     shadowBuffer.endWrite();
 }

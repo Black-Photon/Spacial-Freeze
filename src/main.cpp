@@ -17,12 +17,15 @@ namespace core {
         prerender(0.1, 0.1, 0.1);
 
         Light &light = renderer.scene.getLight("light");
-        light.position = glm::vec3(sin(currentFrame)/2, 0.0f, 0.0f);
+        light.position = glm::vec3(0.5f, 0.0f, 0.0f);
+//        light.position = glm::vec3(sin(currentFrame)/2, 0.0f, 0.0f);
 
 //        renderer.drawLightning();
 //        glScissor(Data.SCR_WIDTH/4, Data.SCR_HEIGHT * (1 - Data.distanceOpen) / 2, Data.SCR_WIDTH/2, Data.SCR_HEIGHT * Data.distanceOpen);
         renderer.draw();
 //        glScissor(0, 0, Data.SCR_WIDTH, Data.SCR_HEIGHT);
+
+
 
         glCheckError();
         glfwPollEvents();
@@ -52,6 +55,14 @@ namespace core {
         mainLight.position = glm::vec3(1.0f, 1.0f, 1.0f);
 
         scene.addLight("light", mainLight);
+
+        Shader colourShader("basic3d.vert", "solidColour.frag");
+        colourShader.use();
+        colourShader.setVec4("colour", 0.2f, 0.1f, 1.0f, 1.0f);
+        CubeModel cube;
+        Instance cubeInstance(cube, modelShader);
+        cubeInstance.transformation.size = 100.0f;
+//        scene.addInstance(cubeInstance);
 
         Renderer renderer(scene, modelShader);
 

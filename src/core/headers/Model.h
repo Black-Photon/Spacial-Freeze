@@ -4,7 +4,7 @@
 class Model {
 public:
     explicit Model(std::string path);
-    void draw(Shader shader);
+    virtual void draw(Shader shader);
 private:
     std::vector<std::unique_ptr<Mesh>> meshes;
     std::vector<Texture> texturesLoaded;
@@ -18,6 +18,9 @@ private:
 
     glm::vec2 convertAVec2(aiVector3t<float> vec);
     glm::vec3 convertAVec3(aiVector3t<float> vec);
+
+protected:
+    Model() = default;
 };
 
 /**

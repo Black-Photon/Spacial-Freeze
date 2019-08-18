@@ -83,14 +83,27 @@ void Scene::drawScene(float size) {
         core::makeModel(shader, *core::Data.camera);
         for(auto instance : instanceList) {
             Transformation sizedTrans = instance.transformation;
-            sizedTrans.size = size;
+            sizedTrans.size *= size;
             instance.draw(shader, sizedTrans);
         }
     }
 }
 
 void Scene::drawScene() {
-    drawScene(1.0f);
+    for(const auto pair : instances) {
+        auto shader = shaders.at(pair.first);
+        auto instanceList = pair.second;
+        shader.use();
+
+        for(auto &pair : lights) {
+            shader.setLight(pair.first, pair.second);
+        }
+
+        core::makeModel(shader, *core::Data.camera);
+        for(auto instance : instanceList) {
+            instance.draw(shader);
+        }
+    }
 }
 
 void Scene::addLight(std::string name, Light &light) {

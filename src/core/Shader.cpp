@@ -212,4 +212,7 @@ void Shader::setCamera(const std::string &name, Camera camera) const
 void Shader::setCubemapCamera(const std::string &name, Camera camera) const
 {
     std::vector<glm::mat4> shadowTransforms = camera.getCubemapTransforms();
+//    glUniformMatrix4fv(glGetUniformLocation(ID, name.c_str()), 6, GL_FALSE, (float*) &shadowTransforms);
+    for (unsigned int i = 0; i < 6; ++i)
+        setMat4(name + "[" + std::to_string(i) + "]", shadowTransforms[i]);
 }

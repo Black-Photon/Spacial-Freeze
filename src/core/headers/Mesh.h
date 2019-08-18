@@ -18,7 +18,8 @@ public:
 
     Mesh(std::vector<Vertex> &vertices, std::vector<unsigned int> &indices, std::vector<Texture> &textures);
     ~Mesh();
-    void draw(Shader &shader);
+
+    virtual void draw(Shader &shader);
 private:
     unsigned int VAO, VBO, EBO;
     std::vector<int> attributeSizes;
@@ -43,6 +44,9 @@ private:
     void setAttributes();
 
     void setupMesh();
+
+protected:
+    Mesh() = default;
 };
 
 

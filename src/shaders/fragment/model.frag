@@ -35,6 +35,13 @@ struct Camera {
 
 uniform Camera camera;
 
+struct Shadow {
+    samplerCube depthMap;
+    float far_plane;
+};
+
+uniform Shadow shadow_in;
+
 // ------------------------------------------------------------------------
 // --                    PROTOTYPES + VARIABLES                          --
 // ------------------------------------------------------------------------
@@ -72,7 +79,19 @@ void main() {
     float attenuation = 1.0 / (1.0 + 0.09 * distance +
     0.032 * (distance * distance));
 
-    FragColor = ambient + attenuation * (diffuse + specular);
+    // get vector between fragment position and light position
+    vec3 fragToLight = FragPos - light.position;
+    // use the light to fragment vector to sample from the depth map
+    float closestDepth = texture(shadow_in.depthMap, fragToLight).r;
+    // it is currently in linear range between [0,1]. Re-transform back to original value
+    closestDepth *= shadow_in.far_plane;
+    // now get current linear depth as the length between the fragment and light position
+    float currentDepth = length(fragToLight);
+    // now test for shadows
+    float bias = 0.05;
+    float shadow = currentDepth -  bias > closestDepth ? 1.0 : 0.0;
+    FragColor = mkVec4(1 - shadow);
+//    FragColor = (1 - shadow) * (ambient + attenuation * (diffuse + specular));
 }
 
 vec4 calculateAmbient() {
