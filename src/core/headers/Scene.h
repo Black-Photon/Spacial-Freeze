@@ -13,8 +13,8 @@ public:
     void addInstance(Instance &instance);
     bool removeInstance(Instance &instance);
     void replaceShader(Shader &newShader, Shader &oldShader);
-    void drawScene(float size);
-    void drawScene();
+    void drawScene(bool drawRoom, float size);
+    void drawScene(bool drawRoom);
     void addLight(std::string name, Light &light);
     bool removeLight(std::string name);
     Light& getLight(std::string name);

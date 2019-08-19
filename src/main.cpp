@@ -19,12 +19,12 @@ namespace core {
         Light &light = renderer.scene.getLight("light");
         light.position = glm::vec3(0.5f, 0.0f, 0.0f);
         light.position = glm::vec3(sin(currentFrame)/16, 0.5f, 0.0f);
-        renderer.scene.getInstance("light").transformation.position = light.position;
+//        renderer.scene.getInstance("light").transformation.position = light.position;
 
-//        renderer.drawLightning();
-//        glScissor(Data.SCR_WIDTH/4, Data.SCR_HEIGHT * (1 - Data.distanceOpen) / 2, Data.SCR_WIDTH/2, Data.SCR_HEIGHT * Data.distanceOpen);
+        renderer.drawLightning();
+        glScissor(Data.SCR_WIDTH/4, Data.SCR_HEIGHT * (1 - Data.distanceOpen) / 2, Data.SCR_WIDTH/2, Data.SCR_HEIGHT * Data.distanceOpen);
         renderer.draw();
-//        glScissor(0, 0, Data.SCR_WIDTH, Data.SCR_HEIGHT);
+        glScissor(0, 0, Data.SCR_WIDTH, Data.SCR_HEIGHT);
 
 
 
@@ -37,7 +37,7 @@ namespace core {
         logger::message("Starting Program");
         preInit(1920, 1080, "Spacial Freeze");
         logger::message("Pre-Initialisation Complete");
-        init(true);
+        init(false);
         logger::message("Initialisation Complete");
 
         Model table("Table.obj");
@@ -61,14 +61,14 @@ namespace core {
         colourShader.use();
         colourShader.setVec4("colour", 1.0f, 1.0f, 0.7f, 1.0f);
         CubeModel cube;
-        Instance cubeInstance(cube, modelShader, "room");
-        Instance cubeInstance2(cube, colourShader, "light");
-        cubeInstance.transformation.size = 40.0f;
-        cubeInstance.transformation.position = glm::vec3(0.0f, 3.7f, 0.0f);
-        cubeInstance.inside = true;
-        cubeInstance2.transformation.size = 0.1f;
-        scene.addInstance(cubeInstance);
-        scene.addInstance(cubeInstance2);
+        Instance room(cube, modelShader, "room");
+        Instance light(cube, colourShader, "light");
+        room.transformation.size = 40.0f;
+        room.transformation.position = glm::vec3(0.0f, 3.7f, 0.0f);
+        room.inside = true;
+        light.transformation.size = 0.1f;
+        scene.addInstance(room);
+        scene.addInstance(light);
 
         Renderer renderer(scene, modelShader);
 

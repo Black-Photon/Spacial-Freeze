@@ -19,7 +19,7 @@ private:
     void renderSceneNormal();
     void drawSceneNormal();
     void renderSceneLightning();
-    void drawSceneLightning(Lightning &lightningX, Lightning &lightningY);
+    void drawSceneLightning();
 
     void generateShadows();
 
