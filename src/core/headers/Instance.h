@@ -6,9 +6,11 @@
 class Instance {
 public:
     long ID;
+    std::string name;
     Shader shader;
     Transformation transformation;
-    Instance(Model &model, Shader &shader);
+    bool inside = false;
+    Instance(Model &model, Shader &shader, std::string name);
     void draw();
     void draw(Shader &shader);
     void draw(Shader &shader, Transformation altTrans);

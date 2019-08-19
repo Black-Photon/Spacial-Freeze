@@ -12,9 +12,10 @@ CubeMesh::CubeMesh()
     // Binds the buffer to the buffer type so glBufferData works on this
     glBindBuffer(GL_ARRAY_BUFFER, VBO);
     // Allocates memory for and stores the cubeVertices data
-    glBufferData(GL_ARRAY_BUFFER, 180 * sizeof(*cubeVertices), cubeVertices, GL_STATIC_DRAW);
+    glBufferData(GL_ARRAY_BUFFER, 288 * sizeof(*cubeVertices), cubeVertices, GL_STATIC_DRAW);
 
     addAttribute(3); // Position
+    addAttribute(3); // Normal
     addAttribute(2); // Texture
     setAttributes();
 

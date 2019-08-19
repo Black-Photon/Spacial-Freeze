@@ -15,11 +15,13 @@ out vec3 Normal;
 uniform mat4 model;
 uniform mat4 view;
 uniform mat4 projection;
+uniform bool inside;
 
 void main()
 {
     gl_Position = projection * view * model * vec4(aPos, 1.0);
     TexCoords = vec2(aTexCoords.x, 1.0 - aTexCoords.y);
     FragPos = (model * vec4(aPos, 1.0)).xyz;
-    Normal = aNormal;
+    if(inside) Normal = -aNormal;
+    else Normal = aNormal;
 }

@@ -104,17 +104,6 @@ void Camera::rotateRad(Rotation rotation, float angle)
     rotate(rotation, glm::degrees(angle));
 }
 
-void Camera::zoom(float amount)
-{
-    // Adjusts the fov depending on scroll
-    fov += amount;
-
-    if (fov <= MIN_FOV)
-        fov = MIN_FOV;
-    if (fov >= MAX_FOV)
-        fov = MAX_FOV;
-}
-
 glm::mat4 Camera::getTransformation() const
 {
     return glm::lookAt(cameraPos, cameraPos + cameraFront, cameraUp);

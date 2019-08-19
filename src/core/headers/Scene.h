@@ -18,6 +18,22 @@ public:
     void addLight(std::string name, Light &light);
     bool removeLight(std::string name);
     Light& getLight(std::string name);
+    Instance& getInstance(std::string name);
+
+    /**
+     * Indicated an error occurred in searching for a scene object
+     */
+    struct sceneSearchException : public std::exception {
+        std::string s;
+
+        explicit sceneSearchException(const std::string &string) {
+            s = string;
+        }
+
+        const char *what() const noexcept(true) override {
+            return s.c_str();
+        }
+    };
 };
 
 

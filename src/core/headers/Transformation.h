@@ -5,7 +5,7 @@
 class Transformation {
 public:
     glm::vec3 position;
-    float size;
+    float size = 1;
 
     glm::mat4 getMatrix();
 };

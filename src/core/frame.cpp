@@ -20,10 +20,10 @@ namespace core {
             Data.camera->moveOnPlane(RIGHT, Y, deltaT);
         }
         if(glfwGetKey(Data.window, GLFW_KEY_SPACE) == GLFW_PRESS) {
-            Data.camera->moveOnPlane(FORWARD, Z, deltaT);
+            Data.camera->moveBy(Y, deltaT);
         }
         if(glfwGetKey(Data.window, GLFW_KEY_LEFT_SHIFT) == GLFW_PRESS) {
-            Data.camera->moveOnPlane(BACKWARD, Z, deltaT);
+            Data.camera->moveBy(Y, -deltaT);
         }
         if(glfwGetKey(Data.window, GLFW_KEY_LEFT_CONTROL) == GLFW_PRESS && !Data.ctrlPressed) {
             Data.closed = !Data.closed;

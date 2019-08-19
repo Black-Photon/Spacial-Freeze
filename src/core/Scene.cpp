@@ -118,7 +118,17 @@ Light& Scene::getLight(std::string name) {
     try {
         return lights.at(name);
     } catch (std::out_of_range &e) {
-        logger::warn("Light '" + name + "' could not be found");
-        throw e;
+        throw sceneSearchException("Light '" + name + "' could not be found");
     }
+}
+
+Instance& Scene::getInstance(std::string name) {
+    for(auto &pair : instances) {
+        for(Instance &instance : pair.second) {
+            if(instance.name == name) {
+                return instance;
+            }
+        }
+    }
+    throw sceneSearchException("Instance '" + name + "' could not be found");
 }

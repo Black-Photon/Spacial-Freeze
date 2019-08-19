@@ -18,7 +18,8 @@ namespace core {
 
         Light &light = renderer.scene.getLight("light");
         light.position = glm::vec3(0.5f, 0.0f, 0.0f);
-//        light.position = glm::vec3(sin(currentFrame)/2, 0.0f, 0.0f);
+        light.position = glm::vec3(sin(currentFrame)/16, 4.0f, 0.0f);
+        renderer.scene.getInstance("light").transformation.position = light.position;
 
 //        renderer.drawLightning();
 //        glScissor(Data.SCR_WIDTH/4, Data.SCR_HEIGHT * (1 - Data.distanceOpen) / 2, Data.SCR_WIDTH/2, Data.SCR_HEIGHT * Data.distanceOpen);
@@ -43,10 +44,10 @@ namespace core {
         Model bookshelf("Bookshelf.obj");
         Shader modelShader("basic3d.vert", "model.frag");
 
-        Instance tableInstance(table, modelShader);
-        Instance bookshelfInstance(bookshelf, modelShader);
-        tableInstance.transformation.position = glm::vec3(0, -0.2f, 0);
-        bookshelfInstance.transformation.position = glm::vec3(-0.5f, 0.1f, -0.5f);
+        Instance tableInstance(table, modelShader, "table");
+        Instance bookshelfInstance(bookshelf, modelShader, "bookshelf");
+        tableInstance.transformation.position = glm::vec3(0, -0.25f, 0);
+        bookshelfInstance.transformation.position = glm::vec3(-0.5f, 0.0f, -0.5f);
         Scene scene;
         scene.addInstance(tableInstance);
         scene.addInstance(bookshelfInstance);
@@ -60,16 +61,19 @@ namespace core {
         colourShader.use();
         colourShader.setVec4("colour", 0.2f, 0.1f, 1.0f, 1.0f);
         CubeModel cube;
-        Instance cubeInstance(cube, modelShader);
-        cubeInstance.transformation.size = 100.0f;
-//        scene.addInstance(cubeInstance);
+        Instance cubeInstance(cube, modelShader, "room");
+        Instance cubeInstance2(cube, colourShader, "light");
+        cubeInstance.transformation.size = 40.0f;
+        cubeInstance.transformation.position = glm::vec3(0.0f, 3.7f, 0.0f);
+        cubeInstance.inside = true;
+        cubeInstance2.transformation.size = 0.1f;
+        scene.addInstance(cubeInstance);
+        scene.addInstance(cubeInstance2);
 
         Renderer renderer(scene, modelShader);
 
         logger::message("Starting draw Phase");
         while (!shouldClose()) frame(renderer);
-
-        close();
     }
 }
 
@@ -85,5 +89,7 @@ int main() {
     } catch (modelLoadingException &e) {
         logger::fatal(e.what(), "Model Loading");
     }
+
+    core::close();
 }
 

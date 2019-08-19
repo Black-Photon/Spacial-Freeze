@@ -19,11 +19,6 @@ enum Rotation {
     YAW
 };
 
-// Minimum possible FOV value
-const float MIN_FOV = 1.0f;
-// Maximum possible FOV value
-const float MAX_FOV = 45.0f;
-
 // Distance beyond which objects will be shown
 const float MIN_DISTANCE = 0.1f;
 // Distance beyond which objects won't be shown

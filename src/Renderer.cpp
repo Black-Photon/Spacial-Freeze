@@ -3,7 +3,7 @@
 Renderer::Renderer(Scene &scene, Shader &oldShader):
     scene(scene),
     framebuffer(core::Data.SCR_WIDTH, core::Data.SCR_HEIGHT, false, true),
-    shadowBuffer(2048, 2048, true, false),
+    shadowBuffer(1024, 1024, true, false),
     oldShader(oldShader),
     ppShader("basic2d.vert", "texture.frag"),
     lightningShader("basic3d.vert", "solidColour.frag"),
@@ -104,8 +104,9 @@ void Renderer::generateShadows() {
     shadowShader.use();
     shadowShader.setVec3("lightPos", scene.getLight("light").position);
     shadowShader.setFloat("far_plane", MAX_DISTANCE);
-    Camera cam(core::Data.camera->ASPECT_RATIO);
+    Camera cam(1.0f);
     cam.cameraPos = scene.getLight("light").position;
+    cam.fov = 90.0f;
     shadowShader.setCubemapCamera("shadowMatrices", cam);
     drawScene(shadowShader, 1.0f);
     shadowBuffer.endWrite();

@@ -1,6 +1,6 @@
 long Instance::lastID = 0;
 
-Instance::Instance(Model &model, Shader &shader) : shader(shader), model(&model) {
+Instance::Instance(Model &model, Shader &shader, std::string name) : shader(shader), model(&model), name(name) {
     ID = lastID++;
 }
 void Instance::draw() {
@@ -16,5 +16,6 @@ void Instance::draw(Shader &altShader) {
 void Instance::draw(Shader &altShader, Transformation altTrans) {
     altShader.setMat4("model", altTrans.getMatrix());
     altShader.setCamera("camera", *core::Data.camera);
+    altShader.setBool("inside", inside);
     model->draw(altShader);
 }
