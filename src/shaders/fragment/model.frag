@@ -65,6 +65,14 @@ float ambientLimit = 0.4;
 float diffuseLimit = 0.8;
 float specularLimit = 8.0;
 
+vec3 gridSamplingDisk[20] = vec3[]
+(
+vec3(1, 1,  1), vec3( 1, -1,  1), vec3(-1, -1,  1), vec3(-1, 1,  1),
+vec3(1, 1, -1), vec3( 1, -1, -1), vec3(-1, -1, -1), vec3(-1, 1, -1),
+vec3(1, 1,  0), vec3( 1, -1,  0), vec3(-1, -1,  0), vec3(-1, 1,  0),
+vec3(1, 0,  1), vec3(-1,  0,  1), vec3( 1,  0, -1), vec3(-1, 0, -1),
+vec3(0, 1,  1), vec3( 0, -1,  1), vec3( 0, -1, -1), vec3( 0, 1, -1)
+);
 
 // ------------------------------------------------------------------------
 // --                         MAIN FUNCTIONS                             --
@@ -118,14 +126,24 @@ vec4 calculateSpecular(Camera camera, Light light) {
 
 float calculateShadow(Shadow shadow) {
     vec3 fragToLight = FragPos - light.position;
-    float closestDepth = texture(shadow.depthMap, fragToLight).r;
-
-    // Convert from [0,1] to [0, far_plane]
-    closestDepth *= shadow.far_plane;
-
     float currentDepth = length(fragToLight);
+
+    float shadowVal = 0.0;
     float bias = 0.01;
-    return currentDepth - bias > closestDepth ? 1.0 : 0.0;
+    int samples = 20;
+
+    float viewDistance = length(camera.position - FragPos);
+    float diskRadius = (1.0 + (viewDistance / shadow.far_plane)) / 100.0;
+
+    for(int i = 0; i < samples; i++) {
+        float closestDepth = texture(shadow.depthMap, fragToLight + gridSamplingDisk[i] * diskRadius).r;
+        closestDepth *= shadow.far_plane;
+        if(currentDepth - bias > closestDepth)
+        shadowVal += 1.0;
+    }
+    shadowVal /= float(samples);
+
+    return shadowVal;
 }
 
 float distanceBetween(vec3 first, vec3 second) {

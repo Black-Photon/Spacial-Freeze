@@ -18,7 +18,7 @@ namespace core {
 
         Light &light = renderer.scene.getLight("light");
         light.position = glm::vec3(0.5f, 0.0f, 0.0f);
-        light.position = glm::vec3(sin(currentFrame)/16, 4.0f, 0.0f);
+        light.position = glm::vec3(sin(currentFrame)/16, 0.5f, 0.0f);
         renderer.scene.getInstance("light").transformation.position = light.position;
 
 //        renderer.drawLightning();
@@ -59,7 +59,7 @@ namespace core {
 
         Shader colourShader("basic3d.vert", "solidColour.frag");
         colourShader.use();
-        colourShader.setVec4("colour", 0.2f, 0.1f, 1.0f, 1.0f);
+        colourShader.setVec4("colour", 1.0f, 1.0f, 0.7f, 1.0f);
         CubeModel cube;
         Instance cubeInstance(cube, modelShader, "room");
         Instance cubeInstance2(cube, colourShader, "light");
