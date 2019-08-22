@@ -7,6 +7,9 @@ class CubeModel : public Model {
 public:
     CubeMesh mesh;
     void draw(Shader shader) override;
+    void setTexture(Texture *tex) {
+        mesh.setTexture(tex);
+    }
 };
 
 

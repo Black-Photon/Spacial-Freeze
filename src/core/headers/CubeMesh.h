@@ -51,10 +51,12 @@ public:
     CubeMesh();
     ~CubeMesh();
     void draw(Shader &shader) override;
+    void setTexture(Texture *tex);
 
 protected:
     unsigned int VAO;
     unsigned int VBO;
+    Texture *texture;
     std::vector<int> attributeSizes;
 
     /**

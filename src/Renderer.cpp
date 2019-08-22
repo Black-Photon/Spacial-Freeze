@@ -2,7 +2,8 @@
 
 Renderer::Renderer(Scene &scene, Shader &oldShader):
     scene(scene),
-    framebuffer(core::Data.SCR_WIDTH, core::Data.SCR_HEIGHT, false, true),
+    mainFramebuffer(core::Data.SCR_WIDTH, core::Data.SCR_HEIGHT, false, true),
+    lightningFramebuffer(core::Data.SCR_WIDTH, core::Data.SCR_HEIGHT, false, true),
     shadowBuffer(1024, 1024, true, false),
     oldShader(oldShader),
     ppShader("basic2d.vert", "texture.frag"),
@@ -31,13 +32,14 @@ void Renderer::drawTexture(Shader &postProcessing, unsigned int tex) {
 
 void Renderer::renderOutline(float diff) {
     stencil::enable();
-    lightningShader.use();
 
     stencil::startTrace(1);
+    lightningShader.use();
     lightningShader.setVec4("colour", 0.1f, 0.1f, 0.1f, 0.0f);
     drawScene(lightningShader, 1.0f);
 
     stencil::startDrawInvert(1);
+    lightningShader.use();
     lightningShader.setVec4("colour", 1.0f, 0.5f, 0.0f, 1.0f);
     drawScene(lightningShader, 1.0f + diff);
     drawScene(lightningShader, 1.0f - diff);
@@ -48,41 +50,41 @@ void Renderer::renderOutline(float diff) {
 void Renderer::renderSceneNormal() {
     generateShadows();
 
-    framebuffer.startWrite();
-    core::prerender(0.5, 0.5, 0.5);
+    mainFramebuffer.startWrite();
+    core::prerender(0.07, 0.07, 0.07);
     oldShader.use();
     oldShader.setInt("shadow_in.depthMap", 2);
     oldShader.setFloat("shadow_in.far_plane", MAX_DISTANCE);
     glActiveTexture(GL_TEXTURE2);
     glBindTexture(GL_TEXTURE_CUBE_MAP, shadowBuffer.texture);
     scene.drawScene(true);
-    framebuffer.endWrite();
+    mainFramebuffer.endWrite();
 }
 
 void Renderer::drawSceneNormal() {
     ppShader.use();
     ppShader.setFloat("zPos", 0.0f);
-    drawTexture(ppShader, framebuffer.texture);
+    drawTexture(ppShader, mainFramebuffer.texture);
 }
 
 void Renderer::renderSceneLightning() {
-//    framebuffer.startWrite();
+    lightningFramebuffer.startWrite();
     renderOutline(0.04f);
-//    framebuffer.endWrite();
+    lightningFramebuffer.endWrite();
 }
 
 void Renderer::drawSceneLightning() {
-//    lightningX.update(0.004);
-//    lightningY.update(0.004);
-//    ppLightningShader.use();
-//    ppLightningShader.setInt("lightningX", 1);
-//    glActiveTexture(GL_TEXTURE1);
-//    glBindTexture(GL_TEXTURE_1D, lightningX.getTexture());
-//    ppLightningShader.setInt("lightningY", 2);
-//    glActiveTexture(GL_TEXTURE2);
-//    glBindTexture(GL_TEXTURE_1D, lightningY.getTexture());
-//    ppLightningShader.setFloat("zPos", 0.1f);
-//    drawTexture(ppLightningShader, framebuffer.texture);
+    lightningX.update(0.004);
+    lightningY.update(0.004);
+    ppLightningShader.use();
+    ppLightningShader.setInt("lightningX", 1);
+    glActiveTexture(GL_TEXTURE1);
+    glBindTexture(GL_TEXTURE_1D, lightningX.getTexture());
+    ppLightningShader.setInt("lightningY", 2);
+    glActiveTexture(GL_TEXTURE2);
+    glBindTexture(GL_TEXTURE_1D, lightningY.getTexture());
+    ppLightningShader.setFloat("zPos", 0.1f);
+    drawTexture(ppLightningShader, lightningFramebuffer.texture);
 }
 
 void Renderer::draw() {
@@ -96,7 +98,8 @@ void Renderer::drawLightning() {
 }
 
 void Renderer::updateFramebuffer() {
-    framebuffer.updateSize(core::Data.SCR_WIDTH, core::Data.SCR_HEIGHT);
+    mainFramebuffer.updateSize(core::Data.SCR_WIDTH, core::Data.SCR_HEIGHT);
+    lightningFramebuffer.updateSize(core::Data.SCR_WIDTH, core::Data.SCR_HEIGHT);
 }
 
 void Renderer::generateShadows() {

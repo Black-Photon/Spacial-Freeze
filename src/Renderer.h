@@ -4,7 +4,8 @@
 
 class Renderer {
 private:
-    Framebuffer framebuffer;
+    Framebuffer mainFramebuffer;
+    Framebuffer lightningFramebuffer;
     Framebuffer shadowBuffer;
     Shader oldShader;
     Shader ppShader;
@@ -16,10 +17,6 @@ private:
     void drawScene(Shader &newShader, float size);
     void drawTexture(Shader &postProcessing, unsigned int tex);
     void renderOutline(float diff);
-    void renderSceneNormal();
-    void drawSceneNormal();
-    void renderSceneLightning();
-    void drawSceneLightning();
 
     void generateShadows();
 
@@ -39,6 +36,12 @@ public:
      * Updates the framebuffer size in case of window resizing
      */
     void updateFramebuffer();
+
+
+    void renderSceneNormal();
+    void drawSceneNormal();
+    void renderSceneLightning();
+    void drawSceneLightning();
 };
 
 

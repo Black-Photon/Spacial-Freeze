@@ -86,8 +86,7 @@ void main() {
     float shadow = calculateShadow(shadow_in);
 
     float distance = distanceBetween(camera.position, light.position);
-    float attenuation = 1.0 / (1.0 + 0.09 * distance +
-    0.031 * (distance * distance));
+    float attenuation = 1.0 / (1.0 + 0.09 * distance + 0.031 * (distance * distance));
 
     FragColor = ambient + attenuation * (1 - shadow) * (diffuse + specular);
 }
