@@ -18,14 +18,14 @@ void Scene::addInstance(Instance &instance) {
     found = false;
     for(auto& pair : instances) {
         if(pair.first == pos) {
-            pair.second.push_back(instance);
+            pair.second.push_back(&instance);
             found = true;
         }
     }
 
     if(!found) {
-        std::vector<Instance> newInstances;
-        newInstances.push_back(instance);
+        std::vector<Instance*> newInstances;
+        newInstances.push_back(&instance);
         instances.insert(std::pair(pos, newInstances));
     }
 }
@@ -49,7 +49,7 @@ bool Scene::removeInstance(Instance &instance) {
     for(auto& pair : instances) {
         if(pair.first == pos) {
             for(int i = 0; i < pair.second.size(); i++) {
-                if(pair.second.at(i).ID == instance.ID) {
+                if(pair.second.at(i)->ID == instance.ID) {
                     pair.second.erase(pair.second.begin() + i);
                     
                     return true;
@@ -82,9 +82,9 @@ void Scene::drawScene(bool drawRoom, float size) {
 
         core::makeModel(shader, *core::Data.camera);
         for(auto instance : instanceList) {
-            Transformation sizedTrans = instance.transformation;
+            Transformation sizedTrans = instance->transformation;
             sizedTrans.size *= size;
-            if(drawRoom || !instance.inside) instance.draw(shader, sizedTrans);
+            if(drawRoom || !instance->inside) instance->draw(shader, sizedTrans);
         }
     }
 }
@@ -101,7 +101,7 @@ void Scene::drawScene(bool drawRoom) {
 
         core::makeModel(shader, *core::Data.camera);
         for(auto instance : instanceList) {
-            if(drawRoom || !instance.inside) instance.draw(shader);
+            if(drawRoom || !instance->inside) instance->draw(shader);
         }
     }
 }
@@ -124,11 +124,19 @@ Light& Scene::getLight(std::string name) {
 
 Instance& Scene::getInstance(std::string name) {
     for(auto &pair : instances) {
-        for(Instance &instance : pair.second) {
-            if(instance.name == name) {
-                return instance;
+        for(Instance *instance : pair.second) {
+            if(instance->name == name) {
+                return *instance;
             }
         }
     }
     throw sceneSearchException("Instance '" + name + "' could not be found");
+}
+
+void Scene::update(float deltaT) {
+    for(auto &pair : instances) {
+        for(auto &instance : pair.second) {
+            instance->update(deltaT);
+        }
+    }
 }

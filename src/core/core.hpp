@@ -9,7 +9,10 @@
 #include "headers/Scene.h"
 #include "headers/Transformation.h"
 #include "headers/Instance.h"
+#include "headers/CubeMesh.h"
 #include "headers/CubeModel.h"
+#include "headers/Component.h"
+#include "headers/BoxColliderComponent.h"
 
 // Helper headers
 #include "headers/frame.h"
@@ -37,6 +40,7 @@
 #include "Instance.cpp"
 #include "CubeMesh.cpp"
 #include "CubeModel.cpp"
+#include "BoxColliderComponent.cpp"
 
 // Helper files
 #include "preInit.cpp"

@@ -19,3 +19,24 @@ void Instance::draw(Shader &altShader, Transformation altTrans) {
     altShader.setBool("inside", inside);
     model->draw(altShader);
 }
+
+void Instance::update(float deltaT) {
+    for(std::pair<string, Component*> component : components) {
+        component.second->update(deltaT);
+    }
+}
+
+void Instance::addComponent(string name, Component *component) {
+    std::pair<string, Component*> pair(name, component);
+    components.insert(pair);
+}
+
+Component* Instance::getComponent(std::string name) {
+    for(auto pair : components) {
+        Component* component = pair.second;
+        if(pair.first == name) {
+            return component;
+        }
+    }
+    throw componentSearchException("Component '" + name + "' could not be found");
+}

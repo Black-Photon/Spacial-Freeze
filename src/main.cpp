@@ -15,6 +15,7 @@ namespace core {
 
         renderer.updateFramebuffer();
         prerender(0.1, 0.1, 0.1);
+        renderer.scene.update(deltaTime);
 
         Light &light = renderer.scene.getLight("light");
         light.position = glm::vec3(0.5f, 0.0f, 0.0f);
@@ -54,8 +55,14 @@ namespace core {
         tableInstance.transformation.position = glm::vec3(0, -0.25f, 0);
         bookshelfInstance.transformation.position = glm::vec3(-0.5f, 0.0f, -0.5f);
         Scene scene;
+
+        BoxColliderComponent component;
+        tableInstance.addComponent("collider", &component);
+
         scene.addInstance(tableInstance);
         scene.addInstance(bookshelfInstance);
+
+        component.setTransformation(&scene.getInstance("table").transformation);
 
         Light mainLight;
         mainLight.position = glm::vec3(1.0f, 1.0f, 1.0f);
