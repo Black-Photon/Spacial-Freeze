@@ -1,5 +1,15 @@
-#include "headers/BoxColliderComponent.h"
-
 void BoxColliderComponent::update(float deltaT) {
-    transformation->position += glm::vec3(0.0f, deltaT * 0.01f, 0.0f);
+    PhysicsComponent::update(deltaT);
+
+    for(auto &collider : colliders) {
+        if(collider.id != id) {
+            // DoStuff
+        }
+    }
+}
+
+void BoxColliderComponent::setSize(float xwidth, float height, float zwidth) {
+    this->xwidth = xwidth;
+    this->height = height;
+    this->zwidth = zwidth;
 }

@@ -43,7 +43,7 @@ set(ASSIMP_BUILD_STATIC_LIB ON)
 
 # Link all
 if(WIN32)
-        add_library( assimp STATIC IMPORTED )
+        add_library( assimp STATIC IMPORTED src/core/PhysicsComponent.cpp src/core/headers/PhysicsComponent.h)
         set_target_properties( assimp PROPERTIES IMPORTED_LOCATION "C:/Program Files/Assimp/lib/x64/assimp-vc140-mt.lib" )
 endif()
 target_link_libraries(SpacialFreeze glfw assimp)

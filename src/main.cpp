@@ -63,6 +63,11 @@ namespace core {
         scene.addInstance(bookshelfInstance);
 
         component.setTransformation(&scene.getInstance("table").transformation);
+        component.setSize(0.0f, 0.0f, 0.0f);
+
+        std::vector<BoxColliderComponent> colliders;
+        colliders.push_back(component);
+        component.setCollisionList(colliders);
 
         Light mainLight;
         mainLight.position = glm::vec3(1.0f, 1.0f, 1.0f);
