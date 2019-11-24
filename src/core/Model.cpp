@@ -13,7 +13,7 @@ void Model::draw(Shader shader) {
 
 void Model::loadModel(std::string &path) {
     Assimp::Importer importer;
-    const aiScene *scene = importer.ReadFile(path, aiProcess_Triangulate | aiProcess_FlipUVs);
+    const aiScene *scene = importer.ReadFile(path, aiProcess_Triangulate | aiProcess_FlipUVs | aiProcess_CalcTangentSpace);
 
     if(!scene || scene->mFlags & AI_SCENE_FLAGS_INCOMPLETE || !scene->mRootNode) {
         throw modelLoadingException(importer.GetErrorString());
@@ -75,6 +75,9 @@ std::unique_ptr<Mesh> Model::processMesh(aiMesh *mesh, const aiScene *scene) {
         std::vector<Texture> specularMaps = loadMaterialTextures(material,
                                                             aiTextureType_SPECULAR, "texture_specular");
         textures.insert(textures.end(), specularMaps.begin(), specularMaps.end());
+        std::vector<Texture> normalMaps = loadMaterialTextures(material,
+                                                            aiTextureType_HEIGHT, "texture_normal");
+        textures.insert(textures.end(), normalMaps.begin(), normalMaps.end());
     }
 
     return std::make_unique<Mesh>(vertices, indices, textures);

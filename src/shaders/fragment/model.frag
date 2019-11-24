@@ -16,6 +16,7 @@ in vec3 Normal;
 struct Material {
     sampler2D texture_diffuse1;
     sampler2D texture_specular1;
+    sampler2D texture_normal1;
 };
 
 uniform Material material;
@@ -42,13 +43,15 @@ struct Shadow {
 
 uniform Shadow shadow_in;
 
+uniform bool usesNormalMap;
+
 // ------------------------------------------------------------------------
 // --                    PROTOTYPES + VARIABLES                          --
 // ------------------------------------------------------------------------
 
 vec4 calculateAmbient();
-vec4 calculateDiffuse(Light light);
-vec4 calculateSpecular(Camera camera, Light light);
+vec4 calculateDiffuse(vec3 Normal, Light light);
+vec4 calculateSpecular(vec3 Normal, Camera camera, Light light);
 float calculateShadow(Shadow shadow);
 
 vec4 mkVec4(float i) {
@@ -74,15 +77,20 @@ vec3(1, 0,  1), vec3(-1,  0,  1), vec3( 1,  0, -1), vec3(-1, 0, -1),
 vec3(0, 1,  1), vec3( 0, -1,  1), vec3( 0, -1, -1), vec3( 0, 1, -1)
 );
 
+vec3 NormalMap;
+
 // ------------------------------------------------------------------------
 // --                         MAIN FUNCTIONS                             --
 // ------------------------------------------------------------------------
 
 
 void main() {
+    if (usesNormalMap) NormalMap = texture(material.texture_normal1, TexCoords).xyz;
+    else NormalMap = Normal;
+
     vec4 ambient = calculateAmbient();
-    vec4 diffuse = calculateDiffuse(light);
-    vec4 specular = calculateSpecular(camera, light);
+    vec4 diffuse = calculateDiffuse(NormalMap, light);
+    vec4 specular = calculateSpecular(NormalMap, camera, light);
     float shadow = calculateShadow(shadow_in);
 
     float distance = distanceBetween(camera.position, light.position);
@@ -98,7 +106,7 @@ vec4 calculateAmbient() {
     return ambient;
 }
 
-vec4 calculateDiffuse(Light light) {
+vec4 calculateDiffuse(vec3 Normal, Light light) {
     vec3 norm = normalize(Normal);
     vec3 lightDir = normalize(light.position - FragPos);
     float diffuse = max(dot(norm, lightDir), 0.0) * diffuseLimit;
@@ -109,12 +117,12 @@ vec4 calculateDiffuse(Light light) {
     return diffuseVec;
 }
 
-vec4 calculateSpecular(Camera camera, Light light) {
+vec4 calculateSpecular(vec3 Normal, Camera camera, Light light) {
     vec3 lightDir   = normalize(light.position - FragPos);
     vec3 viewDir    = normalize(camera.position - FragPos);
     vec3 halfwayDir = normalize(lightDir + viewDir);
 
-    float spec = pow(max(dot(Normal, halfwayDir), 0.0), 32);
+    float spec = pow(min(max(dot(Normal, halfwayDir), 0.0), 1.0), 32);
     spec = specularLimit * spec;
 
     vec4 specular = spec * texture(material.texture_specular1, TexCoords);
